@@ -1,0 +1,8 @@
+<!--pages/add/index.wxml-->
+<text>pages/add/index.wxml</text>
+<view wx:for="{{list}}" wx:key="item.id">
+  <view >
+    {{item.name}} -- {{item.price}}
+  </view>
+</view>
+<button bindtap="add">添加</button>

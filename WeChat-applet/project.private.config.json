@@ -3,5 +3,6 @@
   "projectname": "applet-learn",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "2.25.4"
 }

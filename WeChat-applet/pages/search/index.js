@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[]
+    list:[],
+    good:{}
   },
 
   /**
@@ -29,6 +30,20 @@ Page({
       console.log(res.data,'res');
       this.setData({
         list: res.data 
+      })
+    }).catch(err=>{
+      console.log(err);
+    })
+    
+    db.collection('goods')
+    // .where({ // 查询条件
+    //   name:'苹果',
+    // })
+    .doc("9890f4c66361d59e006dbc01034417bf")
+    .get().then( res => {
+      console.log(res.data,'res');
+      this.setData({
+        good: res.data 
       })
     }).catch(err=>{
       console.log(err);
