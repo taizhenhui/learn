@@ -1,0 +1,5 @@
+<!--pages/shujuku/index.wxml-->
+
+<view wx:for="{{list}}" wx:key="id">
+  <view>{{item.name}} -- ￥ {{item.price}} 元</view>
+</view>
