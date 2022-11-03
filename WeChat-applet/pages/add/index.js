@@ -19,8 +19,8 @@ Page({
     db.collection('goods')
       .add({
         data: {
-          name: '香蕉',
-          price: 7
+          name: '桃子',
+          price: 24
         }
       })
       .then(res => {

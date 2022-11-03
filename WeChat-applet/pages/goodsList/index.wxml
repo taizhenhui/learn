@@ -1,0 +1,28 @@
+
+<view>
+  <view class="container_form">
+    <view class="input_box">
+      <text class="label">商品名：</text>
+      <input type="text" bindinput="getName" class="input_sty" placeholder="请输入商品名" value="{{name}}"/>
+    </view>
+    <view class="input_box">
+      <text class="label">价格：</text>
+      <input type="number" bindinput="getPrice" class="input_sty" placeholder="请输入价格" value="{{price}}"/>
+    </view>
+  </view>
+  <button size="mini" type="primary" bindtap="addGood">添加商品</button>
+
+  <view wx:for="{{list}}" wx:for-index="i" wx:key="i" class="list_sty">
+    <text>商品名：{{item.name}} ------ 价格：{{item.price}}</text>
+    <view>
+      <button class="btn_handle" size="mini" type="warn" bindtap="remove" data-item="{{item}}">删除</button>
+      <button class="btn_handle" size="mini" type="primary" bindtap="go" data-item="{{item}}">详情</button>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+

@@ -1,6 +1,10 @@
 {
     "pages": [
+      "pages/goodsList/index",
+      "pages/goodDetail/index",
       "pages/add/index",
+      "pages/remove/index",
+      "pages/update/index",
       "pages/search/index",
       "pages/index/index"
     ],

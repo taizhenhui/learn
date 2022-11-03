@@ -1,0 +1,8 @@
+
+<view wx:for="{{list}}" wx:key="_id">
+  <view class="detail">
+    {{item.name}} -- {{item.price}}
+    <button bindtap="remove" data-item="{{item}}" class="btn" type="primary">remove</button>
+  </view>
+</view>
+
