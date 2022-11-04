@@ -1,7 +1,0 @@
-<view>
-  <view> 商品名：{{good.name}} --- 价格：{{good.price}}</view>
-  <view class="container_form">
-    <input type="text" model:value="{{setPrice}}"  placeholder="请输入价格"/>
-    <button size="mini" type="primary" bindtap="modify">提交</button>
-  </view>
-</view>
