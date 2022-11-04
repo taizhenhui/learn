@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车</title>
+  <link rel="stylesheet" href="../购物车/common.css">
+  <link rel="stylesheet" href="../购物车/car.css">
+  <script src="../jQuery.js"></script>
+  <script src="../购物车/car.js"></script>
+</head>
+<body>
+  <!-- 购物车主要核心区域 -->
+  <div class="cart-warp">
+    <!-- 头部全选模块 -->
+    <div class="cart-thead">
+      <div class="t-checkbox"><input type="checkbox" class="checkall"><span>全选</span></div>
+      <div class="t-goods">商品</div>
+      <div class="t-price">单价</div>
+      <div class="t-num">数量</div>
+      <div class="t-sum">小计</div>
+      <div class="t-action">操作</div>
+    </div>
+
+    <!-- 商品详情模块 -->
+    <div class="cart-item-list">
+      <div class="cart-item flex-start">
+
+        <div class="p-checkbox">
+          <input type="checkbox" class="j-checkbox">
+        </div>
+
+        <div class="p-goods flex-start">
+          <div class="p-img"><img src="./img/shu1.jpg" alt=""></div>
+          <div class="p-msg">【5本26.8元】经典儿童文学彩图青少年版八十天环游地球中学生语文数学年版八十天环游地球中学生语文数学</div>
+        </div>
+
+        <div class="p-price">¥12.60</div>
+        <div class="p-num">
+          <div class="quantify-form flex-start">
+            <a href="###" class="decrement">-</a>
+            <input type="text" class="itxt" value="3">
+            <a href="###" class="increment">+</a>
+          </div>
+        </div>
+
+        <div class="p-sum">¥12.60</div>
+        <div class="p-action">删除</div>
+      </div>
+
+      <div class="cart-item flex-start">
+        <div class="p-checkbox">
+          <input type="checkbox"  class="j-checkbox">
+        </div>
+
+        <div class="p-goods flex-start">
+          <div class="p-img"><img src="./img/shu2.jpg" alt=""></div>
+          <div class="p-msg">【5本26.8元】经典儿童文学彩图青少年版八十天环游地球中学生语文数学年版八十天环游地球中学生语文数学</div>
+        </div>
+
+        <div class="p-price">¥46.80</div>
+        <div class="p-num">
+          <div class="quantify-form flex-start">
+            <a href="###" class="decrement">-</a>
+            <input type="text" class="itxt" value="1">
+            <a href="###" class="increment">+</a>
+          </div>
+        </div>
+
+        <div class="p-sum">¥26.80</div>
+        <div class="p-action">删除</div>
+      </div>
+
+      <div class="cart-item flex-start">
+        <div class="p-checkbox">
+          <input type="checkbox" class="j-checkbox">
+        </div>
+
+        <div class="p-goods flex-start">
+          <div class="p-img"><img src="./img/shu3.jpg" alt=""></div>
+          <div class="p-msg">经典儿童文学彩图青少年版八十天环游地球中学生语文数学年版八十天环游地球中学生语文数学</div>
+        </div>
+
+        <div class="p-price">¥26.80</div>
+        <div class="p-num">
+          <div class="quantify-form flex-start">
+            <a href="###" class="decrement">-</a>
+            <input type="text" class="itxt" value="1">
+            <a href="###" class="increment">+</a>
+          </div>
+        </div>
+
+        <div class="p-sum">¥46.80</div>
+        <div class="p-action">删除</div>
+      </div>
+
+    </div>
+
+    <!-- 结算模块 -->
+    <div class="cart-floatbar">
+      <div class="select-all fl"><input type="checkbox" class="checkall"><span>全选</span></div>
+
+      <div class="operation fl">
+        <a href="###" class="remove-batch">删除选中的商品</a>
+        <a href="###" class="clear-all">清理购物车</a>
+      </div>
+
+      <div class="toolbar-right fr flex-start">
+        <div class="amount-sum">已经选<em> 1 </em>件商品</div>
+        <div class="price-sum">总价:<em> ¥12.00 </em></div>
+        <div class="btn-area">去结算</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
