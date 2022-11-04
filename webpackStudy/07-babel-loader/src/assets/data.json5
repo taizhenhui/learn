@@ -1,0 +1,9 @@
+{
+  title: "YAML Example",
+  owner: {
+    name: "Tom",
+    organization: "GitHub",
+    bio: "GitHub CEO",
+    dob: "1979-05-27T07:32:00.000Z"
+  }
+}
