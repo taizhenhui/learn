@@ -27,22 +27,22 @@ Page({
       })
       return
     }
-    try{
+    try {
       const db = wx.cloud.database()
       await db.collection("goods")
-      .doc(id)
-      .update({
-        data:{
-          price:this.data.setPrice
-        }
-      })
+        .doc(id)
+        .update({
+          data: {
+            price: Number(this.data.setPrice)
+          }
+        })
       await this.getDetail()
       await this.reset()
       await wx.showToast({
         title: '修改成功',
         icon: 'success'
       })
-    }catch(err){
+    } catch (err) {
       console.log(err);
     }
   },

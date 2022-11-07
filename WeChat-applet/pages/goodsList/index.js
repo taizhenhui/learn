@@ -2,21 +2,29 @@ Page({
   data: {
     list: [],
     name: '',
-    price: ''
+    price: '',
+    type: ''
 
   },
-  onLoad() {
+  onShow() {
     this.getList()
   },
-  getList() {
-    const db = wx.cloud.database()
-    db.collection('goods').get()
-      .then(res => {
-        console.log(res);
-        this.setData({
-          list: res.data
-        })
+  async getList(e) {  
+    console.log(e);
+    let {
+      type
+    } = this.data
+    if (type == '') type = e == undefined ? 'get' : e.currentTarget.dataset.type == 'up' ? 'asc' : 'desc'
+    const db = wx.cloud.database().collection('goods')
+    try {
+      let res = type == 'get' ? await db.get() : await db.orderBy('price', type).get()
+      this.setData({
+        list: res.data
       })
+    } catch (err) {
+      console.log(err);
+    }
+
   },
   go(e) {
     let id = e.currentTarget.dataset.item._id
@@ -62,7 +70,7 @@ Page({
     }
     let data = {
       name,
-      price
+      price: Number(price)
     }
     try {
       const db = wx.cloud.database()
