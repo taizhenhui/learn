@@ -10,7 +10,14 @@ Page({
     this.getList()
   },
   async getList(e) {  
-    console.log(e);
+    let c= await wx.cloud.callFunction({
+      name:'add',
+      data:{
+        a:1,
+        b:2
+      }
+    })
+    console.log(c.result.sum,'ccccccccccc');
     let {
       type
     } = this.data
