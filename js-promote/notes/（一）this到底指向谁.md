@@ -228,7 +228,7 @@ const foo = {
 const bar = {
   name:'mike'
 }
-console.log( foo.logName.call(bar) )  // nike
+console.log( foo.logName.call(bar) )  // mike
 ```
 
 ​		以上代码的执行结果为mike，不难理解。但是对bind、call、apply的高级考查往往需要面试者结合`构造函数`及`组合`来实现继承。

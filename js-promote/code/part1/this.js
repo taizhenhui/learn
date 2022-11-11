@@ -129,10 +129,21 @@
 // console.log(o3.fn()) // undefined
 
 // 场景1
-function Foo() {
-	this.user = 'tom'
-  const o = []
-  return o
+// function Foo() {
+// 	this.user = 'tom'
+//   const o = []
+//   return o
+// }
+// const instance = new Foo()
+// console.log(instance.user) // undefined
+
+debugger
+
+function foo (a) {
+  this.a = a
 }
-const instance = new Foo()
-console.log(instance.user) // undefined
+const obj1 = {}
+var bar = foo.bind(obj1)
+bar(2)
+console.log(obj1.a)
+
