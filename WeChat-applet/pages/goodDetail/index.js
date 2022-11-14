@@ -20,6 +20,7 @@ Page({
       id,
       setPrice
     } = this.data
+    console.log(id,'iddddddd');
     if (setPrice == '') {
       wx.showToast({
         icon: "none",
@@ -29,13 +30,22 @@ Page({
     }
     try {
       const db = wx.cloud.database()
-      await db.collection("goods")
-        .doc(id)
-        .update({
-          data: {
-            price: Number(this.data.setPrice)
-          }
-        })
+      // 直接操作数据库
+      // await db.collection("goods")
+      //   .doc(id)
+      //   .update({
+      //     data: {
+      //       price: Number(this.data.setPrice)
+      //     }
+      //   })
+      // 调用云函数
+      await wx.cloud.callFunction({
+        name:'updata_good',
+        data:{
+          id:id,
+          price: Number(this.data.setPrice)
+        }
+      })
       await this.getDetail()
       await this.reset()
       await wx.showToast({

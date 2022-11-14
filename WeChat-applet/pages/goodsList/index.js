@@ -80,8 +80,10 @@ Page({
       price: Number(price)
     }
     try {
-      const db = wx.cloud.database()
-      await db.collection("goods").add({
+      // const db = wx.cloud.database()
+      // await db.collection("goods").add({ data })
+      await wx.cloud.callFunction({
+        name: 'add_good',
         data
       })
       await this.getList()
@@ -106,8 +108,12 @@ Page({
     })
     if (res.confirm) {
       try {
-        const db = wx.cloud.database()
-        await db.collection("goods").doc(_id).remove()
+        // const db = wx.cloud.database()
+        // await db.collection("goods").doc(_id).remove()
+        await wx.cloud.callFunction({
+          name: 'remove_good',
+          data: { id: _id }
+        })
         await this.getList()
         await wx.showToast({
           title: '删除成功',

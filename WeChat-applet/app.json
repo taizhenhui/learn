@@ -1,6 +1,8 @@
 {
     "pages": [
       "pages/goodsList/index",
+      "pages/yuncunchu/index",
+      "pages/yunhanshu/index",
       "pages/goodDetail/index",
       "pages/add/index",
       "pages/remove/index",

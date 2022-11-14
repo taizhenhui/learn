@@ -1,0 +1,3 @@
+<button bindtap="seleteImg" type="primary">
+  选择图片
+</button>
