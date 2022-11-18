@@ -1,0 +1,8 @@
+<button bindtap="chooseFile">
+  选择文件
+</button>
+
+<input class="input_sty" type="text" model:value="{{downloadUrl}}" placeholder="请输入下载链接"/>
+<button bindtap="downloadFile">
+  下载文件
+</button>

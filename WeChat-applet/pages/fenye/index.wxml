@@ -1,0 +1,5 @@
+
+<view wx:for="{{list}}" wx:key="index" class="number_sty">
+  {{item.num}}
+</view>
+<view wx:if="{{dataTips}}" class="tips_sty">没有更多了</view>

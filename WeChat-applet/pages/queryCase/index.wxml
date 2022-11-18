@@ -1,0 +1,13 @@
+<view>
+  <view class="select_con">
+    <input type="text" placeholder="请输入内容" bindinput="getValue"/>
+    <button type="primary" size="mini" bindtap="query">搜索</button>
+  </view>
+  <view wx:for="{{list}}" wx:key="index" class="list_sty">
+    <view class="card_sty">
+      <view class="card_title">{{item.title}}</view>
+      <view class="card_desc">{{item.desc}}</view>
+      <view class="card_content">{{item.content}}</view>
+    </view>
+  </view>
+</view>

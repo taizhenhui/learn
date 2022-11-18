@@ -1,0 +1,59 @@
+
+.select_con{
+  width: 100%;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgb(255, 162, 21);
+}
+.select_con input{
+  flex: 1;
+  height: 32px;
+  border: 1px solid rgb(128, 77, 0);
+  border-radius: 20px;
+  padding: 0 30rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.select_con button{
+  margin-left: 20rpx;
+}
+.list_sty{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.card_sty{
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 20rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 1px 1px 7px 2px #eee;
+  padding: 20rpx;
+  margin: 0 auto;
+}
+.card_title{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px dashed rgb(153, 153, 153);
+}
+.card_desc{
+  color: #999;
+  height: 80px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.card_content{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #666;
+  text-align: end;
+}

@@ -3,21 +3,17 @@ Page({
     list: [],
     name: '',
     price: '',
-    type: ''
-
+    type: '',
+    img:'',
   },
   onShow() {
+    wx.startPullDownRefresh()
+    this.getList()
+  },
+  onPullDownRefresh(){
     this.getList()
   },
   async getList(e) {  
-    let c= await wx.cloud.callFunction({
-      name:'add',
-      data:{
-        a:1,
-        b:2
-      }
-    })
-    console.log(c.result.sum,'ccccccccccc');
     let {
       type
     } = this.data
@@ -25,13 +21,35 @@ Page({
     const db = wx.cloud.database().collection('goods')
     try {
       let res = type == 'get' ? await db.get() : await db.orderBy('price', type).get()
+      wx.stopPullDownRefresh()
       this.setData({
         list: res.data
       })
     } catch (err) {
       console.log(err);
     }
-
+  },
+  async uploadImg(){
+    try {
+      let res = await wx.chooseMedia({
+        count: 1,
+        mediaType: ['image'],
+        sourceType: ['album', 'camera']
+      })
+      console.log('res',res);
+      let resImg = await wx.cloud.uploadFile({
+        // 指定上传到的云路径
+        cloudPath: `${+new Date()}.jpg`,
+        // 指定要上传的文件的小程序临时文件路径
+        filePath: res.tempFiles[0].tempFilePath,
+      })
+      this.setData({
+        img:resImg.fileID
+      })
+      // console.log('resImg',resImg);
+    } catch (err) {
+      console.log(err);
+    }
   },
   go(e) {
     let id = e.currentTarget.dataset.item._id
@@ -53,13 +71,15 @@ Page({
   reset() {
     this.setData({
       name: '',
-      price: ''
+      price: '',
+      img:''
     })
   },
   async addGood() {
     let {
       name,
-      price
+      price,
+      img
     } = this.data
     if (name == '') {
       wx.showToast({
@@ -75,9 +95,17 @@ Page({
       })
       return
     }
+    if (img == '') {
+      wx.showToast({
+        icon: 'none',
+        title: '请上传图片',
+      })
+      return
+    }
     let data = {
       name,
-      price: Number(price)
+      price: Number(price),
+      img
     }
     try {
       // const db = wx.cloud.database()

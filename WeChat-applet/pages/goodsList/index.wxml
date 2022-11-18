@@ -9,13 +9,20 @@
       <text class="label">价格：</text>
       <input type="number" bindinput="getPrice" class="input_sty" placeholder="请输入价格" value="{{price}}"/>
     </view>
+    <view class="upload_img" bindtap="uploadImg">
+      <image src="{{img}}" wx:if="{{img}}"></image>
+      <text wx:if="{{!img}}">上传图片</text>
+    </view>
   </view>
   <button size="mini" type="primary" bindtap="addGood">添加商品</button>
   <button size="mini" type="primary" bindtap="getList" data-type="up">按价格升序</button>
   <button size="mini" type="primary" bindtap="getList" data-type="down">按价格降序</button>
 
   <view wx:for="{{list}}" wx:for-index="i" wx:key="i" class="list_sty">
-    <text>商品名：{{item.name}} ------ 价格：{{item.price}}</text>
+    <view class="img_box">
+      <image src="{{item.img}}"></image>
+    </view>
+    <text>{{item.name}} -- 价格：{{item.price}}</text>
     <view>
       <button class="btn_handle" size="mini" type="warn" bindtap="remove" data-item="{{item}}">删除</button>
       <button class="btn_handle" size="mini" type="primary" bindtap="go" data-item="{{item}}">详情</button>

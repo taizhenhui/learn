@@ -20,8 +20,34 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20rpx;
+  margin-bottom: 10rpx;
 }
 
 .btn_handle{
   margin-left: 10rpx;
+}
+
+.img_box{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: pink;
+  overflow: hidden;
+}
+.img_box image{
+  width: 100%;
+  height: 150rpx;
+}
+.upload_img{
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px dashed rgb(30, 126, 235);
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 200rpx;
+  margin-bottom: 20rpx;
+  margin-left: 140rpx;
+}
+.upload_img image{
+  width: 100%;
+  height: 100%;
 }

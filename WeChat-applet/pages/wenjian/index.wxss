@@ -1,0 +1,6 @@
+.input_sty{
+  width: 80%;
+  height: 60rpx;
+  border: 1px solid #666;
+  margin: 20rpx auto;
+}

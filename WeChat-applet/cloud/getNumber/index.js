@@ -5,11 +5,12 @@ cloud.init({ env: cloud.DYNAMIC_CURRENT_ENV }) // 使用当前云环境
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  await cloud.database().collection('goods').add({
-    data:{
-      name: event.name,
-      price: event.price,
-      img:event.img
-    }
-  })
+  let db = cloud.database()
+  const number = await db.collection('number')
+  .skip(event.page*event.pageSize)
+  .limit(event.pageSize)
+  .get()
+  return {
+    number
+  }
 }
