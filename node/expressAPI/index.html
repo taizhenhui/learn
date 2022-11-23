@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+  <button id="get">get-btn</button>
+  <button id="post">post-btn</button>
+  <button id="jsonp">jsonp-btn</button>
+  <button id="delete">delete-btn</button>
+
+  <script>
+    $(function(){
+      $('#get').on('click', function(){
+        $.ajax({
+          method:'GET',
+          url:'http://127.0.0.1:8080/api/get',
+          data:{name:'asd', age:15},
+          success: (res) => {
+            console.log('get', res)
+          }
+        })
+      })
+
+      $('#post').on('click', function(){
+        $.ajax({
+          method:'POST',
+          url:'http://127.0.0.1:8080/api/post',
+          data:{nikename:'qwer', gender:'男'},
+          success: (res) => {
+            console.log('post', res)
+          }
+        })
+      })
+
+      $('#jsonp').on('click', function(){
+        $.ajax({
+          method:'GET',
+          url:'http://127.0.0.1:8080/api/jsonp',
+          dataType:'jsonp',
+          success: (res) => {
+            console.log('jsonp', res)
+          }
+        })
+      })
+
+      $('#delete').on('click', function(){
+        $.ajax({
+          method:'DELETE',
+          url:'http://127.0.0.1:8080/api/delete',
+          success: (res) => {
+            console.log('delete', res)
+          }
+        })
+      })
+    })
+  </script>
+</body>
+</html>
