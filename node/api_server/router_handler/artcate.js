@@ -39,3 +39,16 @@ exports.deleteCateById = (req, res) => {
     res.cc('删除文章分类成功！', 0)
   })
 }
+
+exports.getArtCateById = (req, res) => {
+  const sql = `select * from ev_article_cate where id=?`
+  db.query(sql, req.params.id, (err, results) => {
+    if(err) return res.cc(err)
+    if(results.length !== 1) return  res.cc('获取文章分类数据失败！')
+    res.send({
+      status: 0,
+      message: '获取文章分类数据成功！',
+      data: results[0],
+    })
+  })
+}
