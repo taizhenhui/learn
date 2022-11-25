@@ -26,17 +26,28 @@ exports.updateUserInfo = (req, res) => {
 
 exports.updatePassword = (req, res) => {
   const sql =  `select * from ev_users where id=?`
-  db.query(sql, req.user.id, (err, results) => {
+  let { body: {oldPwd, newPwd} ,user: { id } } = req
+  db.query(sql, id, (err, results) => {
     if(err) return res.cc(err)
     if(results.length !== 1) return res.cc('用户不存在！')
-    const compareResult = bcrypt.compareSync(req.body.oldPwd, results[0].password)
+    const compareResult = bcrypt.compareSync(oldPwd, results[0].password)
     if(!compareResult) return res.cc('原密码错误！')
     const updateSql = `update ev_users set password=? where id=?`
-    const newPwd = bcrypt.hashSync(req.body.newPwd, 10)
-    db.query(updateSql, [newPwd, req.user.id], (err, results) => {
+    newPwd = bcrypt.hashSync(newPwd, 10)
+    db.query(updateSql, [newPwd, id], (err, results) => {
       if(err) return res.cc(err)
       if(results.affectedRows !== 1) return res.cc('更新密码失败！')
       res.cc('更新密码成功！', 0)
     })
+  })
+}
+
+exports.updateAvatar = (req, res) => {
+  const sql = `update ev_users set user_pic=? where id=?`
+  let { body: { avatar }, user: { id } } = req
+  db.query(sql, [avatar, id], (err, results) => {
+    if(err) return res.cc(err)
+    if(results.affectedRows !== 1) return res.cc('头像更新失败')
+    res.cc('更新头像成功！',0)
   })
 }
