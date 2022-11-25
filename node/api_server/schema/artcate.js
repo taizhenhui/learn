@@ -5,19 +5,29 @@ const alias = joi.string().alphanum().required()
 const id = joi.number().integer().min(1).required()
 
 exports.add_cate_schema = {
-  body:{
+  body: {
     name,
     alias
   }
 }
+
 exports.delete_cate_schema = {
-  params:{
+  params: {
     id
   }
 }
+
 exports.get_cate_schema = {
-  params:{
+  params: {
     id
+  }
+}
+
+exports.update_cate_schema = {
+  body: {
+    id,
+    name,
+    alias
   }
 }
 

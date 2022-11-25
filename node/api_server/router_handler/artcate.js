@@ -52,3 +52,21 @@ exports.getArtCateById = (req, res) => {
     })
   })
 }
+
+exports.updateCateById = (req, res) => {
+  let {id, name, alias} = req.body
+  const sql = `select * from ev_article_cate where id<>? and (name=? or alias=?)`
+  db.query(sql, [id, name, alias], (err, results) => {
+    console.log(results,'results');
+    if(err) return res.cc(err)
+    if(results.length === 1 && name === results[0].name && alias === results[0].alias) return res.cc('分类名称与别名被占用，请更换后重试！')
+    if(results.length === 1 && name === results[0].name) return res.cc('分类名称 被占用，请更换后重试！')
+    if(results.length === 1 && alias === results[0].alias) return res.cc('分类别名 被占用，请更换后重试！')
+    const updateSql = `update ev_article_cate set ? where id=?`
+    db.query(updateSql, [req.body, id], (err, results) => {
+      if(err) return res.cc(err)
+      if(results.affectedRows !== 1) return res.cc('更新文章分类失败！')
+      res.cc('更新文章分类成功！', 0)
+    })
+  })
+}
