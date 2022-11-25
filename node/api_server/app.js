@@ -4,6 +4,7 @@ const expressJWT = require('express-jwt')
 const { jwtSecretKey } = require('./config')
 const userRouter = require('./router/user')
 const userinfoRouter = require('./router/userinfo')
+const artCateRouter  = require('./router/artcate')
 const app = express()
 
 app.use((req, res, next)=>{
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false }))
 // 路由 api
 app.use('/api', userRouter)
 app.use('/my', userinfoRouter)
+app.use('/my/article', artCateRouter)
 // 错误中间件
 app.use((err, req, res, next)=>{
   // if(err instanceof joi.ValidationError) return res.cc(err)
