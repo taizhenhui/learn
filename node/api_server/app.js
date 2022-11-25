@@ -5,6 +5,7 @@ const { jwtSecretKey } = require('./config')
 const userRouter = require('./router/user')
 const userinfoRouter = require('./router/userinfo')
 const artCateRouter  = require('./router/artcate')
+const articleRouter  = require('./router/article')
 const app = express()
 
 app.use((req, res, next)=>{
@@ -20,10 +21,12 @@ app.use((req, res, next)=>{
 app.use(cors())
 app.use(expressJWT({secret:jwtSecretKey}).unless({ path: [/^\/api\//] }))
 app.use(express.urlencoded({ extended: false }))
+app.use('/uploads', express.static('./uploads'))
 // 路由 api
 app.use('/api', userRouter)
 app.use('/my', userinfoRouter)
-app.use('/my/article', artCateRouter)
+app.use('/my/artcate', artCateRouter)
+app.use('/my/article', articleRouter)
 // 错误中间件
 app.use((err, req, res, next)=>{
   // if(err instanceof joi.ValidationError) return res.cc(err)
