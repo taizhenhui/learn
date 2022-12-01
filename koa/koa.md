@@ -18,3 +18,19 @@ npm init -y
 npm i koa
 ```
 
+
+
+### hello world 代码
+
+```js
+const Koa = require('koa')
+const app = new Koa()
+
+app.use( async ( ctx ) => {
+  ctx.body = 'hello koa2' //json数据
+})
+
+app.listen(3000)
+```
+
+![image-20220417092053231](E:\project\TAI\tai-project\node-ppt\笔记\笔记.assets\image-20220417092053231.png)

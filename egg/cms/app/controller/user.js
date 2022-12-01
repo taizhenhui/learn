@@ -34,6 +34,28 @@ class UserController extends Controller{
       data: 'success'
     }
   }
+  async update() {
+    
+    const {ctx,service} = this
+    let id = ctx.params.id
+    let user = ctx.request.body
+    user.id = id
+    await service.user.update(user)
+    ctx.body = {
+      code: 0,
+      data: 'success'
+    }
+  }
+  async destroy() {
+    console.log(123);
+    const {ctx, service} = this
+    let id = ctx.params.id
+    await service.user.destroy(id)
+    ctx.body = {
+      code: 0,
+      data: 'success'
+    }
+  }
 }
 
 module.exports = UserController
