@@ -9,4 +9,7 @@ module.exports = app => {
   router.redirect('/', '/swagger-ui.html', 302);
   router.resources('user', '/api/user', controller.user)
   router.resources('role', '/api/role', controller.role)
+  router.resources('roleUser', '/api/roleUser', controller.roleUser)
+  router.resources('roleResource', '/api/roleResource', controller.roleResource)
+  router.resources('resource', '/api/resource', controller.resource)
 };
