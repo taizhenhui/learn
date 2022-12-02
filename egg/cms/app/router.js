@@ -12,4 +12,11 @@ module.exports = app => {
   router.resources('roleUser', '/api/roleUser', controller.roleUser)
   router.resources('roleResource', '/api/roleResource', controller.roleResource)
   router.resources('resource', '/api/resource', controller.resource)
+
+
+  router.get('/api/role/getResource', controller.role.getResource) // 获取所有的资源
+  // router.get('/api/role/setResource', controller.role.setResource) // 设置角色和资源的关系
+
+  // router.get('/api/role/getUser', controller.role.getUser) // 获取所有的用户
+  // router.get('/api/role/setUser', controller.role.setUser) // 设置角色和用户的关系
 };

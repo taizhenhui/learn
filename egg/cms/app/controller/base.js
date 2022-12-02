@@ -3,44 +3,45 @@
 
 const { Controller } = require('egg');
 
-class BaseController extends Controller{
+class BaseController extends Controller {
 
-  async index(){
-    const {service} = this
-    let list = await service[this.entity].list()
+  async index() {
+    const { ctx, service } = this
+    const { pageNum, pageSize, ...where } = ctx.query
+    let list = await service[this.entity].list(isNaN(pageNum) ? 1 : parseInt(pageNum), isNaN(pageSize) ? 10 : parseInt(pageSize), where)
     this.success(list)
   }
-  async create(){
-    const {ctx,service} = this
+  async create() {
+    const { ctx, service } = this
     let entity = ctx.request.body
-    await service[this.entity].create(entity)
-    this.success('success')
+    const result = await service[this.entity].create(entity)
+    result ? this.success('success') : this.error('创建失败')
   }
   async update() {
-    const {ctx,service} = this
+    const { ctx, service } = this
     let id = ctx.params.id
     let entity = ctx.request.body
     entity.id = id
-    await service[this.entity].update(entity)
-    this.success('success')
+    const result = await service[this.entity].update(entity)
+    result ? this.success('success') : this.error('修改失败')
   }
   async destroy() {
-    const {ctx, service} = this
+    const { ctx, service } = this
     let id = ctx.params.id
-    await service[this.entity].destroy(id)
-    this.success('success')
+    const result = await service[this.entity].destroy(id)
+    result ? this.success('success') : this.error('修改失败')
   }
-  success(data){
+  success(data) {
     this.ctx.body = {
       code: 0,
       data,
     }
   }
-  error(error){
+  error(error) {
     this.ctx.body = {
       code: 1,
       error,
-    }  
+    }
   }
 }
 
