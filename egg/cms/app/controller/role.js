@@ -12,6 +12,23 @@ class Controller extends BaseController {
     const result = await service.role.getResource()
     ctx.body = result
   }
+  async setResource() {
+    const { ctx, service } = this
+    let body = ctx.request.body  // {roleId: 1 , resourceIds:[1,2,3]}
+    const result = await service.role.setResource(body)
+    this.success('授权成功')
+  }
+  async getUser() {
+    const { ctx, service } = this
+    const result = await service.role.getUser()
+    ctx.body = result
+  }
+  async setUser() {
+    const { ctx, service } = this
+    let body = ctx.request.body  // {roleId: 1 , resourceIds:[1,2,3]}
+    const result = await service.role.setUser(body)
+    this.success('授权成功')
+  }
 }
 
 module.exports = Controller
