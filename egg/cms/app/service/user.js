@@ -34,5 +34,19 @@ class Service extends BaseService {
     const total = await this.app.mysql.count(this.entity, where)
     return { data, total }
   }
+
+  async signup(body) {
+    await this.create(body)
+  }
+  async signin(body) {
+    const { ctx, app: { mysql } } = this
+    const{ username, password } = ctx.request.body
+    const result = await mysql.select('user', {
+      where: { username, password },
+      limit: 1
+    })
+    return result
+   
+  }
 }
 module.exports = Service

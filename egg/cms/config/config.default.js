@@ -31,15 +31,15 @@ module.exports = appInfo => {
    * @property {Boolean} routeMap - 是否自动生成route
    * @property {Boolean} enable - swagger-ui是否可以访问
    */
-   config.swaggerdoc = {
+  config.swaggerdoc = {
     dirScanner: './app/controller',
     apiInfo: {
       title: 'egg-swagger文档',
       description: 'swagger-ui for egg',
       version: '1.0.0',
     },
-    consumes: ['application/json','multipart/form-data'], // 指定处理请求的提交内容类型（Content-Type），例如application/json, text/html
-    produces: ['application/json','multipart/form-data'], // 指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回
+    consumes: ['application/json', 'multipart/form-data'], // 指定处理请求的提交内容类型（Content-Type），例如application/json, text/html
+    produces: ['application/json', 'multipart/form-data'], // 指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回
     schemes: ['http', 'https'],
     routerMap: true,
     enable: true,
@@ -49,7 +49,8 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
   userConfig.security = {
-    csrf: false
+    csrf: false,
+    domainWhiteList: ['http://localhost:8000'],
   }
   userConfig.mysql = {
     client: {
