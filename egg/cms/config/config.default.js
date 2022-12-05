@@ -16,7 +16,15 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1669705551730_4649';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = [
+    // 'auth',
+  ];
+  config.auth = {
+    authUrls:[
+      '/api/role/getUser',
+      '/api/role/setUser'
+    ]
+  }
   /**
    * 配置swagger
    * @property {String} dirScanner - 插件扫描的文档路径
@@ -52,6 +60,7 @@ module.exports = appInfo => {
     csrf: false,
     domainWhiteList: ['http://localhost:8000'],
   }
+  userConfig.jwtSecret = 'tai ^_^!'
   userConfig.mysql = {
     client: {
       host: 'localhost',

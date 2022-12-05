@@ -20,6 +20,7 @@ class Controller extends BaseController {
   }
   async getUser() {
     const { ctx, service } = this
+    console.log('getUser',ctx.session.user);
     const result = await service.role.getUser()
     ctx.body = result
   }

@@ -6,6 +6,7 @@
 module.exports = app => {
   const { router, controller } = app;
   // router.get('/', controller.home.index);
+  let auth = app.middleware.auth({},app)
   router.redirect('/', '/swagger-ui.html', 302);
   // CRUD 路由
   router.resources('user', '/api/user', controller.user)
@@ -18,8 +19,8 @@ module.exports = app => {
   router.get('/api/role/getResource', controller.role.getResource) // 获取所有的资源
   router.post('/api/role/setResource', controller.role.setResource) // 设置角色和资源的关系
 
-  router.get('/api/role/getUser', controller.role.getUser) // 获取所有的用户
-  router.post('/api/role/setUser', controller.role.setUser) // 设置角色和用户的关系
+  router.get('/api/role/getUser',auth, controller.role.getUser) // 获取所有的用户
+  router.post('/api/role/setUser',auth, controller.role.setUser) // 设置角色和用户的关系
 
   router.get('/api/captcha', controller.user.captcha)
   router.post('/api/checkCaptcha', controller.user.checkCaptcha)
@@ -28,3 +29,6 @@ module.exports = app => {
 
 
 };
+/*
+ * 1. 设置黑白名单
+ */ 
