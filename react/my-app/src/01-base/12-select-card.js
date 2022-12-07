@@ -19,10 +19,10 @@ export default class App extends Component {
     return (
       <div className='container'>
         <div className='content'>
-          {/* {current === 0 && <Film></Film>}
-          {current === 1 && <Center></Center>}
-          {current === 2 && <Cinma></Cinma>} */}
-          {this.showComponent(current)}
+          {current === 0 && <Film></Film>}
+          {current === 1 && <Cinma></Cinma>}
+          {current === 2 && <Center></Center>}
+          {/* {this.showComponent(current)} */}
         </div>
         <div className='footer_bar fl'>
           {
@@ -38,16 +38,16 @@ export default class App extends Component {
       </div>
     )
   }
-  showComponent = (current) => { 
-    switch (current) {
-      case 0:
-        return <Film></Film>
-      case 1:
-        return <Center></Center>
-      case 2:
-        return <Cinma></Cinma>
-    }
-  }
+  // showComponent = (current) => { 
+  //   switch (current) {
+  //     case 0:
+  //       return <Film></Film>
+  //     case 1:
+  //       return <Center></Center>
+  //     case 2:
+  //       return <Cinma></Cinma>
+  //   }
+  // }
   selectHandle = (i) => {
     let { current } = this.state
     current = i
