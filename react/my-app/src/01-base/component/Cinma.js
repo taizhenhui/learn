@@ -10,8 +10,9 @@ export default class Cinma extends Component {
     this.getdata()
     this.state = {
       cinemasList: [],
-      copyCinemasList: [],
-      searchList: []
+      // copyCinemasList: [],
+      myText: '',
+      // searchList: []
     }
   }
 
@@ -25,13 +26,13 @@ export default class Cinma extends Component {
     return (
       <div >
         <div className='header fl'>
-          <input type="text" onInput={(e) => this.handleInput(e)} />
+          <input type="text" value={this.state.myText} onChange={(e) => this.handleInput(e)} />
         </div>
         <div style={{ height: '60px' }}></div>
         <div className='wrapper'>
           <div className='content'>
             {
-              cinemasList.map(m =>
+              this.getCinemasList().map(m =>
                 <div key={m.cinemaId} style={styleObj}>
                   <p>{m.name}</p>
                   <p style={{ color: '#999', marginTop: '5px' }}>{m.address}</p>
@@ -54,7 +55,10 @@ export default class Cinma extends Component {
         }
       })
       let { data: { cinemas }, } = res.data
-      this.setState({ cinemasList: cinemas, copyCinemasList: cinemas }, () => {
+      this.setState({
+        cinemasList: cinemas,
+        // copyCinemasList: cinemas 
+      }, () => {
         new BetterScroll('.wrapper')
       })
 
@@ -62,16 +66,22 @@ export default class Cinma extends Component {
       console.log(error);
     }
   }
+  getCinemasList = () => {
+    let { myText, cinemasList } = this.state
+    return cinemasList.filter(f => f.name.toUpperCase().includes(myText.toUpperCase()) || f.address.toUpperCase().includes(myText.toUpperCase()))
+  }
   handleInput = (e) => {
-
-    let { searchList, copyCinemasList } = this.state
-    searchList = copyCinemasList.filter(f => f.name.toUpperCase().includes(e.target.value.toUpperCase()) || f.address.toUpperCase().includes(e.target.value.toUpperCase()))
     this.setState({
-      cinemasList: searchList
-    }, () => {
-
+      myText: e.target.value
     })
-    console.log(searchList);
+    // let { searchList, cinemasList } = this.state
+    // searchList = cinemasList.filter(f => f.name.toUpperCase().includes(e.target.value.toUpperCase()) || f.address.toUpperCase().includes(e.target.value.toUpperCase()))
+    // this.setState({
+    //   cinemasList: searchList
+    // }, () => {
+
+    // })
+    // console.log(searchList);
 
   }
 }

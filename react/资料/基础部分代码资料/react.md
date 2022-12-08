@@ -51,15 +51,10 @@
 
 ```js
 ├── README.md 使用方法的文档
-
 ├── node_modules 所有的依赖安装的目录
-
 ├── package-lock.json 锁定安装时的包的版本号,保证团队的依赖能保证一致。
-
 ├── package.json
-
 ├── public 静态公共目录
-
 └── src 开发用的源代码目录
 ```
 
@@ -200,33 +195,33 @@ const element = React.createElement(
 
 ### 组件
 
-1. 函数组件
+##### 函数组件
 
-   定义组件最简单的方式就是编写 JavaScript 函数
+定义组件最简单的方式就是编写 JavaScript 函数
 
-   ```react
-   function Welcome(props) {
-     return <h1>Hello, {props.name}</h1>;
-   }
-   ```
+```react
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
 
-   该函数组件它接收唯一带有数据的 “props”（代表属性）对象与并返回一个 React 元素。它本质上就是 JavaScript 函数
+该函数组件它接收唯一带有数据的 “props”（代表属性）对象与并返回一个 React 元素。它本质上就是 JavaScript 函数
 
-   
 
-2. class类组件
 
-   你同时还可以使用 ES6 的 class 来定义组件
+##### class类组件
 
-   ```react
-   class Welcome extends React.Component {
-     render() {
-       return <h1>Hello, {this.props.name}</h1>;
-     }
-   }
-   ```
+你同时还可以使用 ES6 的 class 来定义组件
 
-**注意**
+```react
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+##### 注意
 
 > **注意：** 组件名称必须以大写字母开头。
 >
@@ -237,6 +232,8 @@ const element = React.createElement(
 
 
 ### 事件处理
+
+##### 事件介绍
 
 ​		采用 on+事件名 的方式来绑定一个事件，原生的事件全是小写onclick , React里的事件是驼峰 onClick ，**React的事件并不是原生事件，而是合成事件**。
 
@@ -265,7 +262,7 @@ React
 
 
 
-**事件handler的写法**
+##### 事件handler的写法
 
 1. 直接在render里写行内的箭头函数(不推荐)
 
@@ -317,13 +314,13 @@ React
 
 
 
-**Event** **对象**
+##### Event **对象**
 
 ​		事件handler会被自动传入一个 event 对象，这个对象和普通的浏览器 event 对象所包含的方法和属性都基本一致。不同的是 React中的 event 对象并不是浏览器提供的，而是它自己内部所构建的。它同样具有 event.stopPropagation 、 event.preventDefault 这种常用的方法
 
 
 
-**向事件处理程序传递参数**
+##### 向事件处理程序传递参数
 
  `id` 是你要删除那一行的 ID，以下两种方式都可以向事件处理函数传递参数：
 
@@ -430,11 +427,11 @@ class Clock extends React.Component {
 
 ### Refs
 
-1. **给标签设置****ref="username"**
+1. **给标签设置** ref="username"
 
    通过这个获取this.refs.username , ref可以获取到应用的真实dom
 
-2. **给组件设置****ref="username"**
+2. **给组件设置** ref="username"
 
    通过这个获取this.refs.username ,ref可以获取到组件对象
 
@@ -460,7 +457,7 @@ const node = this.myRef.current;
 
 
 
-### props
+### Props
 
 ​		props 是正常是外部传入的，组件内部也可以通过一些方式来初始化的设置，属性不能被组件自己更
 
@@ -530,11 +527,15 @@ const node = this.myRef.current;
 
 染。	
 
+
+
 ​		props 的主要作用是让使用该组件的父组件可以传入参数来配置该组件。它是外部传进来的配置参
 
 数，组件内部无法控制也无法修改。除非外部组件主动传入新的 props ，否则组件的 props 永远保持
 
 不变。
+
+
 
 > 没有 state 的组件叫无状态组件（stateless component），设置了 state 的叫做有状态组件
 >
@@ -703,3 +704,8 @@ const todoItems = todos.map((todo, index) =>
 
 
 
+### 表单
+
+##### 非受控组件
+
+##### 受控组件
