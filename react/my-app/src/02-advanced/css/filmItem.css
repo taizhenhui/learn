@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.fl {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.fl-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text_ell {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.container {
+  width: 100%;
+  height: 100px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+/* 图片 */
+.l_img {
+  width: 70px;
+  height: 100%;
+  background-color: pink;
+  overflow: hidden;
+
+}
+
+.l_img img {
+  width: 100%;
+}
+
+/* 信息 */
+.r_info {
+  width: calc(100% - 110px);
+  height: 100%;
+  font-size: 12px;
+  color: rgb(124, 124, 124);
+  padding: 5px 5px 5px 10px;
+}
+
+.r_info h1 {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(35, 35, 35);
+}
+
+
+
+.r_info .info_actors {
+  width: calc(95%);
+}
+
+.r_info .info_grade span {
+  color: rgb(246, 164, 87);
+}
+
+
+
+/* 按钮 */
+.pay_btn {
+  width: 40px;
+  height: 22px;
+}
+
+.pay_btn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #fff;
+  border: 1px solid rgb(246, 164, 87);
+  border-radius: 5px;
+  color: rgb(246, 164, 87);
+  line-height: 100%;
+  text-align: center;
+  font-size: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

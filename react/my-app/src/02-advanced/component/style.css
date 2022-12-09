@@ -1,0 +1,85 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper{
+  width: 100%;
+  height: calc(100vh - 110px);
+  overflow: hidden;
+}
+.list button,
+.header button {
+  border: none;
+  color: #fff;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+.header{
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  position: fixed;
+  top: 48px;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
+  
+}
+.fl{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header button{
+  width: 80px;
+  height: 36px;
+  background-color: rgb(42, 102, 255);
+  border-radius: 6px;
+}
+.header button:hover{
+  background-color: rgb(17, 79, 237);
+  transition: 0.3s;
+}
+
+.header input{
+  flex: 1;
+  height: 34px;
+  border-radius: 6px;
+  border: none;
+  border: 1px solid rgb(134, 134, 134);
+  padding: 5px;
+}
+
+.navber_sty{
+  width: 100%;
+  height: 48px;
+  padding: 0 10px;
+  background-color: rgb(42, 102, 255);
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+}
+.navber_sty div{
+  width: 48px;
+  height: 48px;
+}
+.navber_sty .l_btn span {
+  height: 48px;
+  line-height: 48px;
+}
+.navber_sty p{
+  flex: 1;
+  text-align: center;
+}
+.navber_sty .r_btn span{
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  border:none;
+  background-color: rgba(0,0,0,0);
+  
+}
