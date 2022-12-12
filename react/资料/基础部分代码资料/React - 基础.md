@@ -710,7 +710,7 @@ const todoItems = todos.map((todo, index) =>
 >
 > 另一种替代方案是使用 **非受控组件** ，这时表单数据将交由 DOM 节点来处理。
 
-##### 
+
 
 ##### 非受控组件
 
