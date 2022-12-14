@@ -3,10 +3,13 @@
   margin: 0;
   box-sizing: border-box;
 }
-.wrapper{
-  width: 100%;
-  height: calc(100vh - 120px);
-  overflow: hidden;
+.container {
+  margin: 100px auto;
+  width: min(30%, 500px);
+  min-height: 50px;
+  padding: 10px;
+  border: 1px solid rgb(42, 102, 255);
+  border-radius: 10px;
 }
 .list button,
 .header button {
@@ -19,11 +22,6 @@
   width: 100%;
   height: 60px;
   border-bottom: 1px solid #eee;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #fff;
   
 }
 .fl{
@@ -49,4 +47,33 @@
   border: none;
   border: 1px solid rgb(134, 134, 134);
   padding: 5px;
+}
+.content{
+  width: 100%;
+  min-height: 100px;
+  margin-top: 10px;
+
+}
+.list{
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+.list:hover{
+  background-color: rgba(147, 176, 255,0.1);
+  transition: 0.3s;
+}
+.list button{
+  width: 60px;
+  height: 28px;
+  background-color: rgb(250, 77, 77);
+  border-radius: 4px;
+}
+.list button:hover {
+  background-color: rgb(231, 30, 30);
+  transition: 0.3s;
+}
+.list p {
+  flex: 1;
 }

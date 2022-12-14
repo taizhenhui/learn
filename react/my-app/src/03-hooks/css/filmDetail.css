@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.fl {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.fl-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text_ell {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.container1{
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 150px;
+  min-height: 200px;
+  background-color: rgba(255, 127, 22, 0.5);
+  color: #fff;
+}
