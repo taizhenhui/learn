@@ -14,7 +14,7 @@ export default function App() {
     let newList = [...list]
     newList.splice(i,1)
     setList(newList)
-  }
+  } 
   return (
     <div>
       <input type="text" onChange={(e) => handleChange(e)} value={text} />
