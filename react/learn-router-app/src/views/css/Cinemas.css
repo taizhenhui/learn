@@ -1,0 +1,16 @@
+.tabs_sty{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabs_sty span{
+  flex: 1;
+  line-height: 40px;
+  text-align: center;
+  color: #333;
+}
+.activeTabs{
+  color: red !important;
+}
