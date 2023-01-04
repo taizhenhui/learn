@@ -7,8 +7,7 @@ export default function App() {
   const [isShow, setIsShow] = useState(true)
   useEffect(() => {
     store.subscribe(() => {
-      console.log('app 订阅',store.getState())
-      let {show} = store.getState()
+      let {show} = store.getState().TabbarReducer
       setIsShow(show)
     })
   }, [])

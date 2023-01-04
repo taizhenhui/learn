@@ -1,18 +1,13 @@
 import React, { useEffect } from "react"
 import { useHistory } from "react-router-dom";
+import { hide, show } from "../redux/actionCreator/TabbarActionCreator";
 import store from '../redux/store'
 export default function Detail(props) {
-  console.log(props.match.params);
   const history = useHistory()
-
   useEffect(() => {
-    store.dispatch({
-      type:'hide-tabber'
-    })
+    store.dispatch(hide())
     return () => {
-      store.dispatch({
-        type:'show-tabber'
-      })
+      store.dispatch(show())
     }
   }, [])
 
