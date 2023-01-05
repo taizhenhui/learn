@@ -1,0 +1,9 @@
+/* .adm-list-item-description{
+  width: 200px;
+} */
+.adm-list-item-content-main{
+  overflow: hidden;
+}
+.adm-list-default .adm-list-body{
+  border: none;
+}
