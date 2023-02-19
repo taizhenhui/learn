@@ -3,66 +3,64 @@
     <section class="todoapp">
       <header class="header">
         <h1>todos</h1>
-        <input class="new-todo"
-               autofocus=""
-               autocomplete="off"
-               placeholder="What needs to be done?"
-               v-model="newTodoRef"
-               @keyup.enter="addTodo" />
+        <input
+          class="new-todo"
+          autofocus=""
+          autocomplete="off"
+          placeholder="What needs to be done?"
+          v-model="newTodoRef"
+          @keyup.enter="addTodo"
+        />
       </header>
-      <section class="main">
-        <input id="toggle-all"
-               class="toggle-all"
-               type="checkbox" />
+      <section class="main" v-show="todosRef.length > 0">
+        <input id="toggle-all" class="toggle-all" type="checkbox" v-model="allDoneRef"/>
         <label for="toggle-all">Mark all as complete</label>
         <ul class="todo-list">
-          <li class="todo">
+          <li
+            class="todo"
+            :class="{
+              completed: todo.completed,
+              editing: todo === editTodoRef
+            }"
+            v-for="todo in filteredTodosRef"
+            :key="todo.id"
+          >
             <div class="view">
-              <input class="toggle"
-                     type="checkbox" />
-              <label>学习composition api</label>
-              <button class="destroy"></button>
+              <input class="toggle" type="checkbox" v-model="todo.completed" />
+              <label @dblclick="editTodo(todo)">{{ todo.title }}</label>
+              <button class="destroy" @click="delTodo(todo)"></button>
             </div>
-            <input class="edit"
-                   type="text" />
-          </li>
-          <li class="todo">
-            <div class="view">
-              <input class="toggle"
-                     type="checkbox" />
-              <label>投递50封简历</label>
-              <button class="destroy"></button>
-            </div>
-            <input class="edit"
-                   type="text" />
-          </li>
-          <li class="todo">
-            <div class="view">
-              <input class="toggle"
-                     type="checkbox" />
-              <label>上午10:30 参加面试</label>
-              <button class="destroy"></button>
-            </div>
-            <input class="edit"
-                   type="text" />
+            <input
+              class="edit"
+              type="text"
+              v-model="todo.title"
+              @blur="doneEdit(todo)"
+              @keyup.enter="doneEdit(todo)"
+              @keyup.esc="cancelEdit(todo)"
+            />
           </li>
         </ul>
       </section>
-      <footer class="footer">
+      <footer class="footer" v-show="todosRef.length > 0">
         <span class="todo-count">
-          <strong>3</strong>
-          <span>items left</span>
+          <strong>{{ remainingRef }}</strong>
+          <span>item{{ remainingRef > 1 ? "s" : "" }} left</span>
         </span>
         <ul class="filters">
-          <li><a href="#/all"
-               class="selected">All</a></li>
-          <li><a href="#/active"
-               class="">Active</a></li>
-          <li><a href="#/completed"
-               class="">Completed</a></li>
+          <li>
+            <a href="#/all" :class="{ selected: visibilityRef === 'all' }">All</a>
+          </li>
+          <li>
+            <a href="#/active" :class="{ selected: visibilityRef === 'active' }" >Active</a>
+          </li>
+          <li>
+            <a
+              href="#/completed"
+              :class="{ selected: visibilityRef === 'completed' }"
+              >Completed</a>
+          </li>
         </ul>
-        <button class="clear-completed"
-                style="display: none">
+        <button class="clear-completed" v-show="completedRef > 0" @click="delAllTodo">
           Clear completed
         </button>
       </footer>
@@ -71,8 +69,12 @@
 </template>
 
 <script>
-import useTodoList from './composition/useTodoList'
-import useNewTodo from './composition/useNewTodo'
+import useTodoList from "./composition/useTodoList"
+import useNewTodo from "./composition/useNewTodo"
+import useFilter from "./composition/useFilter"
+import useEditTodo from "./composition/useEditTodo"
+import useEeleteTodo from './composition/useDeleteTodo'
+
 export default {
   setup() {
     const { todosRef } = useTodoList()
@@ -80,7 +82,10 @@ export default {
     return {
       todosRef,
       ...useNewTodo(todosRef),
+      ...useFilter(todosRef),
+      ...useEditTodo(todosRef),
+      ...useEeleteTodo(todosRef),
     }
-  },
+  }
 }
 </script>

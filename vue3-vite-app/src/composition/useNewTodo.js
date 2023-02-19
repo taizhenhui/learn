@@ -14,7 +14,6 @@ export default function useNewTodo(todosRef) {
       title: value,
       completed: false, // 任务是否完成
     }
-    
     todosRef.value.push(todo)
     newTodoRef.value = ''
   }
