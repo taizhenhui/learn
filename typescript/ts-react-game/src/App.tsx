@@ -1,9 +1,12 @@
 import React from 'react';
+import { GameComp } from './components/GameComp';
 
 function App() {
+
+
   return (
     <div className="App">
-      <h1>App.tsx</h1>
+      <GameComp  />
     </div>
   );
 }
