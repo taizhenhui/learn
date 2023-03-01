@@ -1,16 +1,8 @@
-import { Square } from "./core/Square"
-import { IPoint, IViewer } from "./core/types"
 import { SquarePageView } from "./core/view/SquarePageView"
 import $ from 'jquery'
-import { SquareGroup } from "./core/SquareGroup"
+import { createTeris } from "./core/Teris"
 
-const groupArr: IPoint[] = [
-  { x: 0, y: -1 },
-  { x: -1, y: 0 },
-  { x: 0, y: 0 },
-  { x: 0, y: 1 }
-]
-const group = new SquareGroup(groupArr, { x: 3, y: 2 }, 'red')
+const group = createTeris({ x: 3, y: 2 })
 group.squares.forEach(sq => {
   sq.viewer = new SquarePageView(sq, $('#root'))
 });
