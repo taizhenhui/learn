@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve('./dist'),
     filename: 'script/bundle.js',
   },
+  mode: 'development', // 设置mode
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',

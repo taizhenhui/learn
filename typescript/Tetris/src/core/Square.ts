@@ -16,6 +16,9 @@ export class Square {
 
   public set viewer(v){
     this._viewer = v
+    if(v){
+      v.show()
+    }
   }
 
   public get point() {
