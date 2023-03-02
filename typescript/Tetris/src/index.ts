@@ -9,6 +9,7 @@ teris.squares.forEach(sq => {
   sq.viewer = new SquarePageView(sq, $('#root'))
 });
 
+
 $('#btnDown').on('click', () => {
   TerisRule.moveDirection(teris, MoveDirection.down)
 })
@@ -17,5 +18,11 @@ $('#btnLeft').on('click', () => {
 })
 $('#btnRight').on('click', () => {
   TerisRule.move(teris, MoveDirection.right)
+})
+$('#clockwise').on('click', () => {
+  teris.rotate()
+ 
+})
+$('#anticlockwise').on('click', () => {
 })
 

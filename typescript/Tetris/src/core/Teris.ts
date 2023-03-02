@@ -1,36 +1,57 @@
 import { SquareGroup } from "./SquareGroup";
 import { IPoint, Shape } from "./types";
 import { getRandom } from "./utils";
+export class TShape extends SquareGroup {
+  constructor(_centerPoint:IPoint, _color:string) {
+    super([{ x: -1, y: 0 }, { x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: -1 }], _centerPoint, _color);
+  }
+  // rotate(): void {}
+}
 
-export const TShape: Shape = [
-  { x: -1, y: 0 }, { x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: -1 }
-]
+export class LShape extends SquareGroup {
+  constructor(_centerPoint:IPoint, _color:string) {
+    super([{ x: 2, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 0 }, { x: 0, y: -1 }], _centerPoint, _color);
+  }
+  // rotate(): void {}
+}
 
-export const LShape: Shape = [
-  { x: 2, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 0 }, { x: 0, y: -1 }
-]
+export class LMirrorShape extends SquareGroup {
+  constructor(_centerPoint:IPoint, _color:string) {
+    super([{ x: -2, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 0 }, { x: 0, y: 1 }], _centerPoint, _color);
+  }
+  // rotate(): void {}
+}
 
-export const LMirrorShape: Shape = [
-  { x: -2, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 0 }, { x: 0, y: 1 }
-]
+export class SShape extends SquareGroup {
+  constructor(_centerPoint:IPoint, _color:string) {
+    super([{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 1 }, { x: -1, y: 1 }], _centerPoint, _color);
+  }
+  // rotate(): void {}
+}
 
-export const SShape: Shape = [
-  { x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 1 }, { x: -1, y: 1 }
-]
+export class SMirrorShape extends SquareGroup {
+  constructor(_centerPoint:IPoint, _color:string) {
+    super([{ x: 0, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 1 }, { x: 1, y: 1 }], _centerPoint, _color);
+  }
+  // rotate(): void {}
+}
 
-export const SMirrorShape: Shape = [
-  { x: 0, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 1 }, { x: 1, y: 1 }
-]
+export class SquareShape extends SquareGroup {
+  constructor(_centerPoint:IPoint, _color:string) {
+    super([{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 1 }, { x: 1, y: 1 }], _centerPoint, _color);
+  }
+  // rotate(): void {}
+}
 
-export const SquareShape: Shape = [
-  { x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 1 }, { x: 1, y: 1 }
-]
+export class LineShape extends SquareGroup {
+  constructor(_centerPoint:IPoint, _color:string) {
+    super([{ x: -1, y: 0 }, { x: 0, y: 0 }, { x: 1, y: 0 }, { x: 2, y: 0 }], _centerPoint, _color);
+  }
+  // rotate(): void {}
+}
 
-export const LineShape: Shape = [
-  { x: -1, y: 0 }, { x: 0, y: 0 }, { x: 1, y: 0 }, { x: 2, y: 0 }
-]
 
-export const shapes = [
+export const subclasses = [
   TShape,
   LShape,
   LMirrorShape,
@@ -52,12 +73,12 @@ export const colors = [
  * @param centerPoint   
  */
 export function createTeris(centerPoint: IPoint) {
-  let index = getRandom(0, shapes.length)
-  const shape = shapes[index]
+  let index = getRandom(0, subclasses.length)
+  const Subclass = subclasses[index]
 
   index = getRandom(0, colors.length)
   const color = colors[index]
 
-  return new SquareGroup(shape, centerPoint, color)
+  return new Subclass(centerPoint, color)
 }
 
