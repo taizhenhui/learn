@@ -23,6 +23,9 @@ export class SquareGroup {
 
   }
 
+  public get shape() {
+    return this._shape
+  }
   public get squares() {
     return this._squares
   }

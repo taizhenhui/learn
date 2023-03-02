@@ -1,48 +1,21 @@
 import { SquarePageView } from "./core/view/SquarePageView"
 import $ from 'jquery'
 import { createTeris } from "./core/Teris"
+import { TerisRule } from "./core/TerisRule";
+import { MoveDirection } from "./core/types";
 
-const group = createTeris({ x: 3, y: 2 })
-group.squares.forEach(sq => {
+const teris = createTeris({ x: 3, y: 2 })
+teris.squares.forEach(sq => {
   sq.viewer = new SquarePageView(sq, $('#root'))
 });
-// const sq = new Square()
 
-
-// sq.color = 'red'
-// sq.point = {
-//   x: 4,
-//   y: 0
-// }
 $('#btnDown').on('click', () => {
-  group.centerPoint = {
-    x: group.centerPoint.x,
-    y: group.centerPoint.y + 1
-  }
-})
-$('#btnUp').on('click', () => {
-  group.centerPoint = {
-    x: group.centerPoint.x,
-    y: group.centerPoint.y - 1
-  }
+  TerisRule.moveDirection(teris, MoveDirection.down)
 })
 $('#btnLeft').on('click', () => {
-  group.centerPoint = {
-    x: group.centerPoint.x + 1,
-    y: group.centerPoint.y
-  }
+  TerisRule.move(teris, MoveDirection.left)
 })
 $('#btnRight').on('click', () => {
-  group.centerPoint = {
-    x: group.centerPoint.x - 1,
-    y: group.centerPoint.y
-  }
+  TerisRule.move(teris, MoveDirection.right)
 })
 
-// $('#btnRemove').on('click', () => {
-//   sq.viewer?.remove()
-// })
-
-// $('#btnAdd').on('click', () => {
-//   sq.viewer = new SquarePageView(sq, $('#root'))
-// })

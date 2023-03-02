@@ -1,6 +1,6 @@
 export default {
   SquareSize: {
-    width: 30,
-    height: 30
+    width: 25,
+    height: 25
   }
 }
