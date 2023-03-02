@@ -9,9 +9,8 @@ export class SquareGroup {
   /**
    * 旋转方向是否为顺时针
    */
-  private _isClock: boolean = true;
+  protected isClock: boolean = true;
   constructor(private _shape: Shape, private _centerPoint: IPoint, private _color: string) {
-
     let arr: Square[] = []
     this._shape.forEach(s => {
       const sq = new Square()
@@ -20,15 +19,6 @@ export class SquareGroup {
     })
     this._squares = arr
     this.setSquarePoint()
-
-  }
-
-  public get isClock() {
-    return this._isClock
-  }
-
-  public set isClock(val: boolean) {
-    this._isClock = val
   }
 
   public get shape() {
@@ -60,8 +50,8 @@ export class SquareGroup {
     })
   }
 
-  private afterRotateShape(): Shape {
-    let newShape: Shape = this._isClock 
+  afterRotateShape(): Shape {
+    let newShape: Shape = this.isClock 
       ? this._shape.map(m => ({ x: -m.y, y: m.x })) 
       : this._shape.map(m => ({ x: m.y, y: -m.x }))
 
