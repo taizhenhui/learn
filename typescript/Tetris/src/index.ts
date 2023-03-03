@@ -1,28 +1,25 @@
-import { SquarePageView } from "./core/view/SquarePageView"
+import { Game } from "./core/Game";
+import { GamePageView } from "./core/view/GamePageView";
 import $ from 'jquery'
-import { createTeris } from "./core/Teris"
-import { TerisRule } from "./core/TerisRule";
-import { MoveDirection } from "./core/types";
+let g = new Game(new GamePageView())
 
-const teris = createTeris({ x: 3, y: 2 })
-teris.squares.forEach(sq => {
-  sq.viewer = new SquarePageView(sq, $('#root'))
-});
 
-  
-$('#btnDown').on('click', () => {
-  TerisRule.move(teris, MoveDirection.down)
+$('#pause').on('click', () => {
+  g.pause()
 })
-$('#btnLeft').on('click', () => {
-  TerisRule.move(teris, MoveDirection.left)
-})
-$('#btnRight').on('click', () => {
-  TerisRule.move(teris, MoveDirection.right)
+$('#start').on('click', () => {
+  g.start()
 })
 $('#clockwise').on('click', () => {
-  TerisRule.rotate(teris)
-
+  g.controlRotate()
 })
-$('#anticlockwise').on('click', () => {
+$('#left').on('click', () => {
+  g.controlLeft()
+})
+$('#right').on('click', () => {
+  g.controlRight()
+})
+$('#down').on('click', () => {
+  g.controlDown()
 })
 

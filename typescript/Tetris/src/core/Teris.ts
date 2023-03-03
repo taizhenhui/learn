@@ -10,14 +10,14 @@ export class TShape extends SquareGroup {
 
 export class LShape extends SquareGroup {
   constructor(_centerPoint: IPoint, _color: string) {
-    super([{ x: 2, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 0 }, { x: 0, y: -1 }], _centerPoint, _color);
+    super([{ x: -1, y: -1 }, { x: -1, y: 0 }, { x: 0, y: 0 }, { x: 1, y: 0 }], _centerPoint, _color);
   }
   // rotate(): void {}
 }
 
 export class LMirrorShape extends SquareGroup {
   constructor(_centerPoint: IPoint, _color: string) {
-    super([{ x: -2, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 0 }, { x: 0, y: 1 }], _centerPoint, _color);
+    super([{ x: -1, y: 1 }, { x: -1, y: 0 }, { x: 0, y: 0 }, { x: 1, y: 0 }], _centerPoint, _color);
   }
   // rotate(): void {}
 }
@@ -75,7 +75,7 @@ export const subclasses = [
 
 export const colors = [
   'red',
-  '#fff',
+  'pink',
   'green',
   'blue',
   'orange'
