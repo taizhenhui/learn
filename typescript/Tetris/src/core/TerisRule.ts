@@ -77,11 +77,11 @@ export class TerisRule {
     // 获取最大和最小的y坐标
     const maxY = Math.max(...ys)
     const minY = Math.min(...ys)
-    
+
     let num = 0
     // 循环判断每一行是否可以消除
     for (let y = minY; y <= maxY; y++) {
-      if(this.deleteLine(exists, y)) num ++
+      if (this.deleteLine(exists, y)) num++
     }
     return num
   }
@@ -99,15 +99,16 @@ export class TerisRule {
       squares.forEach(sq => {
         // 从界面移除
         if (sq.viewer) sq.viewer.remove()
-        // 剩下的， y坐标比 当前的y小的方块，y+1
-        exists.filter(f => f.point.y < y).forEach(i=>{
-          i.point = {
-            x: i.point.x,
-            y: i.point.y + 1
-          }
-        })
+
         const index = exists.indexOf(sq)
         exists.splice(index, 1)
+      })
+      // 剩下的， y坐标比 当前的y小的方块，y+1
+      exists.filter(f => f.point.y < y).forEach(i => {
+        i.point = {
+          x: i.point.x,
+          y: i.point.y + 1
+        }
       })
       return true
     }

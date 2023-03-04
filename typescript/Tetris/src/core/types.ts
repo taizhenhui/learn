@@ -1,3 +1,4 @@
+import { Game } from "./Game";
 import { SquareGroup } from "./SquareGroup";
 
 export interface IPoint {
@@ -28,6 +29,12 @@ export interface IGameViewer {
    * @param teris 切换的方块对象
    */
   switch(teris:SquareGroup): void;
+
+  /**
+   * 完成页面初始化
+   * @param game 游戏对象
+   */
+  init(game: Game):void
 
 }
 
