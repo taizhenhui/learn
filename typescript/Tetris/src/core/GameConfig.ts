@@ -1,6 +1,6 @@
 export default {
   panelSize: {
-    width: 20,
+    width: 14,
     height: 20
   },
   nextSize: {

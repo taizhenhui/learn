@@ -19,10 +19,9 @@ export class TerisRule {
     // 边界判断
     const targetShape: Shape = shape.map(i => ({ x: i.x + targetPoint.x, y: i.y + targetPoint.y }))
     const result = targetShape.some(s => (
-      s.x < 0 || s.x > (GameConfig.panelSize.width - 1) ||
-      s.y < 0 || s.y > (GameConfig.panelSize.height - 1)
+      s.x < 0 || (s.x > GameConfig.panelSize.width - 1) ||
+      s.y < 0 || (s.y > GameConfig.panelSize.height - 1)
     ))
-
     if (result) return false
     // 判断是否已有的方块有重叠
     return !targetShape.some(p => exists.some(sq => sq.point.x === p.x && sq.point.y === p.y))
@@ -49,7 +48,6 @@ export class TerisRule {
       else {
         targetPoint = { x: teris.centerPoint.x + 1, y: teris.centerPoint.y }
       }
-
       return this.move(teris, targetPoint, exists)
     }
 
@@ -69,5 +67,51 @@ export class TerisRule {
     }
   }
 
+  /**
+   * 从已存在的方块中进行消除，并返回消除行数
+   * @param exists 
+   */
+  static deleteSquares(exists: Square[]): number {
+    // 得到y坐标的数组
+    const ys = exists.map(sq => sq.point.y)
+    // 获取最大和最小的y坐标
+    const maxY = Math.max(...ys)
+    const minY = Math.min(...ys)
+    
+    let num = 0
+    // 循环判断每一行是否可以消除
+    for (let y = minY; y <= maxY; y++) {
+      if(this.deleteLine(exists, y)) num ++
+    }
+    return num
+  }
+
+  /**
+   * 消除一行
+   * @param exists 
+   * @param y 
+   * @returns 
+   */
+  private static deleteLine(exists: Square[], y: number): boolean {
+    const squares = exists.filter(sq => sq.point.y === y)
+    if (squares.length === GameConfig.panelSize.width) {
+      // 这一行可以移除
+      squares.forEach(sq => {
+        // 从界面移除
+        if (sq.viewer) sq.viewer.remove()
+        // 剩下的， y坐标比 当前的y小的方块，y+1
+        exists.filter(f => f.point.y < y).forEach(i=>{
+          i.point = {
+            x: i.point.x,
+            y: i.point.y + 1
+          }
+        })
+        const index = exists.indexOf(sq)
+        exists.splice(index, 1)
+      })
+      return true
+    }
+    return false
+  }
 }
 

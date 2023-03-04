@@ -50,12 +50,12 @@ export class Game {
 
   controlLeft() {
     if (this._curTeris && this._gameStatus === GameStatus.playing) {
-      TerisRule.move(this._curTeris, MoveDirection.left,this._exists)
+      TerisRule.move(this._curTeris, MoveDirection.left, this._exists)
     }
   }
   controlRight() {
     if (this._curTeris && this._gameStatus === GameStatus.playing) {
-      TerisRule.move(this._curTeris, MoveDirection.right,this._exists)
+      TerisRule.move(this._curTeris, MoveDirection.right, this._exists)
     }
   }
   controlDown() {
@@ -122,7 +122,9 @@ export class Game {
     // 将当前的俄罗斯方块包含的小方块，加入到已存在的方块数组中。
     let arr = this._curTeris ? this._curTeris.squares : []
     this._exists = [...this._exists, ...arr]
-    this._curTeris?.squares
+    const num = TerisRule.deleteSquares(this._exists)
+    console.log(num, 'num');
+
     this.switchTeris()
   }
 
