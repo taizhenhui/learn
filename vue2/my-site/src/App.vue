@@ -1,14 +1,19 @@
 <template>
   <div id="app">
     <h1>APP组件</h1>
+    <Icon type="arrowDown"/>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'App',
   components: {
+    Icon: () => import('./components/Icon.vue')
+  },
+  data(){
+    return {
+    }
   }
 }
 </script>
