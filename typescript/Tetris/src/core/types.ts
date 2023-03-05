@@ -36,6 +36,25 @@ export interface IGameViewer {
    */
   init(game: Game):void
 
+  /**
+   * 完成页面初始化
+   * @param score 分数
+   */
+  showScore(score: number):void
+
+  /**
+   * 游戏暂停
+   */
+  onGamePause():void
+  /**
+   * 游戏开始
+   */
+  onGameStart():void
+  /**
+   * 游戏结束
+   */
+  onGameOver():void
+
 }
 
 /**

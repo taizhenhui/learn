@@ -8,6 +8,9 @@ import { GameStatus, IGameViewer, MoveDirection } from "./types";
 export class Game {
   // 游戏状态
   private _gameStatus: GameStatus = GameStatus.init
+  public get gameStatus() {
+    return this._gameStatus
+  }
   // 当前玩家操作的方块
   private _curTeris?: SquareGroup
   // 下一个方块
@@ -15,14 +18,36 @@ export class Game {
   // 计时器
   private _timer?: number
   // 自动下落的间隔时间
-  private _duration: number = 1000
+  private _duration: number
   // 当前游戏中，已存在的方块
   private _exists: Square[] = []
   // 积分
-  private _score:number = 0
+  private _score: number = 0
+  public get score() {
+    return this._score
+  }
+  public set score(val) {
+    this._score = val
+    this._viewer.showScore(val)
+    const level = GameConfig.levels.filter(it => it.score <= val).pop()!
+    
+    if(this._duration === level.duration){
+      return
+    }
+    this._duration = level.duration
+    if(this._timer){
+      clearInterval(this._timer)
+      this._timer = undefined
+      this.autoDrop()
+      
+    }
+  }
   constructor(private _viewer: IGameViewer) {
+    this._duration = GameConfig.levels[0].duration
     this._nextTeris = createTeris({ x: 0, y: 0 })
     this.createNext()
+    this._viewer.init(this)
+    this._viewer.showScore(this.score)
   }
 
   /**
@@ -38,19 +63,19 @@ export class Game {
     this._gameStatus = GameStatus.playing
     // 给当前玩家操作的方块赋值
     if (!this._curTeris) this.switchTeris()
-
     this.autoDrop()
+    this._viewer.onGameStart()
   }
-  private createNext(){
+  private createNext() {
     this._nextTeris = createTeris({ x: 0, y: 0 })
     this._viewer.showNext(this._nextTeris)
     this.resetCenterPoint(GameConfig.nextSize.width, this._nextTeris)
   }
-  private init(){
-    this._exists.forEach(sq=>sq.viewer?.remove())
+  private init() {
+    this._exists.forEach(sq => sq.viewer?.remove())
     this._exists = []
-    this._duration =1000
-    this._score = 0
+    this._duration = 1000
+    this.score = 0
     this._curTeris = undefined
     this.createNext()
   }
@@ -62,6 +87,7 @@ export class Game {
       this._gameStatus = GameStatus.pause
       clearInterval(this._timer)
       this._timer = undefined
+      this._viewer.onGamePause()
     }
   }
 
@@ -92,14 +118,15 @@ export class Game {
    */
   private switchTeris() {
     this._curTeris = this._nextTeris
-    this._curTeris.squares.forEach(it=>it.viewer?.remove())
+    this._curTeris.squares.forEach(it => it.viewer?.remove())
     this.resetCenterPoint(GameConfig.panelSize.width, this._curTeris)
-    
+
     if (!TerisRule.canIMove(this._curTeris.shape, this._curTeris.centerPoint, this._exists)) {
       // 游戏结束
       this._gameStatus = GameStatus.over
       clearInterval(this._timer)
       this._timer = undefined
+      this._viewer.onGameOver()
       return
     }
     this.createNext()
@@ -134,8 +161,8 @@ export class Game {
     while (teris.squares.some(s => s.point.y < 0)) {
       TerisRule.move(teris, MoveDirection.down, this._exists)
       teris.centerPoint = {
-        x:teris.centerPoint.x,
-        y:teris.centerPoint.y + 1
+        x: teris.centerPoint.x,
+        y: teris.centerPoint.y + 1
       }
     }
   }
@@ -154,23 +181,22 @@ export class Game {
     // 切换方块
     this.switchTeris()
   }
-  private addScore(num:number){
-    if(num === 0){
+
+  private addScore(num: number) {
+    if (num === 0) {
       return
     }
-    else if(num === 1){
-      this._score += 10
+    else if (num === 1) {
+      this.score += 10
     }
-    else if(num === 2){
-      this._score += 30
+    else if (num === 2) {
+      this.score += 30
     }
-    else if(num === 3){
-      this._score += 50
+    else if (num === 3) {
+      this.score += 50
     }
-    else if(num === 4){
-      this._score += 100
+    else if (num === 4) {
+      this.score += 100
     }
-    console.log(this._score);
-    
   }
 }
