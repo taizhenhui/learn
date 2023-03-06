@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <h1>APP组件</h1>
-    <Icon type="arrowDown" />
-    <Pager :current="current" :total="total" @pageChange="handlePageChange" />
+    <ImageLoader
+      @load="handleLoaded"
+      src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?fit=crop&crop=entropy&w=3456&h=2304"
+      placeholder="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?w=100" />
   </div>
 </template>
 
@@ -10,30 +12,23 @@
 export default {
   name: 'App',
   components: {
-    Icon: () => import('./components/Icon.vue'),
-    Pager: () => import('./components/Pager.vue'),
+    Empty: () => import('./components/Empty'),
+    ImageLoader: () => import('./components/ImageLoader')
   },
-  data() {
-    return {
-      current: 1,
-      total: 302
-    }
-  },
-  methods: {
-    handlePageChange(newPage) {
-      this.current = newPage
+  methods:{
+    handleLoaded(){
+      console.log('图片加载完成');
     }
   }
 }
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style>
+#app{
+  width: 500px;
+  height: 400px;
+  border: 1px solid #333;
+
 }
 </style>
+
