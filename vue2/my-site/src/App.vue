@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <h1>APP组件</h1>
-    <Icon type="arrowDown"/>
+    <Icon type="arrowDown" />
+    <Pager :current="current" :total="total" @pageChange="handlePageChange" />
   </div>
 </template>
 
@@ -9,10 +10,18 @@
 export default {
   name: 'App',
   components: {
-    Icon: () => import('./components/Icon.vue')
+    Icon: () => import('./components/Icon.vue'),
+    Pager: () => import('./components/Pager.vue'),
   },
-  data(){
+  data() {
     return {
+      current: 1,
+      total: 302
+    }
+  },
+  methods: {
+    handlePageChange(newPage) {
+      this.current = newPage
     }
   }
 }
