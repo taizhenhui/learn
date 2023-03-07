@@ -6,18 +6,12 @@
 </template>
 
 <script>
+import { getBanners } from '@/api/banner'
 export default {
   methods: {
     handleClick() {
-      const container = this.$refs.container
-      this.$showMessage({
-        content:'hello world',
-        type:'success',
-        duration: 1000,
-        container,
-        callback: ()=>{
-          console.log('h w');
-        }
+      getBanners().then(r => {
+        console.log(r, 'rrrrrrrrrrrrr');
       })
     },
   },
