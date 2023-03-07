@@ -22,7 +22,7 @@ export default {
     },
     size: {
       type: Number,
-      default: 50
+      default: 150
     }
   },
   data() {
@@ -39,5 +39,6 @@ export default {
   border-radius: 50%;
   object-fit: cover;
   display: block;
+  margin: 0 auto;
 }
 </style>

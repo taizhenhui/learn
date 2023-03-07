@@ -1,7 +1,16 @@
 <template>
   <div id="app">
-    <h1>APP组件</h1>
-    <SiteAside />
+    <Layout>
+      <template #left>
+        <div class="aside">
+          <SiteAside />
+        </div>
+      </template>
+      main
+      <template #right>
+        右边
+      </template>
+    </Layout>
   </div>
 </template>
 
@@ -12,17 +21,24 @@ export default {
     Empty: () => import('./components/Empty'),
     ImageLoader: () => import('./components/ImageLoader'),
     SiteAside: () => import('./components/SiteAside'),
+    Layout: () => import('./components/Layout'),
   },
   methods:{
   }
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+@import "~@/styles/mixin.less";
 #app{
-  width: 300px;
-  min-height: 400px;
-  border: 1px solid #333;
+  .self-fill(fixed);
+  width: 100%;
+  height: 100vh;
+}
+
+.aside {
+  width: 250px;
+  height: 100%;
 }
 </style>
 
