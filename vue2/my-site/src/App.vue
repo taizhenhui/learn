@@ -6,7 +6,9 @@
           <SiteAside />
         </div>
       </template>
-      main
+      <template #default>
+        <router-view />
+      </template>
       <template #right>
         右边
       </template>
@@ -35,7 +37,6 @@ export default {
   width: 100%;
   height: 100vh;
 }
-
 .aside {
   width: 250px;
   height: 100%;

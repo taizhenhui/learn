@@ -1,18 +1,18 @@
 <template>
   <nav class="menu-container">
-    <a
+    <router-link 
       v-for="item in items"
       :key="item.link"
-      :href="item.link"
-      :class="{
-        selected: isSelected(item),
-      }"
+      :to="{ name: item.name }"
+      :exact="item.exact"
+      active-class="selected"
+      exact-active-class=""
     >
       <div class="icon">
         <Icon :type="item.icon" />
       </div>
       <span>{{ item.title }}</span>
-    </a>
+    </router-link>
   </nav>
 </template>
 
@@ -29,41 +29,39 @@ export default {
           link: "/",
           title: "首页",
           icon: "home",
+          name: "Home",
+          exact: true
         },
         {
           link: "/blog",
           title: "文章",
           icon: "blog",
-          startWith: true, // 只要当前路径以link开头，当前菜单就是选中的
+          name: "Blog",
+          exact: false  // 
         },
         {
           link: "/about",
           title: "关于我",
           icon: "about",
+          name: "About",
+          exact: true
         },
         {
           link: "/project",
           title: "项目&效果",
           icon: "code",
+          name: "Project",
+          exact: true
         },
         {
           link: "/message",
           title: "留言板",
           icon: "chat",
+          name: "Message",
+          exact: true
         },
       ],
     };
-  },
-  methods: {
-    isSelected(item) {
-      var link = item.link.toLowerCase(); // 菜单的链接地址
-      var curPathname = location.pathname.toLowerCase(); // 当前浏览器的访问路径
-      if (item.startWith) {
-        return curPathname.startsWith(link);
-      } else {
-        return curPathname === link;
-      }
-    },
   },
 };
 </script>
@@ -74,8 +72,8 @@ export default {
   color: @gray;
   margin: 24px 0;
   a {
-    &.selected {
-      background: darken(@words, 3%);
+    &.selected{
+      background: darken(@words, 48%);
     }
     padding: 0 50px;
     display: block;

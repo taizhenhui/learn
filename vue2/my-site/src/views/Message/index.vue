@@ -1,6 +1,6 @@
 <template>
   <div class="message-container">
-
+    评论
   </div>
 </template>
 
