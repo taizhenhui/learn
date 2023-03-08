@@ -1,6 +1,5 @@
 <template>
   <div class="blog-container">
-    文章
   </div>
 </template>
 
@@ -8,7 +7,6 @@
 export default {
   name: 'blog',
   components: {
-
   },
   data() {
     return {

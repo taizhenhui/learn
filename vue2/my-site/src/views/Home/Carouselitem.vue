@@ -29,14 +29,13 @@ export default {
   computed: {
     // 得到图片宽高
     imagePosition() {
-      if (!this.innerSize || !this.containerSize) {
-        return
-      }
-      const extraWidth = this.innerSize.width - this.containerSize.width
-      const extraHeight = this.innerSize.height - this.containerSize.height
-      const left = -extraWidth / this.containerSize.width * this.mouseX
-      const top = -extraHeight / this.containerSize.height * this.mouseY
-      console.log(top, left, '-0-0');
+      if (!this.innerSize || !this.containerSize) return
+  
+      const extraWidth = this.innerSize.width - this.containerSize.width,
+            extraHeight = this.innerSize.height - this.containerSize.height,
+            left = -extraWidth / this.containerSize.width * this.mouseX,
+            top = -extraHeight / this.containerSize.height * this.mouseY
+
       return {
         transform: `translate(${left}px, ${top}px)`
       }
