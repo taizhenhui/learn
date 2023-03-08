@@ -9,9 +9,9 @@
       <template #default>
         <router-view />
       </template>
-      <template #right>
+      <!-- <template #right>
         右边
-      </template>
+      </template> -->
     </Layout>
   </div>
 </template>

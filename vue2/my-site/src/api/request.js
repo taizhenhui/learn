@@ -3,7 +3,6 @@ import showMessage from "../utils/showMessage";
 const instance = axios.create(); // 创建一个 axios 实例
 
 instance.interceptors.request.use(function (config) {
-  console.log(config,'config');
   return config;
 }, function (error) {
   return Promise.reject(error);

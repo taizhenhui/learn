@@ -44,6 +44,7 @@ export default {
     handleLoad() {
       this.originLoaded = true
       setTimeout(() => {
+        this.$emit("load");
         this.everythingDone = true
       },this.duration)
     }
