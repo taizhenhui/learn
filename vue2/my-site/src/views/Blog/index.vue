@@ -1,56 +1,24 @@
 <template>
-  <div class="blog-container">
-    <RightList :list="list" @select="handleSelect"/>
-  </div>
+  <Layout>
+    <BlogList />
+    <template #right>
+      <BlogCategory />
+    </template>
+  </Layout>
 </template>
 
 <script>
-import RightList from './components/RightList.vue'
-import fetchData from '@/mixins/fetchData'
-import {getBlogTypes,getBlogs} from '@/api/blog'
+import Layout from "@/components/Layout";
+import BlogList from "./components/BlogList";
+import BlogCategory from "./components/BlogCategory";
 export default {
-  name: 'blog',
-  mixins:[fetchData([])],
+  name:'Blog',
   components: {
-    RightList
+    Layout,
+    BlogList,
+    BlogCategory,
   },
-  data() {
-    return {
-      list: [
-        { name: 'A', isSelect: false },
-        { name: 'B', isSelect: false },
-        {
-          name: 'C', isSelect: true, children: [
-            { name: 'c-1', isSelect: false },
-            {
-              name: 'c-2', isSelect: false, children: [
-                { name: 'c-2-1', isSelect: false },
-                { name: 'c-2-2', isSelect: false },
-              ]
-            },
-            { name: 'c-3', isSelect: false },
-            { name: 'c-4', isSelect: false },
-          ]
-        },
-        { name: 'D', isSelect: false },
-      ],
-      dataTypes:[],
-      dataBlogs:{}
-    }
-  },
-
-  methods: {
-    async fetchData(){
-      this.dataTypes =  await getBlogTypes()
-      this.dataBlogs = await getBlogs()
-      console.log('this.dataTypes',this.dataTypes);
-      console.log('this.dataBlogs',this.dataBlogs);
-    },
-    handleSelect(item){
-      // console.log(item);
-    }
-  },
-}
+};
 </script>
 
-<style scoped lang="less"></style>
+<style></style>

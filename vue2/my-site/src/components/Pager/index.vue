@@ -62,7 +62,7 @@ export default {
     handleClick(newpage){
       if(newpage < 1) newpage = 1
       if(newpage > this.pageNumber ) newpage = this.pageNumber
-      if (newPage === this.current) return
+      if (newpage === this.current) return
       
       this.$emit('pageChange', newpage)
     }

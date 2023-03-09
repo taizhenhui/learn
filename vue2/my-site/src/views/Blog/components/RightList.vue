@@ -3,7 +3,10 @@
     <ul class="right-list-container">
       <li v-for="item in list" :key="item.name">
         <span :class="{ active: item.isSelect }" @click="handleClick(item)">{{ item.name }}</span>
-        <RightList :list="item.children"  @click="handleClick(item)"/>
+        <span v-if="item.aside" @click="handleClick(item)" class="aside" :class="{ active: item.isSelect }">
+          {{ item.aside }}
+        </span>
+        <RightList :list="item.children" @click="handleClick(item)" />
       </li>
     </ul>
   </div>
@@ -20,6 +23,7 @@ export default {
   },
   methods: {
     handleClick(item) {
+      if (item.isSelect) return
       this.$emit('select', item)
     },
   }
@@ -47,5 +51,13 @@ export default {
       color: @warn;
       font-weight: bold;
     }
+
+
   }
-}</style>
+  .aside {
+      font-size: 12px;
+      margin-left: 1em;
+      color: @gray;
+    }
+}
+</style>

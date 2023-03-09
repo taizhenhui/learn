@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app-container">
     <Layout>
       <template #left>
         <div class="aside">
@@ -7,39 +7,31 @@
         </div>
       </template>
       <template #default>
-        <router-view />
+        <RouterView />
       </template>
-      <!-- <template #right>
-        右边
-      </template> -->
     </Layout>
   </div>
 </template>
 
 <script>
+import Layout from "./components/Layout";
+import SiteAside from "./components/SiteAside";
 export default {
-  name: 'App',
   components: {
-    Empty: () => import('./components/Empty'),
-    ImageLoader: () => import('./components/ImageLoader'),
-    SiteAside: () => import('./components/SiteAside'),
-    Layout: () => import('./components/Layout'),
+    Layout,
+    SiteAside,
   },
-  methods:{
-  }
-}
+};
 </script>
 
 <style lang="less" scoped>
 @import "~@/styles/mixin.less";
-#app{
+.app-container {
   .self-fill(fixed);
-  width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .aside {
   width: 250px;
   height: 100%;
 }
 </style>
-

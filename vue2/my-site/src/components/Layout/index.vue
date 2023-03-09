@@ -13,14 +13,11 @@
 </template>
 
 <script>
-export default {
-
-}
-
+export default {};
 </script>
 
-<style lang="less" scoped>
-.layout-container{
+<style scoped lang="less">
+.layout-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -33,6 +30,5 @@ export default {
     flex: 1 1 auto;
     overflow: hidden;
   }
-
 }
 </style>
