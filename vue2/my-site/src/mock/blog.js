@@ -52,7 +52,7 @@ Mock.mock(/^\/api\/blog\/[^/]+$/, "get", {
     description: "@cparagraph(1, 10)",
     "scanNumber|0-10000": 0,
     "commentNumber|0-100": 0,
-    createDate: "@date('T')",
+    createDate: Mock.Random.date('yyyy-MM-dd'),
     toc: [
       { name: "概述", anchor: "article-md-title-1" },
       {
