@@ -19,6 +19,7 @@ export default {
   methods: {
     handleSelect(item) {
       location.hash = item.anchor;
+      JSON.stringify()
     },
   },
 };
