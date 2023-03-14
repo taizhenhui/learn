@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="main-container" v-loading="isLoading">
+    <div ref="mainContainer" class="main-container" v-loading="isLoading">
       <BlogDetail :blog="datas" v-if="datas" />
       <BlogComment v-if="!isLoading"/>
     </div>
@@ -9,6 +9,7 @@
         <BlogTOC :toc="datas.toc" v-if="datas" />
       </div>
     </template>
+    <ToTop />
   </Layout>
 </template>
 
@@ -19,6 +20,7 @@ import Layout from "@/components/Layout";
 import BlogDetail from './components/BlogDetail.vue';
 import BlogTOC from './components/BlogTOC.vue';
 import BlogComment from './components/BlogComment.vue';
+import ToTop from '@/components/ToTop'
 export default {
   name: 'Detail',
   mixins: [fetchData({})],
@@ -27,11 +29,36 @@ export default {
     BlogDetail,
     BlogTOC,
     BlogComment,
+    ToTop,
+  },
+  created(){
+    this.$bus.$on('setMainScroll', this.handleSetMainScroll)
+  },
+  mounted(){
+    this.$refs.mainContainer.addEventListener('scroll', this.handleScroll)
+  },
+  updated() {
+    const hash = location.hash;
+    location.hash = "";
+    setTimeout(() => {
+      location.hash = hash;
+    }, 50);
+  },
+  beforeDestroy(){
+    this.$bus.$off('setMainScroll', this.handleSetMainScroll)
+    this.$bus.$emit('mainScroll')
+    this.$refs.mainContainer.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     async fetchData() {
       const { id } = this.$route.params
       return await getBlog(id)
+    },
+    handleScroll(){
+      this.$bus.$emit('mainScroll', this.$refs.mainContainer)
+    },
+    handleSetMainScroll(scrollTop){
+      this.$refs.mainContainer.scrollTop = scrollTop
     }
   },
 }

@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from './router'
 import './styles/global.less'
 import { showMessage } from './utils';
-
+import './eventBus'
 
 
 Vue.prototype.$showMessage = showMessage

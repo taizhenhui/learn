@@ -6,7 +6,7 @@
         <span v-if="item.aside" @click="handleClick(item)" class="aside" :class="{ active: item.isSelect }">
           {{ item.aside }}
         </span>
-        <RightList :list="item.children" @click="handleClick(item)" />
+        <RightList :list="item.children" @select="handleClick" />
       </li>
     </ul>
   </div>

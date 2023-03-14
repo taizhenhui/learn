@@ -21,21 +21,48 @@ export default {
   },
   data(){
     return {
-
-    }
-  },
-  methods:{
-    async fetchData(){
-      let data= {
+      formData:{
         page:1,
         limit: 10,
         blogid: this.$route.params.id
       }
-      return await getComment(data)
+    }
+  },
+  computed:{
+    hasMore(){
+      return this.datas.rows.length < this.datas.total
+    }
+  },
+  created(){
+    this.$bus.$on('mainScroll', this.handleScroll)
+  },
+  destroyed(){
+    this.$bus.$off('mainScroll', this.handleScroll)
+  },
+  methods:{
+    async fetchData(){
+      return await getComment(this.formData)
+    },
+    async fetchMore(){
+      if(!this.hasMore) return
+      this.isLoading = true
+      this.formData.page++
+      let res = await this.fetchData()
+      this.datas.total = res.total
+      this.datas.rows = this.datas.rows.concat(res.rows)
+      this.isLoading = false
+    },
+    async handleScroll(dom){
+      if(this.isLoading || !dom) return
+
+      const range = 100
+      const dec = Math.abs(dom.scrollHeight - (dom.scrollTop + dom.clientHeight))
+
+      if(dec <= range) this.fetchMore()
+      
     },
     async handleSubmit(formData, callback){
       let res = await postComment({...formData, blogid: this.$route.params.id})
-      console.log(res,'result');
       this.datas.rows.unshift(res)
       this.datas.total++
       callback('评论成功')
