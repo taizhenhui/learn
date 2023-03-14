@@ -43,8 +43,9 @@
 import Pager from '@/components/Pager'
 import fetchData from '@/mixins/fetchData'
 import { getBlogs } from '@/api/blog'
+import mainScroll from '@/mixins/mainScroll'
 export default {
-  mixins: [fetchData({})],
+  mixins: [fetchData({}), mainScroll('container')],
   components: {
     Pager,
   },
@@ -73,7 +74,6 @@ export default {
   },
   methods: {
     async fetchData() {
-      console.log(1111);
       const { categoryId, page, limit } = this.routeInfo
       return await getBlogs(page, limit, categoryId)
     },

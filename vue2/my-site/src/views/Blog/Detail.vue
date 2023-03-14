@@ -21,9 +21,10 @@ import BlogDetail from './components/BlogDetail.vue';
 import BlogTOC from './components/BlogTOC.vue';
 import BlogComment from './components/BlogComment.vue';
 import ToTop from '@/components/ToTop'
+import mainScroll from '@/mixins/mainScroll'
 export default {
   name: 'Detail',
-  mixins: [fetchData({})],
+  mixins: [fetchData({}), mainScroll('mainContainer')],
   components: {
     Layout,
     BlogDetail,
@@ -31,12 +32,7 @@ export default {
     BlogComment,
     ToTop,
   },
-  created(){
-    this.$bus.$on('setMainScroll', this.handleSetMainScroll)
-  },
-  mounted(){
-    this.$refs.mainContainer.addEventListener('scroll', this.handleScroll)
-  },
+
   updated() {
     const hash = location.hash;
     location.hash = "";
@@ -44,22 +40,12 @@ export default {
       location.hash = hash;
     }, 50);
   },
-  beforeDestroy(){
-    this.$bus.$off('setMainScroll', this.handleSetMainScroll)
-    this.$bus.$emit('mainScroll')
-    this.$refs.mainContainer.removeEventListener('scroll', this.handleScroll)
-  },
+
   methods: {
     async fetchData() {
       const { id } = this.$route.params
       return await getBlog(id)
     },
-    handleScroll(){
-      this.$bus.$emit('mainScroll', this.$refs.mainContainer)
-    },
-    handleSetMainScroll(scrollTop){
-      this.$refs.mainContainer.scrollTop = scrollTop
-    }
   },
 }
 </script>

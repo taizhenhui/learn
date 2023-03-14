@@ -24,7 +24,6 @@ export default {
     },
     list() {
       const totalArticleCount = this.datas.reduce((a, b) => a + b.articleCount, 0)
-      console.log(totalArticleCount, 'totalArticleCount');
       const all = {
         id: -1,
         name: '全部',
