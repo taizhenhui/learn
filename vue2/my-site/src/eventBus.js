@@ -40,4 +40,7 @@ import Vue from 'vue'
  * 参数：
  * - 滚动高度
  */
-Vue.prototype.$bus =  new Vue({})
+const app = new Vue({})
+Vue.prototype.$bus =  app
+
+export default app

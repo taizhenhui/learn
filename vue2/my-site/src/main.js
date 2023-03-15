@@ -11,7 +11,9 @@ Vue.prototype.$showMessage = showMessage
 
 // 注册全局指令
 import vloading from "./directives/loading";
+import vlazy from './directives/lazy'
 Vue.directive('loading', vloading)
+Vue.directive('lazy', vlazy)
 
 new Vue({
   router,
