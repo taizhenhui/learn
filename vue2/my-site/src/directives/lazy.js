@@ -18,7 +18,6 @@ function setImage(img) {
     // }
     // tempImg.src = img.src
     img.dom.src = img.src
-    console.log('加载真实图片', img.dom);
     imgs = imgs.filter(i => i !== img)
   }
 }

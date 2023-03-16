@@ -1,5 +1,5 @@
 import { getSetting } from '@/api/setting'
-
+import { titleController } from '@/utils'
 export default {
   namespaced: true,
   state: {
@@ -20,6 +20,7 @@ export default {
     async fetchSetting(ctx){
       ctx.commit('setLoading', true)
       const resp = await getSetting()
+
       ctx.commit('setData', resp)
       ctx.commit('setLoading', false)
       if(resp.favicon){
@@ -34,6 +35,9 @@ export default {
 
         document.querySelector('head').appendChild(link)
       } 
+
+      if(resp.siteTitle) titleController.setSiteTitle(resp.siteTitle)
+      
     }
   }
 
