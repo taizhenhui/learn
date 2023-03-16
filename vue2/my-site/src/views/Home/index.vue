@@ -1,11 +1,9 @@
 <template>
-  <div v-loading="isLoading" class="home-container" ref="container" @wheel="handleWheel">
-    
-    <ul class="carousel-container" 
-      :style="{
-        marginTop: marginTop
-      }" 
-      @transitionend="handleTransitionEnd">
+  <div v-loading="loading" class="home-container" ref="container" @wheel="handleWheel">
+
+    <ul class="carousel-container" :style="{
+      marginTop: marginTop
+    }" @transitionend="handleTransitionEnd">
       <li v-for="item in datas" :key="item.id">
         <Carouselitem :carousel="item" />
       </li>
@@ -27,14 +25,12 @@
 </template>
 
 <script>
-import { getBanners } from '@/api/banner'
-import fetchData  from '@/mixins/fetchData'
+import {mapState, mapActions} from 'vuex'
 export default {
   components: {
     Carouselitem: () => import('./Carouselitem.vue'),
     Icon: () => import('@/components/Icon'),
   },
-  mixins:[ fetchData([]) ],
   data() {
     return {
       index: 0, // 当前显示的第几张轮播图
@@ -43,21 +39,23 @@ export default {
     }
   },
   computed: {
+    ...mapState('banner', ['loading','datas']),
     marginTop() {
       return -this.index * this.containerHeight + 'px'
     }
+  },
+  created(){
+    this.fetchBanners()
   },
   mounted() {
     this.containerHeight = this.$refs.container.clientHeight
     window.addEventListener('resize', this.handleResize)
   },
-  destroyed(){
+  destroyed() {
     window.removeEventListener('resize', this.handleResize)
   },
   methods: {
-    async fetchData() {
-      return await getBanners() || []
-    },
+    ...mapActions('banner', ['fetchBanners']),
 
     switchTo(i) {
       this.index = i
@@ -77,7 +75,7 @@ export default {
     handleTransitionEnd() {
       this.switching = false
     },
-    handleResize(){
+    handleResize() {
       this.containerHeight = this.$refs.container.clientHeight
     },
   },

@@ -5,29 +5,29 @@
         <div class="icon">
           <Icon type="github" />
         </div>
-        <span>DuYi-Edu</span>
+        <span>{{ data.githubName }}</span>
       </a>
     </li>
     <li>
-      <a href="mailto:23423424234@qq.com">
+      <a href="###">
         <div class="icon">
           <Icon type="mail" />
         </div>
-        <span>23423424234@qq.com</span>
+        <span>{{ data.mail }}</span>
       </a>
     </li>
     <li>
       <a
-        href="tencent://message/?Menu=yes&uin=3263023350&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45"
+        href="###"
       >
         <div class="icon">
           <Icon type="qq" />
         </div>
-        <span>3263023350</span>
+        <span>{{data.qq}}</span>
       </a>
       <div class="pop">
         <img
-          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201807%2F21%2F20180721110514_TM5nj.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1680687747&t=88ecb1c9ebcd661dc91443a8ef68bb75"
+          :src="data.qqQrCode"
           alt=""
         />
       </div>
@@ -37,11 +37,11 @@
         <div class="icon weixin">
           <Icon type="weixin" />
         </div>
-        <span>dsfggasas</span>
+        <span>{{ data.weixin }}</span>
       </a>
       <div class="pop">
         <img
-          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201807%2F21%2F20180721110514_TM5nj.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1680687747&t=88ecb1c9ebcd661dc91443a8ef68bb75"
+          :src="data.weixinQrCode"
           alt=""
         />
       </div>
@@ -51,10 +51,14 @@
 
 <script>
 import Icon from "@/components/Icon";
+import {mapState} from 'vuex'
 export default {
   components: {
     Icon,
   },
+  computed: {
+    ...mapState('setting', ['data'])
+  }
 };
 </script>
 
