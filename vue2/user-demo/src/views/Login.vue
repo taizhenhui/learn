@@ -33,7 +33,6 @@ export default {
   },
   methods: {
     async handleSubmit() {
-      console.log('登录', this.loginId, this.loginPwd);
       const resp = await this.$store.dispatch('loginUser/login', { loginId: this.loginId, loginPwd: this.loginPwd })
       if (resp) {
         const path = this.$route.query.returnurl || "/";
