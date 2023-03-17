@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.body-container {
+  width: 700px;
+  height: 500px;
+  margin: 20px auto;
+}
+
+.calendar-container {
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* 头部 */
+.calendar-container .header{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a59d8;
+  color: #fff;
+  padding: 0 20px;
+}
+.header #prev, 
+.header #next{
+  cursor: pointer;
+}
+.header .setDate{
+  width: 300px;
+  cursor: pointer;
+}
+.header .setDate .select-sty{
+  width: 70px;
+  height: 24px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: #333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+/* 表格 main */
+.calendar-container .main {
+  width: 100%;
+  height: 100%;
+}
+.main .tab-header{
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddd;
+}
+.main .tab-header p{
+  flex: 1;
+}
+
+.main .tab-body {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+.tab-body .tab-tr{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tab-body .tab-tr .tab-td{
+  flex: 1;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: 0.8s;
+}
+.tab-body .tab-tr .tab-td:hover{
+  box-shadow: 0px 2px 5px 1px #8db5f5;
+  font-weight: bold;
+  transition: 0.8s;
+
+}
+.tab-body .tab-tr .active{
+  background-color: #ddd;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.tab-body .tab-tr .active:hover{
+  background-color: #ddd;
+  box-shadow: 0px 2px 5px 1px #c1c1c1;
+  transition: 0.8s;
+}
+.tab-body .tab-tr .disabled{
+  color: #ddd;
+  background-color: #f7f7f7;
+  cursor: not-allowed;
+}
+.tab-body .tab-tr .disabled:hover{
+  box-shadow: none;
+  background-color: #f7f7f7;
+}
