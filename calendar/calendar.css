@@ -6,7 +6,7 @@
 }
 
 .body-container {
-  width: 700px;
+  width: 600px;
   height: 500px;
   margin: 20px auto;
 }
@@ -14,7 +14,7 @@
 .calendar-container {
   width: 100%;
   min-height: 200px;
-  border: 1px solid #999;
+  border: 1px solid #0a59d8;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -44,10 +44,6 @@
   outline: none;
   border-radius: 3px;
   color: #333;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
 }
 
 /* 表格 main */
@@ -63,15 +59,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ddd;
+  background-color: #eee;
 }
 .main .tab-header p{
   flex: 1;
+  color: #555;
 }
 
 .main .tab-body {
   width: 100%;
   padding: 10px;
+  color: #0a59d8;
   
 }
 .tab-body .tab-tr{
@@ -90,6 +88,9 @@
   cursor: pointer;
   transition: 0.8s;
 }
+.tab-body .tab-tr .tab-td:nth-child(7n){
+  margin-right: 0;
+}
 .tab-body .tab-tr .tab-td:hover{
   box-shadow: 0px 2px 5px 1px #8db5f5;
   font-weight: bold;
@@ -98,6 +99,7 @@
 }
 .tab-body .tab-tr .active{
   background-color: #ddd;
+  color: #999;
   border-radius: 10px;
   font-weight: 600;
 }
