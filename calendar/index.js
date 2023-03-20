@@ -12,6 +12,7 @@ $(function () {
     // curCalendar = [], // 当前日历的数组
     doms = {}, // 获取的dom元素
     selectedDates = [] // 已选择的日期
+    // switchTo = true
   /**
    * 初始化
    */
@@ -50,12 +51,19 @@ $(function () {
   // 绑定事件start
   function bindEvent() {
     const { prevDom, nextDom, setYearDom, setMonthDom } = doms
+    // let tabBodys = document.querySelector('#tab-body')
     const tabBody = $('#tab-body')
     prevDom.on('click', handlePrev)
     nextDom.on('click', handleNext)
     setYearDom.on('change', handleSelectYear)
     setMonthDom.on('change', handleSelectMonth)
     tabBody.delegate('.tab-td', 'click', handleSelectDate)
+    // tabBody.mouseenter(function () {
+    //   tabBodys.addEventListener('wheel', debounce(handleWheel, 300))
+    // })
+    // tabBody.mouseleave(function () {
+    //   tabBodys.removeEventListener('wheel', debounce(handleWheel, 300) )
+    // })
   }
   // 绑定事件end
 
@@ -73,11 +81,22 @@ $(function () {
     } else {
       createOpt(setMonthDom, selectMonthsOne)
     }
-
+    // switchTo = true
     setMonthDom.val(curMonth)
     createDatas(curYear, curMonth)
   }
-
+  // function handleWheel(e){
+  //   if(!switchTo) return
+  //   if (e.deltaY < -5) {
+  //     // 往上滚动
+  //     switchTo = false
+  //     handlePrev()
+  //   } else if (e.deltaY > 5) {
+  //     // 往下滚动
+  //     switchTo = false
+  //     handleNext()
+  //   }
+  // }
   /**
    * 处理上月
    */
@@ -313,5 +332,15 @@ $(function () {
       return true
     }
     return false
+  }
+
+  function debounce(fn, duration = 300){
+    let timer = null
+    return (...args) => {
+      clearTimeout(timer)
+      timer = setTimeout(()=>{
+        fn(...args)
+      }, duration)
+    }
   }
 })
