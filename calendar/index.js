@@ -42,7 +42,7 @@ $(function () {
     createOpt(setYearDom, selectYears)
     createOpt(setMonthDom, selectMonthsOne)
 
-    //
+    // 绑定事件
     bindEvent()
   }
   init()
