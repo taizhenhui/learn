@@ -12,7 +12,6 @@ $(function () {
     // curCalendar = [], // 当前日历的数组
     doms = {}, // 获取的dom元素
     selectedDates = [] // 已选择的日期
-    // switchTo = true
   /**
    * 初始化
    */
@@ -51,19 +50,12 @@ $(function () {
   // 绑定事件start
   function bindEvent() {
     const { prevDom, nextDom, setYearDom, setMonthDom } = doms
-    // let tabBodys = document.querySelector('#tab-body')
     const tabBody = $('#tab-body')
     prevDom.on('click', handlePrev)
     nextDom.on('click', handleNext)
     setYearDom.on('change', handleSelectYear)
     setMonthDom.on('change', handleSelectMonth)
     tabBody.delegate('.tab-td', 'click', handleSelectDate)
-    // tabBody.mouseenter(function () {
-    //   tabBodys.addEventListener('wheel', debounce(handleWheel, 300))
-    // })
-    // tabBody.mouseleave(function () {
-    //   tabBodys.removeEventListener('wheel', debounce(handleWheel, 300) )
-    // })
   }
   // 绑定事件end
 
@@ -85,18 +77,7 @@ $(function () {
     setMonthDom.val(curMonth)
     createDatas(curYear, curMonth)
   }
-  // function handleWheel(e){
-  //   if(!switchTo) return
-  //   if (e.deltaY < -5) {
-  //     // 往上滚动
-  //     switchTo = false
-  //     handlePrev()
-  //   } else if (e.deltaY > 5) {
-  //     // 往下滚动
-  //     switchTo = false
-  //     handleNext()
-  //   }
-  // }
+
   /**
    * 处理上月
    */
@@ -239,7 +220,6 @@ $(function () {
         arr = []
       }
     }
-    // console.log('curMonthArr', curMonthArr);
     createDom(curMonthArr)
     return curMonthArr
   }
@@ -261,7 +241,7 @@ $(function () {
         // 给禁用的日期 添加类样式
         if (td.isDisabled) tdDom.addClass("disabled")
         // 给选中的日期 添加类样式
-        if (td.isSelected === 'yes')  tdDom.addClass("active")
+        if (td.isSelected === 'yes') tdDom.addClass("active")
         // 给不是当月日期 添加类样式
         if (!td.isCurMonthDays) tdDom.addClass("disCurMonthDays")
 
@@ -271,6 +251,7 @@ $(function () {
       tabBody.append(trDom)
     }
   }
+
   /**
    * 获取元素
    * @returns {Object} doms
@@ -291,6 +272,7 @@ $(function () {
       setMonthDom,
     }
   }
+
   /**
    * 创建日期对象格式
    * @param {String} date 时间 年月日
@@ -310,6 +292,7 @@ $(function () {
 
     return obj
   }
+
   /**
    * 判断该时间是否被选中
    * @param {String} date 时间 年月日
@@ -318,6 +301,7 @@ $(function () {
   function isSelectedDom(date) {
     return selectedDates.some((s) => s.date === date)
   }
+
   /**
    * 判断该时间是否禁用
    * @param {String} date 时间 年月日
@@ -332,15 +316,5 @@ $(function () {
       return true
     }
     return false
-  }
-
-  function debounce(fn, duration = 300){
-    let timer = null
-    return (...args) => {
-      clearTimeout(timer)
-      timer = setTimeout(()=>{
-        fn(...args)
-      }, duration)
-    }
   }
 })

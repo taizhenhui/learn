@@ -1,0 +1,6 @@
+<template name="msgItem">
+  <view>
+    <text> {{index}} -- {{msg}} </text>
+    <text> qwe </text>
+  </view>
+</template>
