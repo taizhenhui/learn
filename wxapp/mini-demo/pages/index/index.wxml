@@ -1,8 +1,0 @@
-<import src="../templates/msgItem.wxml"/>
-<block>
-  <view>
-    <text>我的名字是：{{name}}</text>
-  </view>
-  <template is="msgItem" data="{{index:1,msg:'hello'}}"/>
-</block>
-

@@ -81,7 +81,7 @@ Page 除了配置 data 配置项以外，还以配置相应的生命周期钩子
 
 什么算是页面销毁？或者说什么时候页面会被销毁？
 
-当前页面使用wx.redirectTo或wx.navigateBack返回到其他页时，当前页面会被微信客户端销毁回收
+当前页面使用**wx.redirectTo**或**wx.navigateBack**返回到其他页时，当前页面会被微信客户端销毁回收
 
 
 
