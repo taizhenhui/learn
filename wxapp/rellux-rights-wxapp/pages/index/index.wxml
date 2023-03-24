@@ -1,0 +1,6 @@
+<NavBar navbar-data='{{nvabarData}}'></NavBar>
+<scroll-view scroll-y
+             style="height: 100%;">
+  <view class="scroll-view-item"
+        style='padding-top: {{height}}px;'>我是内容</view>
+</scroll-view>
