@@ -1,0 +1,11 @@
+<view class="container">
+  <item class="item" content="{{content}}"
+        count="{{count}}" bind:myEvent="handleEvent" bind:tap="tapHandle">
+        <view>
+          这部分内容会放入 slot 中
+        </view>
+        <view slot="after">
+          这部分内容会放入 after-slot 中
+        </view>
+  </item>
+</view>

@@ -1,0 +1,12 @@
+<view>
+  <view>
+    {{content}}
+  </view>
+  <slot></slot>
+  <view>
+    {{count}}
+  </view>
+  <slot name="after" style="color: red;"></slot>
+  <input class="input-sty" type="text" model:value="{{iptVal}}" bind:input="handleInput"/>
+  <button type="primary" bind:tap="emitFatherData">给父组件传递数据</button>
+</view>

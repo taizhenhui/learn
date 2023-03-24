@@ -7,16 +7,22 @@
   </view>
   <!-- 文本输入框 -->
   <view class="tranlateTxt">
-    <textarea 
-      bindblur="tanslateHandler"
-      model:value = "{{query}}"
-      bindinput="handleInput"
-      placeholder="请输入您要翻译的文本"
-    ></textarea>
+    <textarea bindblur="tanslateHandler"
+              model:value="{{query}}"
+              bindinput="handleInput"
+              placeholder="请输入您要翻译的文本"></textarea>
   </view>
   <!-- 翻译结果 -->
   <view class="resultTxt">
     <view>译文</view>
     <view class="content">{{content}}</view>
+  </view>
+
+  <view>
+    <button type="primary"
+            bindtap="goToComponent"
+            style="position: absolute; bottom: 0;">
+      component
+    </button>
   </view>
 </view>

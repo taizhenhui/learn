@@ -13,6 +13,11 @@ Page({
       url: '/pages/change/change',
     })
   },
+  goToComponent(){
+    wx.navigateTo({
+      url: '/pages/component/component',
+    })
+  },
   // 翻译事件
   tanslateHandler(){
     // 1. 拿到用户输入的值  2. 调用接口进行翻译
@@ -37,6 +42,14 @@ Page({
   onShow(){
     this.setData({
       curLanTxt : app.globalData.curLan.chs
+    })
+    wx.login({
+      success: (res) => {
+        console.log(res,'res');
+        wx.request({
+          url: 'url',
+        })
+      },
     })
   },
   handleInput(){}
