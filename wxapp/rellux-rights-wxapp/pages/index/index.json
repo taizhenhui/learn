@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "NavBar":"../../components/NavBar/NavBar"
+    "van-button": "@vant/weapp/button/index"
   }
 }

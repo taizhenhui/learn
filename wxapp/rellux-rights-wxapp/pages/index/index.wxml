@@ -1,6 +1,5 @@
-<NavBar navbar-data='{{nvabarData}}'></NavBar>
-<scroll-view scroll-y
-             style="height: 100%;">
-  <view class="scroll-view-item"
-        style='padding-top: {{height}}px;'>我是内容</view>
-</scroll-view>
+<van-button type="default">默认按钮</van-button>
+<van-button type="primary">主要按钮</van-button>
+<van-button type="info">信息按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+<van-button type="danger">危险按钮</van-button>

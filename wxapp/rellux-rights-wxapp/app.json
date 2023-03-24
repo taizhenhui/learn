@@ -4,11 +4,11 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationBarBackgroundColor": "#f0f6db",
+    "backgroundColor": "#f0f6db",
+    "navigationBarTitleText": "权益商城",
+    "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+
   "sitemapLocation": "sitemap.json"
 }
