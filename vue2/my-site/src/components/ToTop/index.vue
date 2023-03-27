@@ -27,7 +27,7 @@ export default {
         this.show = false
         return
       }
-      const distance = 1500
+      const distance = 1000
       this.show = dom.scrollTop > distance
     },
     handleClick(){
