@@ -1,15 +1,36 @@
-import Home from "@/views/Home";
-import About from "@/views/About";
-import Blog from "@/views/Blog";
-import Project from "@/views/Project";
-import Message from "@/views/Message";
-import BlogDetail from "@/views/Blog/Detail";
+import "nprogress/nprogress.css";
+import { start, done, configure } from "nprogress";
+configure({
+  trickleSpeed: 20,
+  showSpinner: false,
+});
+
+function delay(duration) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, duration);
+  });
+}
+function getPageComponent(pageCompResolver){
+  return async () => {
+    start();
+    if (process.env.NODE_ENV === "development") {
+      await delay(2000);
+    }
+    const comp = await pageCompResolver();
+    done();
+    return comp;
+  }
+}
 
 export default [
   {
     name: "Home",
     path: "/",
-    component: () => import(/* webpackChunkName: "Home" */'@/views/Home'),
+    component: getPageComponent(() => 
+      import(/* webpackChunkName: "Home" */'@/views/Home')
+    ),
     meta: {
       title: "首页",
     },
@@ -33,7 +54,7 @@ export default [
   {
     name: "CategoryBlog",
     path: "/article/cate/:categoryId",
-    component: () => () => import(/* webpackChunkName: "Blog" */'@/views/Blog'),
+    component: () => import(/* webpackChunkName: "Blog" */'@/views/Blog'),
     meta: {
       title: "文章",
     },
@@ -41,7 +62,7 @@ export default [
   {
     name: "BlogDetail",
     path: "/article/:id",
-    component: () => () => import(/* webpackChunkName: "BlogDetail" */'@/views/Blog/Detail'),
+    component: () => import(/* webpackChunkName: "BlogDetail" */'@/views/Blog/Detail'),
     meta: {
       title: "文章详情",
     },
