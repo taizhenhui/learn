@@ -1,10 +1,11 @@
 <template>
-  <div class="about-container">
-    关于
+  <div class="about-container" v-loading="loading || !srcLoading">
+    <iframe v-if="src" class="about-content" :src="src" @load="srcLoading = true" frameborder="0"></iframe>
   </div>
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
 export default {
   name: 'about',
   components: {
@@ -12,21 +13,36 @@ export default {
   },
   data() {
     return {
-
+      srcLoading: false
     }
   },
-  created () {
-
+  computed: {
+    ...mapState('about', { src: 'data', loading: 'loading' })
   },
-  mounted () {
+  created() {
+    this.fetchAbout()
+  },
+  mounted() {
 
   },
   methods: {
-
+    ...mapActions('about', ['fetchAbout'])
   },
 }
 </script>
 
 <style scoped lang="less">
+.about-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
 
+.about-content {
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+}
 </style>
