@@ -4,8 +4,9 @@ import banner from './banner'
 import setting from './setting'
 import about from "./about";
 import project from "./project";
-Vue.use(Vuex)
-
+if(!window.Vuex){
+  Vue.use(Vuex)
+}
 export default new Vuex.Store({
   modules: {
     banner,
