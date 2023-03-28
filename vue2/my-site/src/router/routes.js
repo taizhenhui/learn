@@ -81,4 +81,12 @@ export default [
       title: "留言板",
     },
   },
+  {
+    name: "NotFound",
+    path: "*",
+    component: getPageComponent(() => import(/* webpackChunkName: "Message" */'@/views/NotFound')),
+    meta: {
+      title: "404",
+    },
+  },
 ];

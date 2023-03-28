@@ -33,14 +33,18 @@
         </div>
       </li>
     </ul>
+    <Empty v-if="!datas?.rows.length && !isLoading" />
     <!-- 分页放到这里 -->
     <Pager v-if="datas.total" :current="routeInfo.page" :total="datas.total" :limit="routeInfo.limit" :visibleNumber="10"
       @pageChange="handlePageChange" />
+    
+   
   </div>
 </template>
 
 <script>
 import Pager from '@/components/Pager'
+import Empty from '@/components/Empty'
 import fetchData from '@/mixins/fetchData'
 import { getBlogs } from '@/api/blog'
 import mainScroll from '@/mixins/mainScroll'
@@ -48,6 +52,7 @@ export default {
   mixins: [fetchData({}), mainScroll('container')],
   components: {
     Pager,
+    Empty,
   },
   data() {
     return {}
