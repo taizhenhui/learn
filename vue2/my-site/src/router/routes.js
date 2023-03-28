@@ -16,7 +16,7 @@ function getPageComponent(pageCompResolver){
   return async () => {
     start();
     if (process.env.NODE_ENV === "development") {
-      await delay(2000);
+      await delay(1000);
     }
     const comp = await pageCompResolver();
     done();
@@ -28,9 +28,7 @@ export default [
   {
     name: "Home",
     path: "/",
-    component: getPageComponent(() => 
-      import(/* webpackChunkName: "Home" */'@/views/Home')
-    ),
+    component: getPageComponent(() => import(/* webpackChunkName: "Home" */'@/views/Home')),
     meta: {
       title: "首页",
     },
@@ -38,7 +36,7 @@ export default [
   {
     name: "About",
     path: "/about",
-    component: () => import(/* webpackChunkName: "About" */'@/views/About'),
+    component: getPageComponent(() => import(/* webpackChunkName: "About" */'@/views/About')),
     meta: {
       title: "关于我",
     },
@@ -46,7 +44,7 @@ export default [
   {
     name: "Blog",
     path: "/article",
-    component: () => import(/* webpackChunkName: "Blog" */'@/views/Blog'),
+    component: getPageComponent(() => import(/* webpackChunkName: "Blog" */'@/views/Blog')),
     meta: {
       title: "文章",
     },
@@ -54,7 +52,7 @@ export default [
   {
     name: "CategoryBlog",
     path: "/article/cate/:categoryId",
-    component: () => import(/* webpackChunkName: "Blog" */'@/views/Blog'),
+    component: getPageComponent(() => import(/* webpackChunkName: "Blog" */'@/views/Blog')),
     meta: {
       title: "文章",
     },
@@ -62,7 +60,7 @@ export default [
   {
     name: "BlogDetail",
     path: "/article/:id",
-    component: () => import(/* webpackChunkName: "BlogDetail" */'@/views/Blog/Detail'),
+    component: getPageComponent(() => import(/* webpackChunkName: "BlogDetail" */'@/views/Blog/Detail')),
     meta: {
       title: "文章详情",
     },
@@ -70,7 +68,7 @@ export default [
   {
     name: "Project",
     path: "/project",
-    component: () => import(/* webpackChunkName: "Project" */'@/views/Project'),
+    component: getPageComponent(() => import(/* webpackChunkName: "Project" */'@/views/Project')),
     meta: {
       title: "项目&效果",
     },
@@ -78,7 +76,7 @@ export default [
   {
     name: "Message",
     path: "/message",
-    component: () => import(/* webpackChunkName: "Message" */'@/views/Message'),
+    component: getPageComponent(() => import(/* webpackChunkName: "Message" */'@/views/Message')),
     meta: {
       title: "留言板",
     },
