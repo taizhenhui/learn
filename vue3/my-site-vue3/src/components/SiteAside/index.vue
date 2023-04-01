@@ -11,9 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import Avatar from '@/components/Avatar/index.vue'
-import Menu from '@/components/SiteAside/Menu/index.vue'
-import Contact from '@/components/SiteAside/Contact/index.vue'
+import Avatar from '@/components/Avatar'
+import Menu from '@/components/SiteAside/Menu'
+import Contact from '@/components/SiteAside/Contact'
 const url: string =
   'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202106%2F09%2F20210609081952_51ef5.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682921186&t=8d91e34b33a95390054168eb917cb201'
 

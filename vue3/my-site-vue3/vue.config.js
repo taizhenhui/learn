@@ -2,7 +2,7 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
-  devServer:{
+  devServer: {
     host: '0.0.0.0',
     port: 8088,
     open: false, // vue项目启动时自动打开浏览器
@@ -17,5 +17,6 @@ module.exports = defineConfig({
         },
       },
     },
-  }
+  },
+  
 })

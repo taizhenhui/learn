@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-import Layout from '@/components/Layout/index.vue'
-import SiteAside from '@/components/SiteAside/index.vue'
+import Layout from '@/components/Layout'
+import SiteAside from '@/components/SiteAside'
 </script>
 
 <style lang="less" scoped>

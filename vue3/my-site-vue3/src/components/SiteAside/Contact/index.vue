@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import Icon from '@/components/Icon/index.vue'
+import Icon from '@/components/Icon'
 const url = 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201807%2F21%2F20180721110514_TM5nj.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1680687747&t=88ecb1c9ebcd661dc91443a8ef68bb75'
 
 </script>

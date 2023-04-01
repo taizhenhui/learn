@@ -1,10 +1,10 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
 import './styles/global.less'
-
-
+import { showMessage } from './utils';
 const app = createApp(App)
 
+app.config.globalProperties.$showMessage = showMessage;
 app.use(router)
-app.mount("#app");
+app.mount('#app')

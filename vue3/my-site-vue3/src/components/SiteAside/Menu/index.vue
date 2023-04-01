@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import Icon from '@/components/Icon/index.vue'
+import Icon from '@/components/Icon'
 import { ref } from 'vue'
 type RouterList = {
   link: string
