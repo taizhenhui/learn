@@ -3,7 +3,9 @@
     <Suspense>
       <Layout>
         <template #left>
-          
+          <div class="aside">
+            <SiteAside />
+          </div>
         </template>
         <template #main>
           <router-view />
@@ -15,6 +17,7 @@
 
 <script setup lang="ts">
 import Layout from '@/components/Layout/index.vue'
+import SiteAside from '@/components/SiteAside/index.vue'
 </script>
 
 <style lang="less" scoped>
