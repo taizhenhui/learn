@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <h1>首页</h1>
-    <button @click="go('about')">go 关于</button>
+    <button @click="go('About')">go about</button>
   </div>
 </template>
 
@@ -15,6 +15,9 @@ const go = (name: string) => {
 </script>
 
 <style lang="less" scoped>
+
 .home-container {
+  width: 100%;
+  height: 100%;
 }
 </style>
