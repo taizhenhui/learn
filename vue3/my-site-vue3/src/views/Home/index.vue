@@ -1,5 +1,5 @@
 <template>
-  <div class="home-container">
+  <div class="home-container" v-loading="true">
     <h1>首页</h1>
     <!-- <MessageArea
       title="留言板"
