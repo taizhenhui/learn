@@ -24,6 +24,7 @@ import MessageArea from '@/components/MessageArea/index.vue'
 import Pages from '@/components/Pager/index.vue'
 import { reactive, ref } from 'vue'
 import { FormDataType, IList } from '@/types'
+import { getBanners } from '@/api/banner'
 
 interface IPages {
   page?: number
@@ -40,7 +41,6 @@ const routeInfo: IPages = reactive({
 
 const handlePageChange = (newpage: number) => {
   routeInfo.page = newpage
-  
 }
 const list = ref<Array<IList>>([
   {
@@ -65,6 +65,9 @@ const handleSubmit = (data: FormDataType, cb: (successMsg: string) => void) => {
   console.log(data, 'data---data')
   cb('感谢您的留言')
 }
+const resp = await getBanners()
+console.log(resp,'resp---resp');
+
 </script>
 
 <style lang="less" scoped>
