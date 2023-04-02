@@ -8,5 +8,5 @@ import "./banner"
 
 import Mock from "mockjs";
 Mock.setup({
-  timeout: "700-1200",
+  timeout: "7000-12000",
 });

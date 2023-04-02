@@ -7,17 +7,17 @@ const transform: InterceptorHooks = {
     // if (token) {
     //   config!.headers!.Authorization = token
     // }
-    console.log('requestInterceptor', config)
+    // console.log('requestInterceptor', config)
     return config
   },
   requestInterceptorCatch(err) {
-    console.log('requestInterceptorCatch', err)
+    // console.log('requestInterceptorCatch', err)
     // 请求错误，这里可以用全局提示框进行提示
     return Promise.reject(err)
   },
   responseInterceptor(result) {
     const res = result as ExpandAxiosResponse
-    console.log(res, 'responseInterceptor--res')
+    // console.log(res, 'responseInterceptor--res')
 
     // 与后端约定的请求成功码
     const SUCCESS_CODE = 0
@@ -25,19 +25,19 @@ const transform: InterceptorHooks = {
     if (res.data.code !== SUCCESS_CODE) {
       if (res.config.requestOptions?.globalErrorMsg) {
         // 这里全局提示错误
-        console.error(res.data.msg)
+        // console.error(res.data.msg)
       }
       return Promise.reject(res.data)
     }
     if (res.config.requestOptions?.globalSuccessMsg) {
       // 这里全局提示请求成功
-      console.log(res.data.msg)
+      // console.log(res.data.msg)
     }
     return result.data.data
   },
   responseInterceptorCatch(err) {
     // 这里用来处理 http 常见错误，进行全局提示
-    console.log('responseInterceptorCatch', err)
+    // console.log('responseInterceptorCatch', err)
 
     const mapErrorStatus = new Map([
       [400, '请求方式错误'],

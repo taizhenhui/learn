@@ -6,7 +6,7 @@
       <span>{{ subTitle }}</span>
     </h3>
     <DataList :list="list"></DataList>
-    <div class="loading"></div>
+    <div class="loading" v-loading="isListLoading"></div>
   </div>
 </template>
 

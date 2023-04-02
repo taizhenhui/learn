@@ -46,7 +46,7 @@ export default class Request {
     url: string,
     params?: any
   ): Promise<AxiosResponse<BaseApiResponse<T>>> {
-    const config: ExpandAxiosRequestConfig = { params }
+    const config: ExpandAxiosRequestConfig = { params } 
     return this._instance.get(url, config)
   }
   public post<T = any>(
