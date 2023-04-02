@@ -41,9 +41,9 @@ const props = withDefaults(defineProps<IProps>(), {
   limit: 10,
   visibleNumber: 10,
 })
-console.log(props);
 
 const emit = defineEmits(['pageChange'])
+
 let { current, total, limit, visibleNumber } = toRefs(props)
 
 // 总页数
@@ -70,8 +70,6 @@ const numbersRef = computed(() => {
 })
 
 const handleClick = (newpage: number) => {
-  console.log(pageNumberRef.value)
-
   if (newpage < 1) newpage = 1
   if (newpage > pageNumberRef.value) newpage = pageNumberRef.value
   if (newpage === current.value) return
