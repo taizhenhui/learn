@@ -1,0 +1,11 @@
+java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at stream.OOO0OOOOO00O0000O0O000O00O000OO0000O000OOO0OO00O000O0OOOO0O0OOO0O00OO00O0OO0O0O0O0O0O0OO00O00O0OOO0.OOO0O00O000O00OOO000000OO00O0O0OOO0O00OO0O00O000OOO00OO0OOO0O0O0O0O00O0OOO000O0OO0O00000OO000OOO000(Unknown Source)
+	at stream.O0O0OO0O00O00OO0OOOOO0O0O00OOOOOO0OOO00000OO0OO00000OOOO00OOOO00O00O0000OOO0000OOO0000O00O00000000O0.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
