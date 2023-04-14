@@ -1,3 +1,5 @@
+const mymid = require("../app/middleware/mymid");
+
 exports.keys = 'tai.com';
 
 exports.view = {
@@ -17,4 +19,12 @@ exports.security = {
   },
 };
 
+exports.middleware = ["mymid"]
+
+exports.mymid = {
+  enable: true,
+  match:'/login',
+  a: 1,
+  b: 2
+}
 exports.$apiBase = "http://study.yuanjin.tech";

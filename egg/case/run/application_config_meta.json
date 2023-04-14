@@ -65,6 +65,13 @@
       "checkAddress": "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\node_modules\\egg-security\\config\\config.default.js"
     }
   },
+  "middleware": "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\config\\config.default.js",
+  "mymid": {
+    "enable": "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\config\\config.default.js",
+    "match": "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\config\\config.default.js",
+    "a": "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\config\\config.default.js",
+    "b": "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\config\\config.default.js"
+  },
   "$apiBase": "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\config\\config.default.js",
   "session": {
     "maxAge": "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\node_modules\\egg-session\\config\\config.default.js",

@@ -2,7 +2,9 @@
 module.exports = (app) => {
   const { router } = app;
 
-  router.get('/', 'home.index')
+  const verifyToken = app.middleware.verifyToken({}, app)
+  router.get('/', verifyToken, 'home.index')
+  router.get('/css', verifyToken, 'home.css')
   router.get('/login', 'user.login')
   router.post('/login', 'user.handleLogin')
 }

@@ -356,3 +356,18 @@ name: "unhandledExceptionError"
 pid: 1412
 hostname: DESKTOP-2IDU54L
 
+2023-04-14 17:29:19,120 ERROR 25312 [-/127.0.0.1/-/2ms GET /] nodejs.TypeError: Cannot read properties of undefined (reading 'axios')
+    at E:\project\TAI\tai-project\learn\egg\case\app\middleware\verifyToken.js:11:28
+    at dispatch (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa-compose\index.js:44:32)
+    at next (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa-compose\index.js:45:18)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\@eggjs\router\lib\router.js:186:18
+    at dispatch (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa-compose\index.js:44:32)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\project\TAI\tai-project\learn\egg\case\node_modules\@eggjs\router\lib\router.js:191:33)
+    at dispatch (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at fn (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-core\lib\loader\mixin\middleware.js:111:29)
+    at dispatch (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+
+pid: 25312
+hostname: DESKTOP-2IDU54L
+
