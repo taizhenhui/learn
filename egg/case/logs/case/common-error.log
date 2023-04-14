@@ -347,3 +347,12 @@ path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
 pid: 25060
 hostname: DESKTOP-2IDU54L
 
+2023-04-14 16:51:03,597 ERROR 1412 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:220:20)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 1412
+hostname: DESKTOP-2IDU54L
+

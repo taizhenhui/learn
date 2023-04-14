@@ -172,3 +172,6 @@
 2023-04-14 16:51:01,872 INFO 18436 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
 2023-04-14 16:51:01,872 INFO 18436 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-logrotator\app\schedule\clean_log.js
 2023-04-14 16:51:01,873 INFO 18436 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 16:51:03,512 INFO 14528 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 16:51:03,512 INFO 14528 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 16:51:03,512 INFO 14528 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
