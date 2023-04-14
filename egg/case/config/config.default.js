@@ -1,5 +1,3 @@
-const mymid = require("../app/middleware/mymid");
-
 exports.keys = 'tai.com';
 
 exports.view = {
