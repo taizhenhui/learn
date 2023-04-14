@@ -1200,3 +1200,120 @@ hostname: DESKTOP-2IDU54L
 2023-04-14 17:32:11,220 INFO 2096 [egg:core] dump config after load, 6ms
 2023-04-14 17:32:11,232 INFO 2096 [egg-watcher:application] watcher start success
 2023-04-14 17:32:11,242 INFO 2096 [egg:core] dump config after ready, 8ms
+2023-04-14 17:41:58,635 INFO 22072 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\case\\logs\\case","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"case-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-04-14 17:41:58,708 INFO 22072 [egg-multipart] stream mode enable
+2023-04-14 17:41:58,922 INFO 22072 [egg-static] starting static serve /public/ -> E:\project\TAI\tai-project\learn\egg\case\app\public
+2023-04-14 17:41:58,925 INFO 22072 [egg-security] use methodnoallow middleware
+2023-04-14 17:41:58,926 INFO 22072 [egg-security] use noopen middleware
+2023-04-14 17:41:58,927 INFO 22072 [egg-security] use nosniff middleware
+2023-04-14 17:41:58,928 INFO 22072 [egg-security] use xssProtection middleware
+2023-04-14 17:41:58,929 INFO 22072 [egg-security] use xframe middleware
+2023-04-14 17:41:58,929 INFO 22072 [egg-security] use dta middleware
+2023-04-14 17:41:58,929 INFO 22072 [egg-security] compose 6 middlewares into one security middleware
+2023-04-14 17:41:58,944 INFO 22072 [egg:core] dump config after load, 8ms
+2023-04-14 17:41:58,963 INFO 22072 [egg-watcher:application] watcher start success
+2023-04-14 17:41:58,975 INFO 22072 [egg:core] dump config after ready, 10ms
+2023-04-14 17:42:01,054 INFO 17380 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\case\\logs\\case","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"case-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-04-14 17:42:01,097 INFO 17380 [egg-multipart] stream mode enable
+2023-04-14 17:42:01,285 INFO 17380 [egg-static] starting static serve /public/ -> E:\project\TAI\tai-project\learn\egg\case\app\public
+2023-04-14 17:42:01,289 INFO 17380 [egg-security] use methodnoallow middleware
+2023-04-14 17:42:01,290 INFO 17380 [egg-security] use noopen middleware
+2023-04-14 17:42:01,291 INFO 17380 [egg-security] use nosniff middleware
+2023-04-14 17:42:01,292 INFO 17380 [egg-security] use xssProtection middleware
+2023-04-14 17:42:01,293 INFO 17380 [egg-security] use xframe middleware
+2023-04-14 17:42:01,294 INFO 17380 [egg-security] use dta middleware
+2023-04-14 17:42:01,294 INFO 17380 [egg-security] compose 6 middlewares into one security middleware
+2023-04-14 17:42:01,307 INFO 17380 [egg:core] dump config after load, 5ms
+2023-04-14 17:42:01,323 INFO 17380 [egg-watcher:application] watcher start success
+2023-04-14 17:42:01,333 INFO 17380 [egg:core] dump config after ready, 8ms
+2023-04-14 17:42:27,866 INFO 12012 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\case\\logs\\case","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"case-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-04-14 17:42:27,898 INFO 12012 [egg-multipart] stream mode enable
+2023-04-14 17:42:28,039 INFO 12012 [egg-static] starting static serve /public/ -> E:\project\TAI\tai-project\learn\egg\case\app\public
+2023-04-14 17:42:28,041 INFO 12012 [egg-security] use methodnoallow middleware
+2023-04-14 17:42:28,042 INFO 12012 [egg-security] use noopen middleware
+2023-04-14 17:42:28,043 INFO 12012 [egg-security] use nosniff middleware
+2023-04-14 17:42:28,043 INFO 12012 [egg-security] use xssProtection middleware
+2023-04-14 17:42:28,044 INFO 12012 [egg-security] use xframe middleware
+2023-04-14 17:42:28,045 INFO 12012 [egg-security] use dta middleware
+2023-04-14 17:42:28,045 INFO 12012 [egg-security] compose 6 middlewares into one security middleware
+2023-04-14 17:42:28,056 INFO 12012 [egg:core] dump config after load, 5ms
+2023-04-14 17:42:28,069 INFO 12012 [egg-watcher:application] watcher start success
+2023-04-14 17:42:28,077 INFO 12012 [egg:core] dump config after ready, 7ms
+2023-04-14 17:42:39,539 INFO 16788 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\case\\logs\\case","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"case-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-04-14 17:42:39,561 INFO 16788 [egg-multipart] stream mode enable
+2023-04-14 17:42:39,664 INFO 16788 [egg-static] starting static serve /public/ -> E:\project\TAI\tai-project\learn\egg\case\app\public
+2023-04-14 17:42:39,666 INFO 16788 [egg-security] use methodnoallow middleware
+2023-04-14 17:42:39,667 INFO 16788 [egg-security] use noopen middleware
+2023-04-14 17:42:39,668 INFO 16788 [egg-security] use nosniff middleware
+2023-04-14 17:42:39,668 INFO 16788 [egg-security] use xssProtection middleware
+2023-04-14 17:42:39,668 INFO 16788 [egg-security] use xframe middleware
+2023-04-14 17:42:39,669 INFO 16788 [egg-security] use dta middleware
+2023-04-14 17:42:39,669 INFO 16788 [egg-security] compose 6 middlewares into one security middleware
+2023-04-14 17:42:39,678 INFO 16788 [egg:core] dump config after load, 4ms
+2023-04-14 17:42:39,691 INFO 16788 [egg-watcher:application] watcher start success
+2023-04-14 17:42:39,697 INFO 16788 [egg:core] dump config after ready, 4ms
+2023-04-14 17:43:25,690 INFO 21304 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\case\\logs\\case","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"case-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-04-14 17:43:25,709 INFO 21304 [egg-multipart] stream mode enable
+2023-04-14 17:43:25,799 INFO 21304 [egg-static] starting static serve /public/ -> E:\project\TAI\tai-project\learn\egg\case\app\public
+2023-04-14 17:43:25,800 INFO 21304 [egg-security] use methodnoallow middleware
+2023-04-14 17:43:25,801 INFO 21304 [egg-security] use noopen middleware
+2023-04-14 17:43:25,801 INFO 21304 [egg-security] use nosniff middleware
+2023-04-14 17:43:25,802 INFO 21304 [egg-security] use xssProtection middleware
+2023-04-14 17:43:25,802 INFO 21304 [egg-security] use xframe middleware
+2023-04-14 17:43:25,803 INFO 21304 [egg-security] use dta middleware
+2023-04-14 17:43:25,803 INFO 21304 [egg-security] compose 6 middlewares into one security middleware
+2023-04-14 17:43:25,810 INFO 21304 [egg:core] dump config after load, 3ms
+2023-04-14 17:43:25,820 INFO 21304 [egg-watcher:application] watcher start success
+2023-04-14 17:43:25,826 INFO 21304 [egg:core] dump config after ready, 4ms
+2023-04-14 17:46:17,934 INFO 22556 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\case\\logs\\case","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"case-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-04-14 17:46:17,972 INFO 22556 [egg-multipart] stream mode enable
+2023-04-14 17:46:18,128 INFO 22556 [egg-static] starting static serve /public/ -> E:\project\TAI\tai-project\learn\egg\case\app\public
+2023-04-14 17:46:18,130 INFO 22556 [egg-security] use methodnoallow middleware
+2023-04-14 17:46:18,131 INFO 22556 [egg-security] use noopen middleware
+2023-04-14 17:46:18,132 INFO 22556 [egg-security] use nosniff middleware
+2023-04-14 17:46:18,133 INFO 22556 [egg-security] use xssProtection middleware
+2023-04-14 17:46:18,133 INFO 22556 [egg-security] use xframe middleware
+2023-04-14 17:46:18,134 INFO 22556 [egg-security] use dta middleware
+2023-04-14 17:46:18,134 INFO 22556 [egg-security] compose 6 middlewares into one security middleware
+2023-04-14 17:46:18,146 INFO 22556 [egg:core] dump config after load, 5ms
+2023-04-14 17:46:18,162 INFO 22556 [egg-watcher:application] watcher start success
+2023-04-14 17:46:18,171 INFO 22556 [egg:core] dump config after ready, 7ms
+2023-04-14 17:46:20,422 INFO 22204 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\case\\logs\\case","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"case-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-04-14 17:46:20,456 INFO 22204 [egg-multipart] stream mode enable
+2023-04-14 17:46:20,600 INFO 22204 [egg-static] starting static serve /public/ -> E:\project\TAI\tai-project\learn\egg\case\app\public
+2023-04-14 17:46:20,603 INFO 22204 [egg-security] use methodnoallow middleware
+2023-04-14 17:46:20,604 INFO 22204 [egg-security] use noopen middleware
+2023-04-14 17:46:20,605 INFO 22204 [egg-security] use nosniff middleware
+2023-04-14 17:46:20,605 INFO 22204 [egg-security] use xssProtection middleware
+2023-04-14 17:46:20,606 INFO 22204 [egg-security] use xframe middleware
+2023-04-14 17:46:20,607 INFO 22204 [egg-security] use dta middleware
+2023-04-14 17:46:20,607 INFO 22204 [egg-security] compose 6 middlewares into one security middleware
+2023-04-14 17:46:20,617 INFO 22204 [egg:core] dump config after load, 5ms
+2023-04-14 17:46:20,630 INFO 22204 [egg-watcher:application] watcher start success
+2023-04-14 17:46:20,638 INFO 22204 [egg:core] dump config after ready, 6ms
+2023-04-14 17:47:10,427 INFO 7416 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\case\\logs\\case","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"case-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-04-14 17:47:10,447 INFO 7416 [egg-multipart] stream mode enable
+2023-04-14 17:47:10,539 INFO 7416 [egg-static] starting static serve /public/ -> E:\project\TAI\tai-project\learn\egg\case\app\public
+2023-04-14 17:47:10,541 INFO 7416 [egg-security] use methodnoallow middleware
+2023-04-14 17:47:10,541 INFO 7416 [egg-security] use noopen middleware
+2023-04-14 17:47:10,542 INFO 7416 [egg-security] use nosniff middleware
+2023-04-14 17:47:10,543 INFO 7416 [egg-security] use xssProtection middleware
+2023-04-14 17:47:10,543 INFO 7416 [egg-security] use xframe middleware
+2023-04-14 17:47:10,543 INFO 7416 [egg-security] use dta middleware
+2023-04-14 17:47:10,543 INFO 7416 [egg-security] compose 6 middlewares into one security middleware
+2023-04-14 17:47:10,551 INFO 7416 [egg:core] dump config after load, 4ms
+2023-04-14 17:47:10,562 INFO 7416 [egg-watcher:application] watcher start success
+2023-04-14 17:47:10,570 INFO 7416 [egg:core] dump config after ready, 6ms
+2023-04-14 17:47:33,984 INFO 25884 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\case\\logs\\case","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"case-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-04-14 17:47:34,005 INFO 25884 [egg-multipart] stream mode enable
+2023-04-14 17:47:34,113 INFO 25884 [egg-static] starting static serve /public/ -> E:\project\TAI\tai-project\learn\egg\case\app\public
+2023-04-14 17:47:34,115 INFO 25884 [egg-security] use methodnoallow middleware
+2023-04-14 17:47:34,116 INFO 25884 [egg-security] use noopen middleware
+2023-04-14 17:47:34,117 INFO 25884 [egg-security] use nosniff middleware
+2023-04-14 17:47:34,117 INFO 25884 [egg-security] use xssProtection middleware
+2023-04-14 17:47:34,118 INFO 25884 [egg-security] use xframe middleware
+2023-04-14 17:47:34,118 INFO 25884 [egg-security] use dta middleware
+2023-04-14 17:47:34,118 INFO 25884 [egg-security] compose 6 middlewares into one security middleware
+2023-04-14 17:47:34,126 INFO 25884 [egg:core] dump config after load, 4ms
+2023-04-14 17:47:34,140 INFO 25884 [egg-watcher:application] watcher start success
+2023-04-14 17:47:34,146 INFO 25884 [egg:core] dump config after ready, 5ms

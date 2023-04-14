@@ -3,7 +3,7 @@ const axios = require('axios')
 class UserController extends Controller {
   async login() {
     const model = {
-      title: '登录--地区数据库',
+      title: '登录',
       error: '',
       loginId: ''
     }
@@ -16,7 +16,7 @@ class UserController extends Controller {
     if (resp.data.code) {
       // 登录失败
       const model = {
-        title: '登录--地区数据库',
+        title: '登录',
         error: resp.data.message,
         loginId: body.loginId
       }

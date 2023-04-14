@@ -20,8 +20,9 @@ module.exports = (options, app) => {
       return
     }
 
-    ctx.state.user = resp.data.data
-    
+    // ctx.state.user = resp.data.data
+    ctx.locals.user = resp.data.data
+
     await next()
   }
 }
