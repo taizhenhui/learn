@@ -1,0 +1,349 @@
+2023-04-14 14:32:20,132 ERROR 12568 [-/127.0.0.1/-/12ms GET /login] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:7
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:26:26)
+    at login (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+    at async UserController.login (E:\project\TAI\tai-project\learn\egg\case\app\controller\user.js:5:5)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\login.ejs"
+pid: 12568
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 14:33:54,309 ERROR 26820 [-/127.0.0.1/-/9ms GET /login] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:7
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:26:26)
+    at login (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+    at async UserController.login (E:\project\TAI\tai-project\learn\egg\case\app\controller\user.js:5:5)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\login.ejs"
+pid: 26820
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 14:34:03,971 ERROR 26820 [-/127.0.0.1/-/9ms GET /login] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:7
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:26:26)
+    at login (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+    at async UserController.login (E:\project\TAI\tai-project\learn\egg\case\app\controller\user.js:5:5)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\login.ejs"
+pid: 26820
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 15:50:54,072 ERROR 27116 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:220:20)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 27116
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:29:02,065 ERROR 2804 nodejs.unhandledRejectionError: Request failed with status code 404
+    at createError (E:\project\TAI\tai-project\learn\egg\case\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\project\TAI\tai-project\learn\egg\case\node_modules\axios\lib\core\settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (E:\project\TAI\tai-project\learn\egg\case\node_modules\axios\lib\adapters\http.js:236:11)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+config: {"url":"/api/user/whoami","method":"get","headers":{"Accept":"application/json, text/plain, */*","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwNTcwLCJleHAiOjE2ODE1NDY5NzB9.WsmYCozkuz7hTwTNMlJI00QmyOs7Ufpw61MvIp5SKpc","User-Agent":"axios/0.19.2"},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1}
+request: {"_events":{},"_eventsCount":6,"outputData":[],"outputSize":0,"writable":true,"destroyed":false,"_last":true,"chunkedEncoding":false,"shouldKeepAlive":false,"maxRequestsOnConnectionReached":false,"_defaultKeepAlive":true,"useChunkedEncodingByDefault":false,"sendDate":false,"_removedConnection":false,"_removedContLen":false,"_removedTE":false,"_contentLength":0,"_hasBody":true,"_trailer":"","finished":true,"_headerSent":true,"_closed":false,"socket":{"connecting":false,"_hadError":false,"_parent":null,"_host":"localhost","_readableState":{"objectMode":false,"highWaterMark":16384,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":true,"ended":false,"endEmitted":false,"reading":true,"constructed":true,"sync":false,"needReadable":true,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":false,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"dataEmitted":true,"decoder":null,"encoding":null},"_events":{"close":[null,null]},"_eventsCount":7,"_writableState":{"objectMode":false,"highWaterMark":16384,"finalCalled":true,"needDrain":false,"ending":true,"ended":true,"finished":false,"destroyed":false,"decodeStrings":false,"defaultEncoding":"utf8","length":0,"writing":false,"corked":0,"sync":false,"bufferProcessing":false,"writecb":null,"writelen":0,"afterWriteTickInfo":null,"buffered":[],"bufferedIndex":0,"allBuffers":true,"allNoop":true,"pendingcb":1,"constructed":true,"prefinished":false,"errorEmitted":false,"emitClose":false,"autoDestroy":true,"errored":null,"closed":false,"closeEmitted":false},"allowHalfOpen":false,"_sockname":null,"_pendingData":null,"_pendingEncoding":"","server":null,"_server":null,"parser":null,"_httpMessage":"~"},"_header":"GET /api/user/whoami HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nauthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwNTcwLCJleHAiOjE2ODE1NDY5NzB9.WsmYCozkuz7hTwTNMlJI00QmyOs7Ufpw61MvIp5SKpc\r\nUser-Agent: axios/0.19.2\r\nHost: localhost\r\nConnection: close\r\n\r\n","_keepAliveTimeout":0,"agent":{"_events":{},"_eventsCount":2,"defaultPort":80,"protocol":"http:","options":{"path":null},"requests":{},"sockets":{"localhost:80:":["~socket"]},"freeSockets":{},"keepAliveMsecs":1000,"keepAlive":false,"maxSockets":null,"maxFreeSockets":256,"scheduling":"lifo","maxTotalSockets":null,"totalSocketCount":1},"method":"GET","path":"/api/user/whoami","_ended":true,"res":{"_readableState":{"objectMode":false,"highWaterMark":16384,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":true,"ended":true,"endEmitted":true,"reading":false,"constructed":true,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":true,"errored":null,"closed":true,"closeEmitted":true,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":true,"dataEmitted":false,"decoder":null,"encoding":null},"_events":{"end":[null,null]},"_eventsCount":3,"socket":"~socket","httpVersionMajor":1,"httpVersionMinor":1,"httpVersion":"1.1","complete":true,"rawHeaders":["Content-Length","0","Connection","close","Date","Fri, 14 Apr 2023 08:29:01 GMT","Server","Kestrel"],"rawTrailers":[],"aborted":false,"upgrade":false,"url":"","method":null,"statusCode":404,"statusMessage":"Not Found","client":"~socket","_consuming":false,"_dumped":false,"req":"~","responseUrl":"http:/api/user/whoami","redirects":[]},"aborted":false,"timeoutCb":null,"upgradeOrConnect":false,"parser":null,"maxHeadersCount":null,"reusedSocket":false,"host":"localhost","protocol":"http:","_redirectable":{"_writableState":{"objectMode":false,"highWaterMark":16384,"finalCalled":false,"needDrain":false,"ending":false,"ended":false,"finished":false,"destroyed":false,"decodeStrings":true,"defaultEncoding":"utf8","length":0,"writing":false,"corked":0,"sync":true,"bufferProcessing":false,"writecb":null,"writelen":0,"afterWriteTickInfo":null,"buffered":[],"bufferedIndex":0,"allBuffers":true,"allNoop":true,"pendingcb":0,"constructed":true,"prefinished":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"errored":null,"closed":false,"closeEmitted":false},"_events":{},"_eventsCount":2,"_options":{"protocol":"http:","maxRedirects":21,"maxBodyLength":10485760,"path":"/api/user/whoami","method":"GET","headers":{"Accept":"application/json, text/plain, */*","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwNTcwLCJleHAiOjE2ODE1NDY5NzB9.WsmYCozkuz7hTwTNMlJI00QmyOs7Ufpw61MvIp5SKpc","User-Agent":"axios/0.19.2"},"agents":{},"hostname":null,"port":null,"nativeProtocols":{"http:":{"METHODS":["ACL","BIND","CHECKOUT","CONNECT","COPY","DELETE","GET","HEAD","LINK","LOCK","M-SEARCH","MERGE","MKACTIVITY","MKCALENDAR","MKCOL","MOVE","NOTIFY","OPTIONS","PATCH","POST","PROPFIND","PROPPATCH","PURGE","PUT","REBIND","REPORT","SEARCH","SOURCE","SUBSCRIBE","TRACE","UNBIND","UNLINK","UNLOCK","UNSUBSCRIBE"],"STATUS_CODES":{"100":"Continue","101":"Switching Protocols","102":"Processing","103":"Early Hints","200":"OK","201":"Created","202":"Accepted","203":"Non-Authoritative Information","204":"No Content","205":"Reset Content","206":"Partial Content","207":"Multi-Status","208":"Already Reported","226":"IM Used","300":"Multiple Choices","301":"Moved Permanently","302":"Found","303":"See Other","304":"Not Modified","305":"Use Proxy","307":"Temporary Redirect","308":"Permanent Redirect","400":"Bad Request","401":"Unauthorized","402":"Payment Required","403":"Forbidden","404":"Not Found","405":"Method Not Allowed","406":"Not Acceptable","407":"Proxy Authentication Required","408":"Request Timeout","409":"Conflict","410":"Gone","411":"Length Required","412":"Precondition Failed","413":"Payload Too Large","414":"URI Too Long","415":"Unsupported Media Type","416":"Range Not Satisfiable","417":"Expectation Failed","418":"I'm a Teapot","421":"Misdirected Request","422":"Unprocessable Entity","423":"Locked","424":"Failed Dependency","425":"Too Early","426":"Upgrade Required","428":"Precondition Required","429":"Too Many Requests","431":"Request Header Fields Too Large","451":"Unavailable For Legal Reasons","500":"Internal Server Error","501":"Not Implemented","502":"Bad Gateway","503":"Service Unavailable","504":"Gateway Timeout","505":"HTTP Version Not Supported","506":"Variant Also Negotiates","507":"Insufficient Storage","508":"Loop Detected","509":"Bandwidth Limit Exceeded","510":"Not Extended","511":"Network Authentication Required"},"maxHeaderSize":16384,"globalAgent":"~agent"},"https:":{"globalAgent":{"_events":{},"_eventsCount":2,"defaultPort":443,"protocol":"https:","options":{"path":null},"requests":{},"sockets":{},"freeSockets":{},"keepAliveMsecs":1000,"keepAlive":false,"maxSockets":null,"maxFreeSockets":256,"scheduling":"lifo","maxTotalSockets":null,"totalSocketCount":0,"maxCachedSessions":100,"_sessionCache":{"map":{},"list":[]}}}},"pathname":"/api/user/whoami"},"_redirectCount":0,"_redirects":"~res~redirects","_requestBodyLength":0,"_requestBodyBuffers":[],"_currentRequest":"~","_currentUrl":"http:/api/user/whoami"}}
+response: {"status":404,"statusText":"Not Found","headers":{"content-length":"0","connection":"close","date":"Fri, 14 Apr 2023 08:29:01 GMT","server":"Kestrel"},"config":{"url":"/api/user/whoami","method":"get","headers":{"Accept":"application/json, text/plain, */*","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwNTcwLCJleHAiOjE2ODE1NDY5NzB9.WsmYCozkuz7hTwTNMlJI00QmyOs7Ufpw61MvIp5SKpc","User-Agent":"axios/0.19.2"},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1},"request":{"_events":{},"_eventsCount":6,"outputData":[],"outputSize":0,"writable":true,"destroyed":false,"_last":true,"chunkedEncoding":false,"shouldKeepAlive":false,"maxRequestsOnConnectionReached":false,"_defaultKeepAlive":true,"useChunkedEncodingByDefault":false,"sendDate":false,"_removedConnection":false,"_removedContLen":false,"_removedTE":false,"_contentLength":0,"_hasBody":true,"_trailer":"","finished":true,"_headerSent":true,"_closed":false,"socket":{"connecting":false,"_hadError":false,"_parent":null,"_host":"localhost","_readableState":{"objectMode":false,"highWaterMark":16384,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":true,"ended":false,"endEmitted":false,"reading":true,"constructed":true,"sync":false,"needReadable":true,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":false,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"dataEmitted":true,"decoder":null,"encoding":null},"_events":{"close":[null,null]},"_eventsCount":7,"_writableState":{"objectMode":false,"highWaterMark":16384,"finalCalled":true,"needDrain":false,"ending":true,"ended":true,"finished":false,"destroyed":false,"decodeStrings":false,"defaultEncoding":"utf8","length":0,"writing":false,"corked":0,"sync":false,"bufferProcessing":false,"writecb":null,"writelen":0,"afterWriteTickInfo":null,"buffered":[],"bufferedIndex":0,"allBuffers":true,"allNoop":true,"pendingcb":1,"constructed":true,"prefinished":false,"errorEmitted":false,"emitClose":false,"autoDestroy":true,"errored":null,"closed":false,"closeEmitted":false},"allowHalfOpen":false,"_sockname":null,"_pendingData":null,"_pendingEncoding":"","server":null,"_server":null,"parser":null,"_httpMessage":"~request"},"_header":"GET /api/user/whoami HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nauthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwNTcwLCJleHAiOjE2ODE1NDY5NzB9.WsmYCozkuz7hTwTNMlJI00QmyOs7Ufpw61MvIp5SKpc\r\nUser-Agent: axios/0.19.2\r\nHost: localhost\r\nConnection: close\r\n\r\n","_keepAliveTimeout":0,"agent":{"_events":{},"_eventsCount":2,"defaultPort":80,"protocol":"http:","options":{"path":null},"requests":{},"sockets":{"localhost:80:":["~request~socket"]},"freeSockets":{},"keepAliveMsecs":1000,"keepAlive":false,"maxSockets":null,"maxFreeSockets":256,"scheduling":"lifo","maxTotalSockets":null,"totalSocketCount":1},"method":"GET","path":"/api/user/whoami","_ended":true,"res":{"_readableState":{"objectMode":false,"highWaterMark":16384,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":true,"ended":true,"endEmitted":true,"reading":false,"constructed":true,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":true,"errored":null,"closed":true,"closeEmitted":true,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":true,"dataEmitted":false,"decoder":null,"encoding":null},"_events":{"end":[null,null]},"_eventsCount":3,"socket":"~request~socket","httpVersionMajor":1,"httpVersionMinor":1,"httpVersion":"1.1","complete":true,"rawHeaders":["Content-Length","0","Connection","close","Date","Fri, 14 Apr 2023 08:29:01 GMT","Server","Kestrel"],"rawTrailers":[],"aborted":false,"upgrade":false,"url":"","method":null,"statusCode":404,"statusMessage":"Not Found","client":"~request~socket","_consuming":false,"_dumped":false,"req":"~request","responseUrl":"http:/api/user/whoami","redirects":[]},"aborted":false,"timeoutCb":null,"upgradeOrConnect":false,"parser":null,"maxHeadersCount":null,"reusedSocket":false,"host":"localhost","protocol":"http:","_redirectable":{"_writableState":{"objectMode":false,"highWaterMark":16384,"finalCalled":false,"needDrain":false,"ending":false,"ended":false,"finished":false,"destroyed":false,"decodeStrings":true,"defaultEncoding":"utf8","length":0,"writing":false,"corked":0,"sync":true,"bufferProcessing":false,"writecb":null,"writelen":0,"afterWriteTickInfo":null,"buffered":[],"bufferedIndex":0,"allBuffers":true,"allNoop":true,"pendingcb":0,"constructed":true,"prefinished":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"errored":null,"closed":false,"closeEmitted":false},"_events":{},"_eventsCount":2,"_options":{"protocol":"http:","maxRedirects":21,"maxBodyLength":10485760,"path":"/api/user/whoami","method":"GET","headers":"~config~headers","agents":{},"hostname":null,"port":null,"nativeProtocols":{"http:":{"METHODS":["ACL","BIND","CHECKOUT","CONNECT","COPY","DELETE","GET","HEAD","LINK","LOCK","M-SEARCH","MERGE","MKACTIVITY","MKCALENDAR","MKCOL","MOVE","NOTIFY","OPTIONS","PATCH","POST","PROPFIND","PROPPATCH","PURGE","PUT","REBIND","REPORT","SEARCH","SOURCE","SUBSCRIBE","TRACE","UNBIND","UNLINK","UNLOCK","UNSUBSCRIBE"],"STATUS_CODES":{"100":"Continue","101":"Switching Protocols","102":"Processing","103":"Early Hints","200":"OK","201":"Created","202":"Accepted","203":"Non-Authoritative Information","204":"No Content","205":"Reset Content","206":"Partial Content","207":"Multi-Status","208":"Already Reported","226":"IM Used","300":"Multiple Choices","301":"Moved Permanently","302":"Found","303":"See Other","304":"Not Modified","305":"Use Proxy","307":"Temporary Redirect","308":"Permanent Redirect","400":"Bad Request","401":"Unauthorized","402":"Payment Required","403":"Forbidden","404":"Not Found","405":"Method Not Allowed","406":"Not Acceptable","407":"Proxy Authentication Required","408":"Request Timeout","409":"Conflict","410":"Gone","411":"Length Required","412":"Precondition Failed","413":"Payload Too Large","414":"URI Too Long","415":"Unsupported Media Type","416":"Range Not Satisfiable","417":"Expectation Failed","418":"I'm a Teapot","421":"Misdirected Request","422":"Unprocessable Entity","423":"Locked","424":"Failed Dependency","425":"Too Early","426":"Upgrade Required","428":"Precondition Required","429":"Too Many Requests","431":"Request Header Fields Too Large","451":"Unavailable For Legal Reasons","500":"Internal Server Error","501":"Not Implemented","502":"Bad Gateway","503":"Service Unavailable","504":"Gateway Timeout","505":"HTTP Version Not Supported","506":"Variant Also Negotiates","507":"Insufficient Storage","508":"Loop Detected","509":"Bandwidth Limit Exceeded","510":"Not Extended","511":"Network Authentication Required"},"maxHeaderSize":16384,"globalAgent":"~request~agent"},"https:":{"globalAgent":{"_events":{},"_eventsCount":2,"defaultPort":443,"protocol":"https:","options":{"path":null},"requests":{},"sockets":{},"freeSockets":{},"keepAliveMsecs":1000,"keepAlive":false,"maxSockets":null,"maxFreeSockets":256,"scheduling":"lifo","maxTotalSockets":null,"totalSocketCount":0,"maxCachedSessions":100,"_sessionCache":{"map":{},"list":[]}}}},"pathname":"/api/user/whoami"},"_redirectCount":0,"_redirects":"~request~res~redirects","_requestBodyLength":0,"_requestBodyBuffers":[],"_currentRequest":"~request","_currentUrl":"http:/api/user/whoami"}},"data":""}
+isAxiosError: true
+toJSON: undefined
+name: "unhandledRejectionError"
+pid: 2804
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:29:15,603 ERROR 2804 nodejs.unhandledRejectionError: Request failed with status code 404
+    at createError (E:\project\TAI\tai-project\learn\egg\case\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\project\TAI\tai-project\learn\egg\case\node_modules\axios\lib\core\settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (E:\project\TAI\tai-project\learn\egg\case\node_modules\axios\lib\adapters\http.js:236:11)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+config: {"url":"/api/user/whoami","method":"get","headers":{"Accept":"application/json, text/plain, */*","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwOTU2LCJleHAiOjE2ODE1NDczNTZ9.GIz9kN_ccnsubUQ7naJZ9hrk-TUVU9r3AQ0l6f82Fv8","User-Agent":"axios/0.19.2"},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1}
+request: {"_events":{},"_eventsCount":6,"outputData":[],"outputSize":0,"writable":true,"destroyed":false,"_last":true,"chunkedEncoding":false,"shouldKeepAlive":false,"maxRequestsOnConnectionReached":false,"_defaultKeepAlive":true,"useChunkedEncodingByDefault":false,"sendDate":false,"_removedConnection":false,"_removedContLen":false,"_removedTE":false,"_contentLength":0,"_hasBody":true,"_trailer":"","finished":true,"_headerSent":true,"_closed":false,"socket":{"connecting":false,"_hadError":false,"_parent":null,"_host":"localhost","_readableState":{"objectMode":false,"highWaterMark":16384,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":true,"ended":false,"endEmitted":false,"reading":true,"constructed":true,"sync":false,"needReadable":true,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":false,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"dataEmitted":true,"decoder":null,"encoding":null},"_events":{"close":[null,null]},"_eventsCount":7,"_writableState":{"objectMode":false,"highWaterMark":16384,"finalCalled":true,"needDrain":false,"ending":true,"ended":true,"finished":false,"destroyed":false,"decodeStrings":false,"defaultEncoding":"utf8","length":0,"writing":false,"corked":0,"sync":false,"bufferProcessing":false,"writecb":null,"writelen":0,"afterWriteTickInfo":null,"buffered":[],"bufferedIndex":0,"allBuffers":true,"allNoop":true,"pendingcb":1,"constructed":true,"prefinished":false,"errorEmitted":false,"emitClose":false,"autoDestroy":true,"errored":null,"closed":false,"closeEmitted":false},"allowHalfOpen":false,"_sockname":null,"_pendingData":null,"_pendingEncoding":"","server":null,"_server":null,"parser":null,"_httpMessage":"~"},"_header":"GET /api/user/whoami HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nauthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwOTU2LCJleHAiOjE2ODE1NDczNTZ9.GIz9kN_ccnsubUQ7naJZ9hrk-TUVU9r3AQ0l6f82Fv8\r\nUser-Agent: axios/0.19.2\r\nHost: localhost\r\nConnection: close\r\n\r\n","_keepAliveTimeout":0,"agent":{"_events":{},"_eventsCount":2,"defaultPort":80,"protocol":"http:","options":{"path":null},"requests":{},"sockets":{"localhost:80:":["~socket"]},"freeSockets":{},"keepAliveMsecs":1000,"keepAlive":false,"maxSockets":null,"maxFreeSockets":256,"scheduling":"lifo","maxTotalSockets":null,"totalSocketCount":1},"method":"GET","path":"/api/user/whoami","_ended":true,"res":{"_readableState":{"objectMode":false,"highWaterMark":16384,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":true,"ended":true,"endEmitted":true,"reading":false,"constructed":true,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":true,"errored":null,"closed":true,"closeEmitted":true,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":true,"dataEmitted":false,"decoder":null,"encoding":null},"_events":{"end":[null,null]},"_eventsCount":3,"socket":"~socket","httpVersionMajor":1,"httpVersionMinor":1,"httpVersion":"1.1","complete":true,"rawHeaders":["Content-Length","0","Connection","close","Date","Fri, 14 Apr 2023 08:29:15 GMT","Server","Kestrel"],"rawTrailers":[],"aborted":false,"upgrade":false,"url":"","method":null,"statusCode":404,"statusMessage":"Not Found","client":"~socket","_consuming":false,"_dumped":false,"req":"~","responseUrl":"http:/api/user/whoami","redirects":[]},"aborted":false,"timeoutCb":null,"upgradeOrConnect":false,"parser":null,"maxHeadersCount":null,"reusedSocket":false,"host":"localhost","protocol":"http:","_redirectable":{"_writableState":{"objectMode":false,"highWaterMark":16384,"finalCalled":false,"needDrain":false,"ending":false,"ended":false,"finished":false,"destroyed":false,"decodeStrings":true,"defaultEncoding":"utf8","length":0,"writing":false,"corked":0,"sync":true,"bufferProcessing":false,"writecb":null,"writelen":0,"afterWriteTickInfo":null,"buffered":[],"bufferedIndex":0,"allBuffers":true,"allNoop":true,"pendingcb":0,"constructed":true,"prefinished":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"errored":null,"closed":false,"closeEmitted":false},"_events":{},"_eventsCount":2,"_options":{"protocol":"http:","maxRedirects":21,"maxBodyLength":10485760,"path":"/api/user/whoami","method":"GET","headers":{"Accept":"application/json, text/plain, */*","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwOTU2LCJleHAiOjE2ODE1NDczNTZ9.GIz9kN_ccnsubUQ7naJZ9hrk-TUVU9r3AQ0l6f82Fv8","User-Agent":"axios/0.19.2"},"agents":{},"hostname":null,"port":null,"nativeProtocols":{"http:":{"METHODS":["ACL","BIND","CHECKOUT","CONNECT","COPY","DELETE","GET","HEAD","LINK","LOCK","M-SEARCH","MERGE","MKACTIVITY","MKCALENDAR","MKCOL","MOVE","NOTIFY","OPTIONS","PATCH","POST","PROPFIND","PROPPATCH","PURGE","PUT","REBIND","REPORT","SEARCH","SOURCE","SUBSCRIBE","TRACE","UNBIND","UNLINK","UNLOCK","UNSUBSCRIBE"],"STATUS_CODES":{"100":"Continue","101":"Switching Protocols","102":"Processing","103":"Early Hints","200":"OK","201":"Created","202":"Accepted","203":"Non-Authoritative Information","204":"No Content","205":"Reset Content","206":"Partial Content","207":"Multi-Status","208":"Already Reported","226":"IM Used","300":"Multiple Choices","301":"Moved Permanently","302":"Found","303":"See Other","304":"Not Modified","305":"Use Proxy","307":"Temporary Redirect","308":"Permanent Redirect","400":"Bad Request","401":"Unauthorized","402":"Payment Required","403":"Forbidden","404":"Not Found","405":"Method Not Allowed","406":"Not Acceptable","407":"Proxy Authentication Required","408":"Request Timeout","409":"Conflict","410":"Gone","411":"Length Required","412":"Precondition Failed","413":"Payload Too Large","414":"URI Too Long","415":"Unsupported Media Type","416":"Range Not Satisfiable","417":"Expectation Failed","418":"I'm a Teapot","421":"Misdirected Request","422":"Unprocessable Entity","423":"Locked","424":"Failed Dependency","425":"Too Early","426":"Upgrade Required","428":"Precondition Required","429":"Too Many Requests","431":"Request Header Fields Too Large","451":"Unavailable For Legal Reasons","500":"Internal Server Error","501":"Not Implemented","502":"Bad Gateway","503":"Service Unavailable","504":"Gateway Timeout","505":"HTTP Version Not Supported","506":"Variant Also Negotiates","507":"Insufficient Storage","508":"Loop Detected","509":"Bandwidth Limit Exceeded","510":"Not Extended","511":"Network Authentication Required"},"maxHeaderSize":16384,"globalAgent":"~agent"},"https:":{"globalAgent":{"_events":{},"_eventsCount":2,"defaultPort":443,"protocol":"https:","options":{"path":null},"requests":{},"sockets":{},"freeSockets":{},"keepAliveMsecs":1000,"keepAlive":false,"maxSockets":null,"maxFreeSockets":256,"scheduling":"lifo","maxTotalSockets":null,"totalSocketCount":0,"maxCachedSessions":100,"_sessionCache":{"map":{},"list":[]}}}},"pathname":"/api/user/whoami"},"_redirectCount":0,"_redirects":"~res~redirects","_requestBodyLength":0,"_requestBodyBuffers":[],"_currentRequest":"~","_currentUrl":"http:/api/user/whoami"}}
+response: {"status":404,"statusText":"Not Found","headers":{"content-length":"0","connection":"close","date":"Fri, 14 Apr 2023 08:29:15 GMT","server":"Kestrel"},"config":{"url":"/api/user/whoami","method":"get","headers":{"Accept":"application/json, text/plain, */*","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwOTU2LCJleHAiOjE2ODE1NDczNTZ9.GIz9kN_ccnsubUQ7naJZ9hrk-TUVU9r3AQ0l6f82Fv8","User-Agent":"axios/0.19.2"},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1},"request":{"_events":{},"_eventsCount":6,"outputData":[],"outputSize":0,"writable":true,"destroyed":false,"_last":true,"chunkedEncoding":false,"shouldKeepAlive":false,"maxRequestsOnConnectionReached":false,"_defaultKeepAlive":true,"useChunkedEncodingByDefault":false,"sendDate":false,"_removedConnection":false,"_removedContLen":false,"_removedTE":false,"_contentLength":0,"_hasBody":true,"_trailer":"","finished":true,"_headerSent":true,"_closed":false,"socket":{"connecting":false,"_hadError":false,"_parent":null,"_host":"localhost","_readableState":{"objectMode":false,"highWaterMark":16384,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":true,"ended":false,"endEmitted":false,"reading":true,"constructed":true,"sync":false,"needReadable":true,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":false,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"dataEmitted":true,"decoder":null,"encoding":null},"_events":{"close":[null,null]},"_eventsCount":7,"_writableState":{"objectMode":false,"highWaterMark":16384,"finalCalled":true,"needDrain":false,"ending":true,"ended":true,"finished":false,"destroyed":false,"decodeStrings":false,"defaultEncoding":"utf8","length":0,"writing":false,"corked":0,"sync":false,"bufferProcessing":false,"writecb":null,"writelen":0,"afterWriteTickInfo":null,"buffered":[],"bufferedIndex":0,"allBuffers":true,"allNoop":true,"pendingcb":1,"constructed":true,"prefinished":false,"errorEmitted":false,"emitClose":false,"autoDestroy":true,"errored":null,"closed":false,"closeEmitted":false},"allowHalfOpen":false,"_sockname":null,"_pendingData":null,"_pendingEncoding":"","server":null,"_server":null,"parser":null,"_httpMessage":"~request"},"_header":"GET /api/user/whoami HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nauthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDYwOTU2LCJleHAiOjE2ODE1NDczNTZ9.GIz9kN_ccnsubUQ7naJZ9hrk-TUVU9r3AQ0l6f82Fv8\r\nUser-Agent: axios/0.19.2\r\nHost: localhost\r\nConnection: close\r\n\r\n","_keepAliveTimeout":0,"agent":{"_events":{},"_eventsCount":2,"defaultPort":80,"protocol":"http:","options":{"path":null},"requests":{},"sockets":{"localhost:80:":["~request~socket"]},"freeSockets":{},"keepAliveMsecs":1000,"keepAlive":false,"maxSockets":null,"maxFreeSockets":256,"scheduling":"lifo","maxTotalSockets":null,"totalSocketCount":1},"method":"GET","path":"/api/user/whoami","_ended":true,"res":{"_readableState":{"objectMode":false,"highWaterMark":16384,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":true,"ended":true,"endEmitted":true,"reading":false,"constructed":true,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":true,"errored":null,"closed":true,"closeEmitted":true,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":true,"dataEmitted":false,"decoder":null,"encoding":null},"_events":{"end":[null,null]},"_eventsCount":3,"socket":"~request~socket","httpVersionMajor":1,"httpVersionMinor":1,"httpVersion":"1.1","complete":true,"rawHeaders":["Content-Length","0","Connection","close","Date","Fri, 14 Apr 2023 08:29:15 GMT","Server","Kestrel"],"rawTrailers":[],"aborted":false,"upgrade":false,"url":"","method":null,"statusCode":404,"statusMessage":"Not Found","client":"~request~socket","_consuming":false,"_dumped":false,"req":"~request","responseUrl":"http:/api/user/whoami","redirects":[]},"aborted":false,"timeoutCb":null,"upgradeOrConnect":false,"parser":null,"maxHeadersCount":null,"reusedSocket":false,"host":"localhost","protocol":"http:","_redirectable":{"_writableState":{"objectMode":false,"highWaterMark":16384,"finalCalled":false,"needDrain":false,"ending":false,"ended":false,"finished":false,"destroyed":false,"decodeStrings":true,"defaultEncoding":"utf8","length":0,"writing":false,"corked":0,"sync":true,"bufferProcessing":false,"writecb":null,"writelen":0,"afterWriteTickInfo":null,"buffered":[],"bufferedIndex":0,"allBuffers":true,"allNoop":true,"pendingcb":0,"constructed":true,"prefinished":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"errored":null,"closed":false,"closeEmitted":false},"_events":{},"_eventsCount":2,"_options":{"protocol":"http:","maxRedirects":21,"maxBodyLength":10485760,"path":"/api/user/whoami","method":"GET","headers":"~config~headers","agents":{},"hostname":null,"port":null,"nativeProtocols":{"http:":{"METHODS":["ACL","BIND","CHECKOUT","CONNECT","COPY","DELETE","GET","HEAD","LINK","LOCK","M-SEARCH","MERGE","MKACTIVITY","MKCALENDAR","MKCOL","MOVE","NOTIFY","OPTIONS","PATCH","POST","PROPFIND","PROPPATCH","PURGE","PUT","REBIND","REPORT","SEARCH","SOURCE","SUBSCRIBE","TRACE","UNBIND","UNLINK","UNLOCK","UNSUBSCRIBE"],"STATUS_CODES":{"100":"Continue","101":"Switching Protocols","102":"Processing","103":"Early Hints","200":"OK","201":"Created","202":"Accepted","203":"Non-Authoritative Information","204":"No Content","205":"Reset Content","206":"Partial Content","207":"Multi-Status","208":"Already Reported","226":"IM Used","300":"Multiple Choices","301":"Moved Permanently","302":"Found","303":"See Other","304":"Not Modified","305":"Use Proxy","307":"Temporary Redirect","308":"Permanent Redirect","400":"Bad Request","401":"Unauthorized","402":"Payment Required","403":"Forbidden","404":"Not Found","405":"Method Not Allowed","406":"Not Acceptable","407":"Proxy Authentication Required","408":"Request Timeout","409":"Conflict","410":"Gone","411":"Length Required","412":"Precondition Failed","413":"Payload Too Large","414":"URI Too Long","415":"Unsupported Media Type","416":"Range Not Satisfiable","417":"Expectation Failed","418":"I'm a Teapot","421":"Misdirected Request","422":"Unprocessable Entity","423":"Locked","424":"Failed Dependency","425":"Too Early","426":"Upgrade Required","428":"Precondition Required","429":"Too Many Requests","431":"Request Header Fields Too Large","451":"Unavailable For Legal Reasons","500":"Internal Server Error","501":"Not Implemented","502":"Bad Gateway","503":"Service Unavailable","504":"Gateway Timeout","505":"HTTP Version Not Supported","506":"Variant Also Negotiates","507":"Insufficient Storage","508":"Loop Detected","509":"Bandwidth Limit Exceeded","510":"Not Extended","511":"Network Authentication Required"},"maxHeaderSize":16384,"globalAgent":"~request~agent"},"https:":{"globalAgent":{"_events":{},"_eventsCount":2,"defaultPort":443,"protocol":"https:","options":{"path":null},"requests":{},"sockets":{},"freeSockets":{},"keepAliveMsecs":1000,"keepAlive":false,"maxSockets":null,"maxFreeSockets":256,"scheduling":"lifo","maxTotalSockets":null,"totalSocketCount":0,"maxCachedSessions":100,"_sessionCache":{"map":{},"list":[]}}}},"pathname":"/api/user/whoami"},"_redirectCount":0,"_redirects":"~request~res~redirects","_requestBodyLength":0,"_requestBodyBuffers":[],"_currentRequest":"~request","_currentUrl":"http:/api/user/whoami"}},"data":""}
+isAxiosError: true
+toJSON: undefined
+name: "unhandledRejectionError"
+pid: 2804
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:40:50,284 ERROR 24152 [-/127.0.0.1/-/103ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 24152
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:42:12,503 ERROR 25060 [-/127.0.0.1/-/158ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 25060
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:42:25,973 ERROR 25060 [-/127.0.0.1/-/149ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 25060
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:45:57,739 ERROR 25060 [-/127.0.0.1/-/184ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好，<%= user.nickname %></h1>
+    4| <ul>
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好，<%= user.nickname %></h1>
+    4| <ul>
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 25060
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:46:13,810 ERROR 25060 [-/127.0.0.1/-/132ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好，<%= user.nickname %></h1>
+    4| <ul>
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好，<%= user.nickname %></h1>
+    4| <ul>
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 25060
+hostname: DESKTOP-2IDU54L
+

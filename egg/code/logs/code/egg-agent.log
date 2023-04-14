@@ -754,3 +754,4 @@
                                              ▇ [33ms] - #45 Before Start in node_modules/egg-schedule/agent.js:12:9
                                              ▇▇▇ [65ms] - #46 Before Start in node_modules/egg-development/agent.js:12:9
 2023-04-14 11:12:51,987 INFO 15112 [egg:core] dump config after ready, 8ms
+2023-04-14 11:27:08,291 INFO 15112 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452285,"size":0,"blocks":0,"atimeMs":1681442828289.1516,"mtimeMs":1681439168052.6616,"ctimeMs":1681439168052.6616,"birthtimeMs":1681437015341.7734,"atime":"2023-04-14T03:27:08.289Z","mtime":"2023-04-14T02:26:08.053Z","ctime":"2023-04-14T02:26:08.053Z","birthtime":"2023-04-14T01:50:15.342Z"},"remove":false,"isDirectory":true,"isFile":false}

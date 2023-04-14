@@ -1,0 +1,324 @@
+2023-04-14 14:32:20,136 ERROR 12568 [-/127.0.0.1/-/12ms GET /login] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:7
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:26:26)
+    at login (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+    at async UserController.login (E:\project\TAI\tai-project\learn\egg\case\app\controller\user.js:5:5)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\login.ejs"
+pid: 12568
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 14:33:54,312 ERROR 26820 [-/127.0.0.1/-/9ms GET /login] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:7
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:26:26)
+    at login (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+    at async UserController.login (E:\project\TAI\tai-project\learn\egg\case\app\controller\user.js:5:5)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\login.ejs"
+pid: 26820
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 14:34:03,974 ERROR 26820 [-/127.0.0.1/-/9ms GET /login] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:7
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    5|   <div class="form-item">
+    6|     <label>账号：</label>
+ >> 7|     <input type="text" name="loginId" value="<%= loginId %>" />
+    8|   </div>
+    9|   <div class="form-item">
+    10|     <label>密码：</label>
+
+loginId is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\login.ejs:26:26)
+    at login (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+    at async UserController.login (E:\project\TAI\tai-project\learn\egg\case\app\controller\user.js:5:5)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\login.ejs"
+pid: 26820
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 14:52:31,813 WARN 26336 [-/127.0.0.1/-/97ms POST /login?loginId=123] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2023-04-14 14:52:31,815 WARN 26336 [-/127.0.0.1/-/99ms POST /login?loginId=123] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa\lib\context.js:97:11)
+    at Object.assertCsrf (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-security\app\extend\context.js:163:32)
+    at csrf (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-security\lib\middlewares\csrf.js:39:9)
+    at dispatch (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-security\node_modules\koa-compose\index.js:34:12
+    at dispatch (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at session (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa-session\index.js:41:13)
+    at dispatch (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at overrideMethod (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa-override\index.js:38:12)
+    at dispatch (E:\project\TAI\tai-project\learn\egg\case\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+message: "invalid csrf token"
+pid: 26336
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:40:50,294 ERROR 24152 [-/127.0.0.1/-/103ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 24152
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:42:12,507 ERROR 25060 [-/127.0.0.1/-/158ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 25060
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:42:25,977 ERROR 25060 [-/127.0.0.1/-/149ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好</h1>
+    4| 
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 25060
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:45:57,744 ERROR 25060 [-/127.0.0.1/-/184ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好，<%= user.nickname %></h1>
+    4| <ul>
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好，<%= user.nickname %></h1>
+    4| <ul>
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 25060
+hostname: DESKTOP-2IDU54L
+
+2023-04-14 16:46:13,813 ERROR 25060 [-/127.0.0.1/-/132ms GET /] nodejs.ReferenceError: E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:1
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好，<%= user.nickname %></h1>
+    4| <ul>
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+ >> 1| <% include common/header.ejs %>
+    2| 
+    3| <h1>你好，<%= user.nickname %></h1>
+    4| <ul>
+
+E:\project\TAI\tai-project\learn\egg\case\app\view\common\header.ejs:6
+    4|     <meta charset="UTF-8" />
+    5|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ >> 6|     <title><%= title %></title>
+    7|     <link rel="stylesheet" href="/public/reset.css" />
+    8|     <link rel="stylesheet" href="/public/global.css" />
+    9|   </head>
+
+title is not defined
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:17:26)
+    at eval (E:\project\TAI\tai-project\learn\egg\case\app\view\home.ejs:23:10)
+    at home (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:682:17)
+    at tryHandleCache (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:254:36)
+    at Object.exports.renderFile (E:\project\TAI\tai-project\learn\egg\case\node_modules\ejs\lib\ejs.js:485:10)
+    at E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:16:11
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\project\TAI\tai-project\learn\egg\case\node_modules\egg-view\lib\context_view.js:72:23)
+path: "E:\\project\\TAI\\tai-project\\learn\\egg\\case\\app\\view\\home.ejs"
+pid: 25060
+hostname: DESKTOP-2IDU54L
+
