@@ -1,0 +1,756 @@
+2023-04-14 09:50:12,984 INFO 16736 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 09:50:12,993 INFO 16736 [egg:core] dump config after load, 6ms
+2023-04-14 09:50:13,238 INFO 16736 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 09:50:13,239 INFO 16736 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 09:50:13,239 INFO 16736 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 09:50:13,239 INFO 16736 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 09:50:13,239 INFO 16736 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 09:50:13,239 INFO 16736 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 09:50:13,239 INFO 16736 [egg-watcher:agent] watcher start success
+2023-04-14 09:50:13,248 INFO 16736 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇ [461ms] - #0 Process Start
+             ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [1226ms] - #1 Application Start
+             ▇ [27ms] - #2 Load Plugin
+              ▇▇▇▇ [158ms] - #3 Load Config
+              ▇ [4ms] - #4 Require(0) config/config.default.js
+              ▇ [5ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+              ▇ [18ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+               ▇ [5ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+               ▇ [12ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+               ▇ [4ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+                ▇ [5ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+                ▇ [4ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+                ▇ [5ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+                ▇ [5ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+                ▇ [15ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+                 ▇ [13ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+                 ▇ [5ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+                 ▇ [17ms] - #17 Require(13) node_modules/egg/config/config.default.js
+                  ▇ [0ms] - #18 Require(14) config/config.default.js
+                  ▇ [11ms] - #19 Require(15) node_modules/egg-security/config/config.local.js
+                  ▇ [5ms] - #20 Require(16) node_modules/egg-watcher/config/config.local.js
+                  ▇ [5ms] - #21 Require(17) node_modules/egg-view/config/config.local.js
+                   ▇ [4ms] - #22 Require(18) node_modules/egg/config/config.local.js
+                   ▇▇▇▇▇▇▇▇▇▇ [345ms] - #23 Load extend/agent.js
+                   ▇ [17ms] - #24 Require(19) node_modules/egg-security/app/extend/agent.js
+                   ▇▇▇▇▇▇▇▇ [294ms] - #25 Require(20) node_modules/egg-schedule/app/extend/agent.js
+                            ▇ [25ms] - #26 Require(21) node_modules/egg-logrotator/app/extend/agent.js
+                             ▇▇▇▇▇▇▇▇ [287ms] - #27 Load extend/context.js
+                             ▇▇▇ [109ms] - #28 Require(22) node_modules/egg-security/app/extend/context.js
+                                ▇ [26ms] - #29 Require(23) node_modules/egg-jsonp/app/extend/context.js
+                                 ▇ [4ms] - #30 Require(24) node_modules/egg-i18n/app/extend/context.js
+                                 ▇▇▇ [117ms] - #31 Require(25) node_modules/egg-multipart/app/extend/context.js
+                                    ▇ [21ms] - #32 Require(26) node_modules/egg-view/app/extend/context.js
+                                     ▇ [7ms] - #33 Require(27) node_modules/egg/app/extend/context.js
+                                     ▇▇▇▇ [145ms] - #34 Load agent.js
+                                     ▇ [5ms] - #35 Require(28) node_modules/egg-security/agent.js
+                                     ▇ [4ms] - #36 Require(29) node_modules/egg-onerror/agent.js
+                                      ▇ [27ms] - #37 Require(30) node_modules/egg-watcher/agent.js
+                                      ▇ [13ms] - #38 Require(31) node_modules/egg-schedule/agent.js
+                                       ▇▇ [77ms] - #39 Require(32) node_modules/egg-development/agent.js
+                                         ▇ [6ms] - #40 Require(33) node_modules/egg-logrotator/agent.js
+                                         ▇ [10ms] - #41 Require(34) node_modules/egg/agent.js
+                                          ▇▇▇▇▇▇▇ [254ms] - #42 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                          ▇▇▇▇ [151ms] - #43 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                          ▇▇▇▇▇▇▇ [253ms] - #44 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 09:50:13,248 INFO 16736 [egg:core] dump config after ready, 7ms
+2023-04-14 09:50:15,346 INFO 16736 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452285,"size":0,"blocks":0,"atimeMs":1681437015347.5955,"mtimeMs":1681437015341.7734,"ctimeMs":1681437015341.7734,"birthtimeMs":1681437015341.7734,"atime":"2023-04-14T01:50:15.348Z","mtime":"2023-04-14T01:50:15.342Z","ctime":"2023-04-14T01:50:15.342Z","birthtime":"2023-04-14T01:50:15.342Z"},"remove":false,"isDirectory":true,"isFile":false}
+2023-04-14 09:51:46,646 INFO 16736 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":101,"blocks":0,"atimeMs":1681437106639.5005,"mtimeMs":1681437106639.5005,"ctimeMs":1681437106639.5005,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T01:51:46.640Z","mtime":"2023-04-14T01:51:46.640Z","ctime":"2023-04-14T01:51:46.640Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:51:46,847 WARN 16736 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\router.js change
+2023-04-14 09:51:46,647 INFO 16736 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":101,"blocks":0,"atimeMs":1681437106639.5005,"mtimeMs":1681437106639.5005,"ctimeMs":1681437106639.5005,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T01:51:46.640Z","mtime":"2023-04-14T01:51:46.640Z","ctime":"2023-04-14T01:51:46.640Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:51:47,769 WARN 16736 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 09:51:55,300 INFO 24604 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 09:51:55,305 INFO 24604 [egg:core] dump config after load, 3ms
+2023-04-14 09:51:55,349 INFO 24604 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 09:51:55,349 INFO 24604 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 09:51:55,349 INFO 24604 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 09:51:55,349 INFO 24604 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 09:51:55,349 INFO 24604 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 09:51:55,350 INFO 24604 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 09:51:55,350 INFO 24604 [egg-watcher:agent] watcher start success
+2023-04-14 09:51:55,374 INFO 24604 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [436ms] - #0 Process Start
+                                     ▇▇▇▇▇▇▇▇▇▇▇▇ [142ms] - #1 Application Start
+                                     ▇ [6ms] - #2 Load Plugin
+                                      ▇ [10ms] - #3 Load Config
+                                      ▇ [0ms] - #4 Require(0) config/config.default.js
+                                      ▇ [0ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+                                      ▇ [0ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+                                      ▇ [0ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+                                      ▇ [1ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+                                      ▇ [0ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+                                      ▇ [1ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+                                      ▇ [0ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+                                      ▇ [1ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+                                      ▇ [0ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+                                      ▇ [1ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+                                      ▇ [0ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+                                      ▇ [1ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+                                      ▇ [0ms] - #17 Require(13) node_modules/egg/config/config.default.js
+                                      ▇ [0ms] - #18 Require(14) config/config.default.js
+                                      ▇ [0ms] - #19 Require(15) node_modules/egg-security/config/config.local.js
+                                      ▇ [0ms] - #20 Require(16) node_modules/egg-watcher/config/config.local.js
+                                      ▇ [1ms] - #21 Require(17) node_modules/egg-view/config/config.local.js
+                                      ▇ [0ms] - #22 Require(18) node_modules/egg/config/config.local.js
+                                       ▇▇ [27ms] - #23 Load extend/agent.js
+                                       ▇ [1ms] - #24 Require(19) node_modules/egg-security/app/extend/agent.js
+                                       ▇ [23ms] - #25 Require(20) node_modules/egg-schedule/app/extend/agent.js
+                                         ▇ [1ms] - #26 Require(21) node_modules/egg-logrotator/app/extend/agent.js
+                                         ▇ [18ms] - #27 Load extend/context.js
+                                         ▇ [6ms] - #28 Require(22) node_modules/egg-security/app/extend/context.js
+                                         ▇ [1ms] - #29 Require(23) node_modules/egg-jsonp/app/extend/context.js
+                                         ▇ [1ms] - #30 Require(24) node_modules/egg-i18n/app/extend/context.js
+                                         ▇ [7ms] - #31 Require(25) node_modules/egg-multipart/app/extend/context.js
+                                          ▇ [1ms] - #32 Require(26) node_modules/egg-view/app/extend/context.js
+                                          ▇ [1ms] - #33 Require(27) node_modules/egg/app/extend/context.js
+                                          ▇ [9ms] - #34 Load agent.js
+                                          ▇ [1ms] - #35 Require(28) node_modules/egg-security/agent.js
+                                          ▇ [0ms] - #36 Require(29) node_modules/egg-onerror/agent.js
+                                          ▇ [2ms] - #37 Require(30) node_modules/egg-watcher/agent.js
+                                           ▇ [1ms] - #38 Require(31) node_modules/egg-schedule/agent.js
+                                           ▇ [4ms] - #39 Require(32) node_modules/egg-development/agent.js
+                                           ▇ [0ms] - #40 Require(33) node_modules/egg-logrotator/agent.js
+                                           ▇ [0ms] - #41 Require(34) node_modules/egg/agent.js
+                                           ▇▇▇▇ [48ms] - #42 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                           ▇▇ [35ms] - #43 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                           ▇▇▇▇▇ [63ms] - #44 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 09:51:55,375 INFO 24604 [egg:core] dump config after ready, 9ms
+2023-04-14 09:52:09,991 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\home.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452274,"size":184,"blocks":0,"atimeMs":1681437129985.209,"mtimeMs":1681437129985.209,"ctimeMs":1681437129985.209,"birthtimeMs":1681436659369.3318,"atime":"2023-04-14T01:52:09.985Z","mtime":"2023-04-14T01:52:09.985Z","ctime":"2023-04-14T01:52:09.985Z","birthtime":"2023-04-14T01:44:19.369Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:52:09,995 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\home.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452274,"size":184,"blocks":0,"atimeMs":1681437129985.209,"mtimeMs":1681437129985.209,"ctimeMs":1681437129985.209,"birthtimeMs":1681436659369.3318,"atime":"2023-04-14T01:52:09.985Z","mtime":"2023-04-14T01:52:09.985Z","ctime":"2023-04-14T01:52:09.985Z","birthtime":"2023-04-14T01:44:19.369Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:52:09,995 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\home.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452274,"size":184,"blocks":0,"atimeMs":1681437129985.209,"mtimeMs":1681437129985.209,"ctimeMs":1681437129985.209,"birthtimeMs":1681436659369.3318,"atime":"2023-04-14T01:52:09.985Z","mtime":"2023-04-14T01:52:09.985Z","ctime":"2023-04-14T01:52:09.985Z","birthtime":"2023-04-14T01:44:19.369Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:52:10,203 WARN 24604 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\controller\home.js change
+2023-04-14 09:52:11,146 WARN 24604 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 09:56:57,610 WARN 24604 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\router.js change
+2023-04-14 09:56:57,395 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":180,"blocks":0,"atimeMs":1681437417389.6484,"mtimeMs":1681437417389.6484,"ctimeMs":1681437417389.6484,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T01:56:57.390Z","mtime":"2023-04-14T01:56:57.390Z","ctime":"2023-04-14T01:56:57.390Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:56:57,396 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":180,"blocks":0,"atimeMs":1681437417389.6484,"mtimeMs":1681437417389.6484,"ctimeMs":1681437417389.6484,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T01:56:57.390Z","mtime":"2023-04-14T01:56:57.390Z","ctime":"2023-04-14T01:56:57.390Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:56:57,396 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":180,"blocks":0,"atimeMs":1681437417389.6484,"mtimeMs":1681437417389.6484,"ctimeMs":1681437417389.6484,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T01:56:57.390Z","mtime":"2023-04-14T01:56:57.390Z","ctime":"2023-04-14T01:56:57.390Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:56:58,737 WARN 24604 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 09:57:07,866 WARN 24604 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\controller\user.js rename
+2023-04-14 09:57:07,662 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\user.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452293,"size":0,"blocks":0,"atimeMs":1681437427659.4368,"mtimeMs":1681437427659.4368,"ctimeMs":1681437427659.4368,"birthtimeMs":1681437427659.4368,"atime":"2023-04-14T01:57:07.659Z","mtime":"2023-04-14T01:57:07.659Z","ctime":"2023-04-14T01:57:07.659Z","birthtime":"2023-04-14T01:57:07.659Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:57:07,662 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452272,"size":0,"blocks":0,"atimeMs":1681437427661.6477,"mtimeMs":1681437427659.4368,"ctimeMs":1681437427659.4368,"birthtimeMs":1681436614498.355,"atime":"2023-04-14T01:57:07.662Z","mtime":"2023-04-14T01:57:07.659Z","ctime":"2023-04-14T01:57:07.659Z","birthtime":"2023-04-14T01:43:34.498Z"},"remove":false,"isDirectory":true,"isFile":false}
+2023-04-14 09:58:28,576 WARN 24604 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\controller\user.js change
+2023-04-14 09:58:28,365 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\user.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452293,"size":146,"blocks":0,"atimeMs":1681437508359.5488,"mtimeMs":1681437508359.5488,"ctimeMs":1681437508359.5488,"birthtimeMs":1681437427659.4368,"atime":"2023-04-14T01:58:28.360Z","mtime":"2023-04-14T01:58:28.360Z","ctime":"2023-04-14T01:58:28.360Z","birthtime":"2023-04-14T01:57:07.659Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:58:28,366 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\user.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452293,"size":146,"blocks":0,"atimeMs":1681437508359.5488,"mtimeMs":1681437508359.5488,"ctimeMs":1681437508359.5488,"birthtimeMs":1681437427659.4368,"atime":"2023-04-14T01:58:28.360Z","mtime":"2023-04-14T01:58:28.360Z","ctime":"2023-04-14T01:58:28.360Z","birthtime":"2023-04-14T01:57:07.659Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:58:44,575 WARN 24604 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\controller\user.js change
+2023-04-14 09:58:44,363 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\user.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452293,"size":182,"blocks":0,"atimeMs":1681437524357.3196,"mtimeMs":1681437524357.3196,"ctimeMs":1681437524357.3196,"birthtimeMs":1681437427659.4368,"atime":"2023-04-14T01:58:44.357Z","mtime":"2023-04-14T01:58:44.357Z","ctime":"2023-04-14T01:58:44.357Z","birthtime":"2023-04-14T01:57:07.659Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:58:44,364 INFO 24604 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\user.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452293,"size":182,"blocks":0,"atimeMs":1681437524357.3196,"mtimeMs":1681437524357.3196,"ctimeMs":1681437524357.3196,"birthtimeMs":1681437427659.4368,"atime":"2023-04-14T01:58:44.357Z","mtime":"2023-04-14T01:58:44.357Z","ctime":"2023-04-14T01:58:44.357Z","birthtime":"2023-04-14T01:57:07.659Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:58:59,194 INFO 22868 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 09:58:59,199 INFO 22868 [egg:core] dump config after load, 3ms
+2023-04-14 09:58:59,232 INFO 22868 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 09:58:59,232 INFO 22868 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 09:58:59,232 INFO 22868 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 09:58:59,232 INFO 22868 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 09:58:59,232 INFO 22868 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 09:58:59,232 INFO 22868 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 09:58:59,233 INFO 22868 [egg-watcher:agent] watcher start success
+2023-04-14 09:58:59,261 INFO 22868 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [492ms] - #0 Process Start
+                                     ▇▇▇▇▇▇▇▇▇▇▇ [149ms] - #1 Application Start
+                                      ▇ [8ms] - #2 Load Plugin
+                                      ▇ [14ms] - #3 Load Config
+                                      ▇ [0ms] - #4 Require(0) config/config.default.js
+                                      ▇ [0ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+                                      ▇ [0ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+                                       ▇ [0ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+                                       ▇ [0ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+                                       ▇ [0ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+                                       ▇ [0ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+                                       ▇ [1ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+                                       ▇ [0ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+                                       ▇ [0ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+                                       ▇ [0ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+                                       ▇ [0ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+                                       ▇ [0ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+                                       ▇ [0ms] - #17 Require(13) node_modules/egg/config/config.default.js
+                                       ▇ [0ms] - #18 Require(14) config/config.default.js
+                                       ▇ [0ms] - #19 Require(15) node_modules/egg-security/config/config.local.js
+                                       ▇ [0ms] - #20 Require(16) node_modules/egg-watcher/config/config.local.js
+                                       ▇ [0ms] - #21 Require(17) node_modules/egg-view/config/config.local.js
+                                       ▇ [1ms] - #22 Require(18) node_modules/egg/config/config.local.js
+                                       ▇▇ [28ms] - #23 Load extend/agent.js
+                                       ▇ [1ms] - #24 Require(19) node_modules/egg-security/app/extend/agent.js
+                                        ▇ [23ms] - #25 Require(20) node_modules/egg-schedule/app/extend/agent.js
+                                         ▇ [1ms] - #26 Require(21) node_modules/egg-logrotator/app/extend/agent.js
+                                          ▇ [23ms] - #27 Load extend/context.js
+                                          ▇ [6ms] - #28 Require(22) node_modules/egg-security/app/extend/context.js
+                                          ▇ [1ms] - #29 Require(23) node_modules/egg-jsonp/app/extend/context.js
+                                          ▇ [0ms] - #30 Require(24) node_modules/egg-i18n/app/extend/context.js
+                                          ▇ [9ms] - #31 Require(25) node_modules/egg-multipart/app/extend/context.js
+                                           ▇ [1ms] - #32 Require(26) node_modules/egg-view/app/extend/context.js
+                                           ▇ [1ms] - #33 Require(27) node_modules/egg/app/extend/context.js
+                                           ▇ [10ms] - #34 Load agent.js
+                                           ▇ [1ms] - #35 Require(28) node_modules/egg-security/agent.js
+                                           ▇ [0ms] - #36 Require(29) node_modules/egg-onerror/agent.js
+                                           ▇ [3ms] - #37 Require(30) node_modules/egg-watcher/agent.js
+                                            ▇ [1ms] - #38 Require(31) node_modules/egg-schedule/agent.js
+                                            ▇ [4ms] - #39 Require(32) node_modules/egg-development/agent.js
+                                            ▇ [0ms] - #40 Require(33) node_modules/egg-logrotator/agent.js
+                                            ▇ [0ms] - #41 Require(34) node_modules/egg/agent.js
+                                             ▇▇ [38ms] - #42 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                             ▇▇ [26ms] - #43 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                             ▇▇▇▇ [55ms] - #44 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 09:58:59,261 INFO 22868 [egg:core] dump config after ready, 8ms
+2023-04-14 09:59:29,335 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\user.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452293,"size":182,"blocks":0,"atimeMs":1681437569327.2795,"mtimeMs":1681437569327.2795,"ctimeMs":1681437569327.2795,"birthtimeMs":1681437427659.4368,"atime":"2023-04-14T01:59:29.327Z","mtime":"2023-04-14T01:59:29.327Z","ctime":"2023-04-14T01:59:29.327Z","birthtime":"2023-04-14T01:57:07.659Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:59:29,337 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\user.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452293,"size":182,"blocks":0,"atimeMs":1681437569327.2795,"mtimeMs":1681437569327.2795,"ctimeMs":1681437569327.2795,"birthtimeMs":1681437427659.4368,"atime":"2023-04-14T01:59:29.327Z","mtime":"2023-04-14T01:59:29.327Z","ctime":"2023-04-14T01:59:29.327Z","birthtime":"2023-04-14T01:57:07.659Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:59:29,546 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\controller\user.js change
+2023-04-14 09:59:30,962 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 09:59:59,545 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":225,"blocks":0,"atimeMs":1681437599539.7925,"mtimeMs":1681437599539.7925,"ctimeMs":1681437599539.7925,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T01:59:59.540Z","mtime":"2023-04-14T01:59:59.540Z","ctime":"2023-04-14T01:59:59.540Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:59:59,547 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":225,"blocks":0,"atimeMs":1681437599539.7925,"mtimeMs":1681437599539.7925,"ctimeMs":1681437599539.7925,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T01:59:59.540Z","mtime":"2023-04-14T01:59:59.540Z","ctime":"2023-04-14T01:59:59.540Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 09:59:59,758 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\router.js change
+2023-04-14 10:00:00,534 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:23:56,485 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\controller\blog.js change
+2023-04-14 10:23:56,269 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\blog.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":6755399441797383,"size":662,"blocks":1,"atimeMs":1681439036262.1992,"mtimeMs":1681353398315.1663,"ctimeMs":1681353398315.1663,"birthtimeMs":1681439036262.1992,"atime":"2023-04-14T02:23:56.262Z","mtime":"2023-04-13T02:36:38.315Z","ctime":"2023-04-13T02:36:38.315Z","birthtime":"2023-04-14T02:23:56.262Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:23:56,271 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452272,"size":0,"blocks":0,"atimeMs":1681439036269.2097,"mtimeMs":1681439036262.1992,"ctimeMs":1681439036262.1992,"birthtimeMs":1681436614498.355,"atime":"2023-04-14T02:23:56.269Z","mtime":"2023-04-14T02:23:56.262Z","ctime":"2023-04-14T02:23:56.262Z","birthtime":"2023-04-14T01:43:34.498Z"},"remove":false,"isDirectory":true,"isFile":false}
+2023-04-14 10:23:56,271 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\blog.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":6755399441797383,"size":662,"blocks":1,"atimeMs":1681439036262.1992,"mtimeMs":1681353398315.1663,"ctimeMs":1681353398315.1663,"birthtimeMs":1681439036262.1992,"atime":"2023-04-14T02:23:56.262Z","mtime":"2023-04-13T02:36:38.315Z","ctime":"2023-04-13T02:36:38.315Z","birthtime":"2023-04-14T02:23:56.262Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:23:56,272 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\blog.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":6755399441797383,"size":662,"blocks":1,"atimeMs":1681439036262.1992,"mtimeMs":1681353398315.1663,"ctimeMs":1681353398315.1663,"birthtimeMs":1681439036262.1992,"atime":"2023-04-14T02:23:56.262Z","mtime":"2023-04-13T02:36:38.315Z","ctime":"2023-04-13T02:36:38.315Z","birthtime":"2023-04-14T02:23:56.262Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:23:57,378 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:24:01,734 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":269,"blocks":0,"atimeMs":1681439041727.1125,"mtimeMs":1681439041727.1125,"ctimeMs":1681439041727.1125,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T02:24:01.727Z","mtime":"2023-04-14T02:24:01.727Z","ctime":"2023-04-14T02:24:01.727Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:24:01,734 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":269,"blocks":0,"atimeMs":1681439041727.1125,"mtimeMs":1681439041727.1125,"ctimeMs":1681439041727.1125,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T02:24:01.727Z","mtime":"2023-04-14T02:24:01.727Z","ctime":"2023-04-14T02:24:01.727Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:24:01,947 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\router.js change
+2023-04-14 10:24:02,726 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:25:20,067 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.html","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452298,"size":0,"blocks":0,"atimeMs":1681439120061.4941,"mtimeMs":1681439120061.4941,"ctimeMs":1681439120061.4941,"birthtimeMs":1681439120061.4941,"atime":"2023-04-14T02:25:20.061Z","mtime":"2023-04-14T02:25:20.061Z","ctime":"2023-04-14T02:25:20.061Z","birthtime":"2023-04-14T02:25:20.061Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:25:20,067 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452285,"size":0,"blocks":0,"atimeMs":1681439120066.5015,"mtimeMs":1681439120061.4941,"ctimeMs":1681439120061.4941,"birthtimeMs":1681437015341.7734,"atime":"2023-04-14T02:25:20.067Z","mtime":"2023-04-14T02:25:20.061Z","ctime":"2023-04-14T02:25:20.061Z","birthtime":"2023-04-14T01:50:15.342Z"},"remove":false,"isDirectory":true,"isFile":false}
+2023-04-14 10:25:43,830 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.html","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452298,"size":284,"blocks":0,"atimeMs":1681439143825.6387,"mtimeMs":1681439143825.6387,"ctimeMs":1681439143825.6387,"birthtimeMs":1681439120061.4941,"atime":"2023-04-14T02:25:43.826Z","mtime":"2023-04-14T02:25:43.826Z","ctime":"2023-04-14T02:25:43.826Z","birthtime":"2023-04-14T02:25:20.061Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:25:43,831 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.html","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452298,"size":284,"blocks":0,"atimeMs":1681439143825.6387,"mtimeMs":1681439143825.6387,"ctimeMs":1681439143825.6387,"birthtimeMs":1681439120061.4941,"atime":"2023-04-14T02:25:43.826Z","mtime":"2023-04-14T02:25:43.826Z","ctime":"2023-04-14T02:25:43.826Z","birthtime":"2023-04-14T02:25:20.061Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:25:54,599 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.html","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452298,"size":282,"blocks":0,"atimeMs":1681439154593.1626,"mtimeMs":1681439154593.1626,"ctimeMs":1681439154593.1626,"birthtimeMs":1681439120061.4941,"atime":"2023-04-14T02:25:54.593Z","mtime":"2023-04-14T02:25:54.593Z","ctime":"2023-04-14T02:25:54.593Z","birthtime":"2023-04-14T02:25:20.061Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:25:54,600 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.html","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452298,"size":282,"blocks":0,"atimeMs":1681439154593.1626,"mtimeMs":1681439154593.1626,"ctimeMs":1681439154593.1626,"birthtimeMs":1681439120061.4941,"atime":"2023-04-14T02:25:54.593Z","mtime":"2023-04-14T02:25:54.593Z","ctime":"2023-04-14T02:25:54.593Z","birthtime":"2023-04-14T02:25:20.061Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:25:56,008 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.html","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452298,"size":288,"blocks":0,"atimeMs":1681439156003.7708,"mtimeMs":1681439156003.7708,"ctimeMs":1681439156003.7708,"birthtimeMs":1681439120061.4941,"atime":"2023-04-14T02:25:56.004Z","mtime":"2023-04-14T02:25:56.004Z","ctime":"2023-04-14T02:25:56.004Z","birthtime":"2023-04-14T02:25:20.061Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:25:56,008 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.html","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452298,"size":288,"blocks":0,"atimeMs":1681439156003.7708,"mtimeMs":1681439156003.7708,"ctimeMs":1681439156003.7708,"birthtimeMs":1681439120061.4941,"atime":"2023-04-14T02:25:56.004Z","mtime":"2023-04-14T02:25:56.004Z","ctime":"2023-04-14T02:25:56.004Z","birthtime":"2023-04-14T02:25:20.061Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:26:08,055 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452285,"size":0,"blocks":0,"atimeMs":1681439168054.6643,"mtimeMs":1681439168052.6616,"ctimeMs":1681439168052.6616,"birthtimeMs":1681437015341.7734,"atime":"2023-04-14T02:26:08.055Z","mtime":"2023-04-14T02:26:08.053Z","ctime":"2023-04-14T02:26:08.053Z","birthtime":"2023-04-14T01:50:15.342Z"},"remove":false,"isDirectory":true,"isFile":false}
+2023-04-14 10:26:08,055 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.css","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452299,"size":0,"blocks":0,"atimeMs":1681439168052.6616,"mtimeMs":1681439168052.6616,"ctimeMs":1681439168052.6616,"birthtimeMs":1681439168052.6616,"atime":"2023-04-14T02:26:08.053Z","mtime":"2023-04-14T02:26:08.053Z","ctime":"2023-04-14T02:26:08.053Z","birthtime":"2023-04-14T02:26:08.053Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:26:29,672 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.css","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452299,"size":33,"blocks":0,"atimeMs":1681439189661.297,"mtimeMs":1681439189661.297,"ctimeMs":1681439189661.297,"birthtimeMs":1681439168052.6616,"atime":"2023-04-14T02:26:29.661Z","mtime":"2023-04-14T02:26:29.661Z","ctime":"2023-04-14T02:26:29.661Z","birthtime":"2023-04-14T02:26:08.053Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:26:29,674 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.css","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452299,"size":33,"blocks":0,"atimeMs":1681439189661.297,"mtimeMs":1681439189661.297,"ctimeMs":1681439189661.297,"birthtimeMs":1681439168052.6616,"atime":"2023-04-14T02:26:29.661Z","mtime":"2023-04-14T02:26:29.661Z","ctime":"2023-04-14T02:26:29.661Z","birthtime":"2023-04-14T02:26:08.053Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:26:40,453 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.html","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452298,"size":334,"blocks":0,"atimeMs":1681439200444.1594,"mtimeMs":1681439200444.1594,"ctimeMs":1681439200444.1594,"birthtimeMs":1681439120061.4941,"atime":"2023-04-14T02:26:40.444Z","mtime":"2023-04-14T02:26:40.444Z","ctime":"2023-04-14T02:26:40.444Z","birthtime":"2023-04-14T02:25:20.061Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:26:40,454 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\public\\index.html","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452298,"size":334,"blocks":0,"atimeMs":1681439200444.1594,"mtimeMs":1681439200444.1594,"ctimeMs":1681439200444.1594,"birthtimeMs":1681439120061.4941,"atime":"2023-04-14T02:26:40.444Z","mtime":"2023-04-14T02:26:40.444Z","ctime":"2023-04-14T02:26:40.444Z","birthtime":"2023-04-14T02:25:20.061Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:30:43,975 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js rename
+2023-04-14 10:30:43,763 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":0,"blocks":0,"atimeMs":1681439443761.8308,"mtimeMs":1681439443761.8308,"ctimeMs":1681439443761.8308,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:30:43.762Z","mtime":"2023-04-14T02:30:43.762Z","ctime":"2023-04-14T02:30:43.762Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:30:45,193 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:31:59,698 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:31:59,491 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":86,"blocks":0,"atimeMs":1681439519481.5789,"mtimeMs":1681439519481.5789,"ctimeMs":1681439519481.5789,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:31:59.482Z","mtime":"2023-04-14T02:31:59.482Z","ctime":"2023-04-14T02:31:59.482Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:31:59,491 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":86,"blocks":0,"atimeMs":1681439519481.5789,"mtimeMs":1681439519481.5789,"ctimeMs":1681439519481.5789,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:31:59.482Z","mtime":"2023-04-14T02:31:59.482Z","ctime":"2023-04-14T02:31:59.482Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:32:00,507 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:32:31,135 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:32:30,919 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":65,"blocks":0,"atimeMs":1681439550909.9446,"mtimeMs":1681439550909.9446,"ctimeMs":1681439550909.9446,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:32:30.910Z","mtime":"2023-04-14T02:32:30.910Z","ctime":"2023-04-14T02:32:30.910Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:32:30,921 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":65,"blocks":0,"atimeMs":1681439550909.9446,"mtimeMs":1681439550909.9446,"ctimeMs":1681439550909.9446,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:32:30.910Z","mtime":"2023-04-14T02:32:30.910Z","ctime":"2023-04-14T02:32:30.910Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:32:31,927 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:32:39,968 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:32:39,754 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":66,"blocks":0,"atimeMs":1681439559749.5413,"mtimeMs":1681439559749.5413,"ctimeMs":1681439559749.5413,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:32:39.750Z","mtime":"2023-04-14T02:32:39.750Z","ctime":"2023-04-14T02:32:39.750Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:32:39,755 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":66,"blocks":0,"atimeMs":1681439559749.5413,"mtimeMs":1681439559749.5413,"ctimeMs":1681439559749.5413,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:32:39.750Z","mtime":"2023-04-14T02:32:39.750Z","ctime":"2023-04-14T02:32:39.750Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:32:40,800 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:32:41,360 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":66,"blocks":0,"atimeMs":1681439561354.4622,"mtimeMs":1681439561354.4622,"ctimeMs":1681439561354.4622,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:32:41.354Z","mtime":"2023-04-14T02:32:41.354Z","ctime":"2023-04-14T02:32:41.354Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:32:41,361 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":66,"blocks":0,"atimeMs":1681439561354.4622,"mtimeMs":1681439561354.4622,"ctimeMs":1681439561354.4622,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:32:41.354Z","mtime":"2023-04-14T02:32:41.354Z","ctime":"2023-04-14T02:32:41.354Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:32:41,564 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:32:42,442 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:32:53,995 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:32:53,793 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":64,"blocks":0,"atimeMs":1681439573785.4863,"mtimeMs":1681439573785.4863,"ctimeMs":1681439573785.4863,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:32:53.785Z","mtime":"2023-04-14T02:32:53.785Z","ctime":"2023-04-14T02:32:53.785Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:32:53,793 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":64,"blocks":0,"atimeMs":1681439573785.4863,"mtimeMs":1681439573785.4863,"ctimeMs":1681439573785.4863,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:32:53.785Z","mtime":"2023-04-14T02:32:53.785Z","ctime":"2023-04-14T02:32:53.785Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:32:54,786 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:34:02,744 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:34:02,543 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":77,"blocks":0,"atimeMs":1681439642539.1736,"mtimeMs":1681439642539.1736,"ctimeMs":1681439642539.1736,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:34:02.539Z","mtime":"2023-04-14T02:34:02.539Z","ctime":"2023-04-14T02:34:02.539Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:34:02,543 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":77,"blocks":0,"atimeMs":1681439642539.1736,"mtimeMs":1681439642539.1736,"ctimeMs":1681439642539.1736,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:34:02.539Z","mtime":"2023-04-14T02:34:02.539Z","ctime":"2023-04-14T02:34:02.539Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:34:03,735 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:35:46,805 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":91,"blocks":0,"atimeMs":1681439746788.5967,"mtimeMs":1681439746788.5967,"ctimeMs":1681439746788.5967,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:35:46.789Z","mtime":"2023-04-14T02:35:46.789Z","ctime":"2023-04-14T02:35:46.789Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:35:46,812 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":91,"blocks":0,"atimeMs":1681439746788.5967,"mtimeMs":1681439746788.5967,"ctimeMs":1681439746788.5967,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:35:46.789Z","mtime":"2023-04-14T02:35:46.789Z","ctime":"2023-04-14T02:35:46.789Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:35:47,021 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:35:48,312 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:36:49,685 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\router.js change
+2023-04-14 10:36:49,473 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":272,"blocks":0,"atimeMs":1681439809468.67,"mtimeMs":1681439809468.67,"ctimeMs":1681439809468.67,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T02:36:49.469Z","mtime":"2023-04-14T02:36:49.469Z","ctime":"2023-04-14T02:36:49.469Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:36:49,473 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":272,"blocks":0,"atimeMs":1681439809468.67,"mtimeMs":1681439809468.67,"ctimeMs":1681439809468.67,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T02:36:49.469Z","mtime":"2023-04-14T02:36:49.469Z","ctime":"2023-04-14T02:36:49.469Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:36:50,671 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:38:19,792 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":133,"blocks":0,"atimeMs":1681439899788.478,"mtimeMs":1681439899788.478,"ctimeMs":1681439899788.478,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:38:19.788Z","mtime":"2023-04-14T02:38:19.788Z","ctime":"2023-04-14T02:38:19.788Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:38:19,793 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":133,"blocks":0,"atimeMs":1681439899788.478,"mtimeMs":1681439899788.478,"ctimeMs":1681439899788.478,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:38:19.788Z","mtime":"2023-04-14T02:38:19.788Z","ctime":"2023-04-14T02:38:19.788Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:38:19,793 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":133,"blocks":0,"atimeMs":1681439899788.478,"mtimeMs":1681439899788.478,"ctimeMs":1681439899788.478,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:38:19.788Z","mtime":"2023-04-14T02:38:19.788Z","ctime":"2023-04-14T02:38:19.788Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:38:20,003 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:38:21,052 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:38:29,720 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:38:29,515 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":133,"blocks":0,"atimeMs":1681439909507.8035,"mtimeMs":1681439909507.8035,"ctimeMs":1681439909507.8035,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:38:29.508Z","mtime":"2023-04-14T02:38:29.508Z","ctime":"2023-04-14T02:38:29.508Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:38:29,516 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":133,"blocks":0,"atimeMs":1681439909507.8035,"mtimeMs":1681439909507.8035,"ctimeMs":1681439909507.8035,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:38:29.508Z","mtime":"2023-04-14T02:38:29.508Z","ctime":"2023-04-14T02:38:29.508Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:38:30,639 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:39:15,587 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:39:15,371 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":133,"blocks":0,"atimeMs":1681439955368.8396,"mtimeMs":1681439955368.8396,"ctimeMs":1681439955368.8396,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:39:15.369Z","mtime":"2023-04-14T02:39:15.369Z","ctime":"2023-04-14T02:39:15.369Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:39:15,372 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":133,"blocks":0,"atimeMs":1681439955368.8396,"mtimeMs":1681439955368.8396,"ctimeMs":1681439955368.8396,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:39:15.369Z","mtime":"2023-04-14T02:39:15.369Z","ctime":"2023-04-14T02:39:15.369Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:39:16,726 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:40:19,174 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:40:18,969 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":134,"blocks":0,"atimeMs":1681440018965.734,"mtimeMs":1681440018965.734,"ctimeMs":1681440018965.734,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:40:18.966Z","mtime":"2023-04-14T02:40:18.966Z","ctime":"2023-04-14T02:40:18.966Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:40:18,970 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":134,"blocks":0,"atimeMs":1681440018965.734,"mtimeMs":1681440018965.734,"ctimeMs":1681440018965.734,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:40:18.966Z","mtime":"2023-04-14T02:40:18.966Z","ctime":"2023-04-14T02:40:18.966Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:40:20,231 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:40:26,387 WARN 22868 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:40:26,172 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":134,"blocks":0,"atimeMs":1681440026169.66,"mtimeMs":1681440026169.66,"ctimeMs":1681440026169.66,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:40:26.170Z","mtime":"2023-04-14T02:40:26.170Z","ctime":"2023-04-14T02:40:26.170Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:40:26,175 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":134,"blocks":0,"atimeMs":1681440026169.66,"mtimeMs":1681440026169.66,"ctimeMs":1681440026169.66,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:40:26.170Z","mtime":"2023-04-14T02:40:26.170Z","ctime":"2023-04-14T02:40:26.170Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:40:26,177 INFO 22868 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":134,"blocks":0,"atimeMs":1681440026169.66,"mtimeMs":1681440026169.66,"ctimeMs":1681440026169.66,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:40:26.170Z","mtime":"2023-04-14T02:40:26.170Z","ctime":"2023-04-14T02:40:26.170Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:40:27,733 WARN 22868 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:40:35,680 INFO 17164 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 10:40:35,689 INFO 17164 [egg:core] dump config after load, 5ms
+2023-04-14 10:40:35,759 INFO 17164 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 10:40:35,759 INFO 17164 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 10:40:35,760 INFO 17164 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 10:40:35,760 INFO 17164 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 10:40:35,760 INFO 17164 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 10:40:35,760 INFO 17164 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 10:40:35,760 INFO 17164 [egg-watcher:agent] watcher start success
+2023-04-14 10:40:35,835 INFO 17164 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [830ms] - #0 Process Start
+                                  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [359ms] - #1 Application Start
+                                  ▇ [25ms] - #2 Load Plugin
+                                   ▇ [34ms] - #3 Load Config
+                                   ▇ [0ms] - #4 Require(0) config/config.default.js
+                                   ▇ [0ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+                                   ▇ [0ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+                                   ▇ [0ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+                                   ▇ [1ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+                                   ▇ [1ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+                                    ▇ [1ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+                                    ▇ [1ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+                                    ▇ [0ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+                                    ▇ [1ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+                                    ▇ [1ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+                                    ▇ [1ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+                                    ▇ [0ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+                                    ▇ [1ms] - #17 Require(13) node_modules/egg/config/config.default.js
+                                    ▇ [0ms] - #18 Require(14) config/config.default.js
+                                    ▇ [2ms] - #19 Require(15) node_modules/egg-security/config/config.local.js
+                                    ▇ [1ms] - #20 Require(16) node_modules/egg-watcher/config/config.local.js
+                                    ▇ [1ms] - #21 Require(17) node_modules/egg-view/config/config.local.js
+                                    ▇ [0ms] - #22 Require(18) node_modules/egg/config/config.local.js
+                                    ▇▇▇ [76ms] - #23 Load extend/agent.js
+                                    ▇ [2ms] - #24 Require(19) node_modules/egg-security/app/extend/agent.js
+                                     ▇▇ [62ms] - #25 Require(20) node_modules/egg-schedule/app/extend/agent.js
+                                       ▇ [3ms] - #26 Require(21) node_modules/egg-logrotator/app/extend/agent.js
+                                        ▇▇ [51ms] - #27 Load extend/context.js
+                                        ▇ [15ms] - #28 Require(22) node_modules/egg-security/app/extend/context.js
+                                        ▇ [4ms] - #29 Require(23) node_modules/egg-jsonp/app/extend/context.js
+                                        ▇ [1ms] - #30 Require(24) node_modules/egg-i18n/app/extend/context.js
+                                         ▇ [18ms] - #31 Require(25) node_modules/egg-multipart/app/extend/context.js
+                                         ▇ [2ms] - #32 Require(26) node_modules/egg-view/app/extend/context.js
+                                         ▇ [2ms] - #33 Require(27) node_modules/egg/app/extend/context.js
+                                          ▇ [32ms] - #34 Load agent.js
+                                          ▇ [1ms] - #35 Require(28) node_modules/egg-security/agent.js
+                                          ▇ [0ms] - #36 Require(29) node_modules/egg-onerror/agent.js
+                                          ▇ [5ms] - #37 Require(30) node_modules/egg-watcher/agent.js
+                                          ▇ [3ms] - #38 Require(31) node_modules/egg-schedule/agent.js
+                                          ▇ [16ms] - #39 Require(32) node_modules/egg-development/agent.js
+                                           ▇ [1ms] - #40 Require(33) node_modules/egg-logrotator/agent.js
+                                           ▇ [0ms] - #41 Require(34) node_modules/egg/agent.js
+                                           ▇▇▇ [78ms] - #42 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                           ▇▇ [52ms] - #43 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                           ▇▇▇▇▇ [125ms] - #44 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 10:40:35,835 INFO 17164 [egg:core] dump config after ready, 23ms
+2023-04-14 10:41:27,998 WARN 17164 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\router.js change
+2023-04-14 10:41:27,784 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":272,"blocks":0,"atimeMs":1681440087782.2422,"mtimeMs":1681440087782.2422,"ctimeMs":1681440087782.2422,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T02:41:27.782Z","mtime":"2023-04-14T02:41:27.782Z","ctime":"2023-04-14T02:41:27.782Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:41:27,785 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":272,"blocks":0,"atimeMs":1681440087782.2422,"mtimeMs":1681440087782.2422,"ctimeMs":1681440087782.2422,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T02:41:27.782Z","mtime":"2023-04-14T02:41:27.782Z","ctime":"2023-04-14T02:41:27.782Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:41:28,909 WARN 17164 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:42:52,619 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":0,"blocks":0,"atimeMs":1681440172606.6382,"mtimeMs":1681440172606.6382,"ctimeMs":1681440172606.6382,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:42:52.607Z","mtime":"2023-04-14T02:42:52.607Z","ctime":"2023-04-14T02:42:52.607Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:42:52,628 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":67,"blocks":0,"atimeMs":1681440172618.739,"mtimeMs":1681440172618.739,"ctimeMs":1681440172618.739,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:42:52.619Z","mtime":"2023-04-14T02:42:52.619Z","ctime":"2023-04-14T02:42:52.619Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:42:52,629 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":67,"blocks":0,"atimeMs":1681440172618.739,"mtimeMs":1681440172618.739,"ctimeMs":1681440172618.739,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:42:52.619Z","mtime":"2023-04-14T02:42:52.619Z","ctime":"2023-04-14T02:42:52.619Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:42:52,833 WARN 17164 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:42:54,219 WARN 17164 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:43:07,586 WARN 17164 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:43:07,377 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":112,"blocks":0,"atimeMs":1681440187371.4675,"mtimeMs":1681440187371.4675,"ctimeMs":1681440187371.4675,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:43:07.371Z","mtime":"2023-04-14T02:43:07.371Z","ctime":"2023-04-14T02:43:07.371Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:43:07,378 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":112,"blocks":0,"atimeMs":1681440187371.4675,"mtimeMs":1681440187371.4675,"ctimeMs":1681440187371.4675,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:43:07.371Z","mtime":"2023-04-14T02:43:07.371Z","ctime":"2023-04-14T02:43:07.371Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:43:08,837 WARN 17164 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:43:30,481 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\sub","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":562949954162953,"size":0,"blocks":0,"atimeMs":1681440210479.7842,"mtimeMs":1681440210477.7827,"ctimeMs":1681440210477.7827,"birthtimeMs":1681440210477.7827,"atime":"2023-04-14T02:43:30.480Z","mtime":"2023-04-14T02:43:30.478Z","ctime":"2023-04-14T02:43:30.478Z","birthtime":"2023-04-14T02:43:30.478Z"},"remove":false,"isDirectory":true,"isFile":false}
+2023-04-14 10:43:30,481 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452272,"size":0,"blocks":0,"atimeMs":1681440210480.7852,"mtimeMs":1681440210477.7827,"ctimeMs":1681440210477.7827,"birthtimeMs":1681436614498.355,"atime":"2023-04-14T02:43:30.481Z","mtime":"2023-04-14T02:43:30.478Z","ctime":"2023-04-14T02:43:30.478Z","birthtime":"2023-04-14T01:43:34.498Z"},"remove":false,"isDirectory":true,"isFile":false}
+2023-04-14 10:43:41,039 WARN 17164 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\controller\sub\home.js change
+2023-04-14 10:43:40,826 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\home.js","remove":true,"isDirectory":false,"isFile":false}
+2023-04-14 10:43:40,827 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\sub\\home.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452274,"size":184,"blocks":0,"atimeMs":1681440188772.5757,"mtimeMs":1681437129985.209,"ctimeMs":1681440220814.495,"birthtimeMs":1681436659369.3318,"atime":"2023-04-14T02:43:08.773Z","mtime":"2023-04-14T01:52:09.985Z","ctime":"2023-04-14T02:43:40.814Z","birthtime":"2023-04-14T01:44:19.369Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:43:40,828 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\sub","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":562949954162953,"size":0,"blocks":0,"atimeMs":1681440220821.9082,"mtimeMs":1681440220814.495,"ctimeMs":1681440220814.495,"birthtimeMs":1681440210477.7827,"atime":"2023-04-14T02:43:40.822Z","mtime":"2023-04-14T02:43:40.814Z","ctime":"2023-04-14T02:43:40.814Z","birthtime":"2023-04-14T02:43:30.478Z"},"remove":false,"isDirectory":true,"isFile":false}
+2023-04-14 10:43:40,829 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller","stat":{"dev":2493532949,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452272,"size":0,"blocks":0,"atimeMs":1681440220826.4163,"mtimeMs":1681440220814.495,"ctimeMs":1681440220814.495,"birthtimeMs":1681436614498.355,"atime":"2023-04-14T02:43:40.826Z","mtime":"2023-04-14T02:43:40.814Z","ctime":"2023-04-14T02:43:40.814Z","birthtime":"2023-04-14T01:43:34.498Z"},"remove":false,"isDirectory":true,"isFile":false}
+2023-04-14 10:43:40,829 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\sub\\home.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452274,"size":184,"blocks":0,"atimeMs":1681440188772.5757,"mtimeMs":1681437129985.209,"ctimeMs":1681440220814.495,"birthtimeMs":1681436659369.3318,"atime":"2023-04-14T02:43:08.773Z","mtime":"2023-04-14T01:52:09.985Z","ctime":"2023-04-14T02:43:40.814Z","birthtime":"2023-04-14T01:44:19.369Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:43:42,314 WARN 17164 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:43:50,769 WARN 17164 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:43:50,560 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":0,"blocks":0,"atimeMs":1681440230558.4075,"mtimeMs":1681440230558.4075,"ctimeMs":1681440230558.4075,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:43:50.558Z","mtime":"2023-04-14T02:43:50.558Z","ctime":"2023-04-14T02:43:50.558Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:43:50,567 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":111,"blocks":0,"atimeMs":1681440230560.4214,"mtimeMs":1681440230560.4214,"ctimeMs":1681440230560.4214,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:43:50.560Z","mtime":"2023-04-14T02:43:50.560Z","ctime":"2023-04-14T02:43:50.560Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:43:50,567 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":111,"blocks":0,"atimeMs":1681440230560.4214,"mtimeMs":1681440230560.4214,"ctimeMs":1681440230560.4214,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:43:50.560Z","mtime":"2023-04-14T02:43:50.560Z","ctime":"2023-04-14T02:43:50.560Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:43:51,942 WARN 17164 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:43:54,937 WARN 17164 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 10:43:54,735 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":112,"blocks":0,"atimeMs":1681440234726.5754,"mtimeMs":1681440234726.5754,"ctimeMs":1681440234726.5754,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:43:54.727Z","mtime":"2023-04-14T02:43:54.727Z","ctime":"2023-04-14T02:43:54.727Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:43:54,736 INFO 17164 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":112,"blocks":0,"atimeMs":1681440234726.5754,"mtimeMs":1681440234726.5754,"ctimeMs":1681440234726.5754,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T02:43:54.727Z","mtime":"2023-04-14T02:43:54.727Z","ctime":"2023-04-14T02:43:54.727Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:43:55,735 WARN 17164 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:45:08,017 INFO 17048 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 10:45:08,025 INFO 17048 [egg:core] dump config after load, 4ms
+2023-04-14 10:45:08,083 INFO 17048 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 10:45:08,083 INFO 17048 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 10:45:08,084 INFO 17048 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 10:45:08,084 INFO 17048 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 10:45:08,084 INFO 17048 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 10:45:08,084 INFO 17048 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 10:45:08,085 INFO 17048 [egg-watcher:agent] watcher start success
+2023-04-14 10:45:08,125 INFO 17048 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [707ms] - #0 Process Start
+                                    ▇▇▇▇▇▇▇▇▇▇▇▇ [244ms] - #1 Application Start
+                                     ▇ [14ms] - #2 Load Plugin
+                                     ▇ [19ms] - #3 Load Config
+                                     ▇ [0ms] - #4 Require(0) config/config.default.js
+                                     ▇ [0ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+                                     ▇ [0ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+                                     ▇ [0ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+                                      ▇ [0ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+                                      ▇ [0ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+                                      ▇ [0ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+                                      ▇ [1ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+                                      ▇ [0ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+                                      ▇ [0ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+                                      ▇ [0ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+                                      ▇ [1ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+                                      ▇ [1ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+                                      ▇ [0ms] - #17 Require(13) node_modules/egg/config/config.default.js
+                                      ▇ [0ms] - #18 Require(14) config/config.default.js
+                                      ▇ [1ms] - #19 Require(15) node_modules/egg-security/config/config.local.js
+                                      ▇ [1ms] - #20 Require(16) node_modules/egg-watcher/config/config.local.js
+                                      ▇ [0ms] - #21 Require(17) node_modules/egg-view/config/config.local.js
+                                      ▇ [0ms] - #22 Require(18) node_modules/egg/config/config.local.js
+                                      ▇▇ [48ms] - #23 Load extend/agent.js
+                                      ▇ [1ms] - #24 Require(19) node_modules/egg-security/app/extend/agent.js
+                                      ▇ [38ms] - #25 Require(20) node_modules/egg-schedule/app/extend/agent.js
+                                        ▇ [2ms] - #26 Require(21) node_modules/egg-logrotator/app/extend/agent.js
+                                         ▇ [38ms] - #27 Load extend/context.js
+                                         ▇ [10ms] - #28 Require(22) node_modules/egg-security/app/extend/context.js
+                                         ▇ [4ms] - #29 Require(23) node_modules/egg-jsonp/app/extend/context.js
+                                          ▇ [1ms] - #30 Require(24) node_modules/egg-i18n/app/extend/context.js
+                                          ▇ [13ms] - #31 Require(25) node_modules/egg-multipart/app/extend/context.js
+                                          ▇ [2ms] - #32 Require(26) node_modules/egg-view/app/extend/context.js
+                                           ▇ [2ms] - #33 Require(27) node_modules/egg/app/extend/context.js
+                                           ▇ [19ms] - #34 Load agent.js
+                                           ▇ [0ms] - #35 Require(28) node_modules/egg-security/agent.js
+                                           ▇ [0ms] - #36 Require(29) node_modules/egg-onerror/agent.js
+                                           ▇ [3ms] - #37 Require(30) node_modules/egg-watcher/agent.js
+                                           ▇ [1ms] - #38 Require(31) node_modules/egg-schedule/agent.js
+                                           ▇ [8ms] - #39 Require(32) node_modules/egg-development/agent.js
+                                            ▇ [1ms] - #40 Require(33) node_modules/egg-logrotator/agent.js
+                                            ▇ [1ms] - #41 Require(34) node_modules/egg/agent.js
+                                            ▇▇▇ [66ms] - #42 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                            ▇▇ [48ms] - #43 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                            ▇▇▇▇ [95ms] - #44 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 10:45:08,126 INFO 17048 [egg:core] dump config after ready, 9ms
+2023-04-14 10:48:20,121 INFO 18092 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 10:48:20,126 INFO 18092 [egg:core] dump config after load, 3ms
+2023-04-14 10:48:20,164 INFO 18092 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 10:48:20,164 INFO 18092 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 10:48:20,165 INFO 18092 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 10:48:20,165 INFO 18092 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 10:48:20,165 INFO 18092 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 10:48:20,165 INFO 18092 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 10:48:20,165 INFO 18092 [egg-watcher:agent] watcher start success
+2023-04-14 10:48:20,189 INFO 18092 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [531ms] - #0 Process Start
+                                     ▇▇▇▇▇▇▇▇▇▇▇▇ [173ms] - #1 Application Start
+                                     ▇ [12ms] - #2 Load Plugin
+                                      ▇ [18ms] - #3 Load Config
+                                      ▇ [1ms] - #4 Require(0) config/config.default.js
+                                      ▇ [0ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+                                      ▇ [1ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+                                      ▇ [1ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+                                      ▇ [0ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+                                      ▇ [1ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+                                      ▇ [1ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+                                      ▇ [0ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+                                       ▇ [1ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+                                       ▇ [0ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+                                       ▇ [0ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+                                       ▇ [0ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+                                       ▇ [1ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+                                       ▇ [0ms] - #17 Require(13) node_modules/egg/config/config.default.js
+                                       ▇ [0ms] - #18 Require(14) config/config.default.js
+                                       ▇ [1ms] - #19 Require(15) node_modules/egg-security/config/config.local.js
+                                       ▇ [0ms] - #20 Require(16) node_modules/egg-watcher/config/config.local.js
+                                       ▇ [0ms] - #21 Require(17) node_modules/egg-view/config/config.local.js
+                                       ▇ [0ms] - #22 Require(18) node_modules/egg/config/config.local.js
+                                       ▇▇ [37ms] - #23 Load extend/agent.js
+                                       ▇ [0ms] - #24 Require(19) node_modules/egg-security/app/extend/agent.js
+                                       ▇▇ [31ms] - #25 Require(20) node_modules/egg-schedule/app/extend/agent.js
+                                         ▇ [2ms] - #26 Require(21) node_modules/egg-logrotator/app/extend/agent.js
+                                          ▇ [28ms] - #27 Load extend/context.js
+                                          ▇ [9ms] - #28 Require(22) node_modules/egg-security/app/extend/context.js
+                                          ▇ [2ms] - #29 Require(23) node_modules/egg-jsonp/app/extend/context.js
+                                           ▇ [0ms] - #30 Require(24) node_modules/egg-i18n/app/extend/context.js
+                                           ▇ [11ms] - #31 Require(25) node_modules/egg-multipart/app/extend/context.js
+                                           ▇ [1ms] - #32 Require(26) node_modules/egg-view/app/extend/context.js
+                                            ▇ [1ms] - #33 Require(27) node_modules/egg/app/extend/context.js
+                                            ▇ [12ms] - #34 Load agent.js
+                                            ▇ [1ms] - #35 Require(28) node_modules/egg-security/agent.js
+                                            ▇ [0ms] - #36 Require(29) node_modules/egg-onerror/agent.js
+                                            ▇ [4ms] - #37 Require(30) node_modules/egg-watcher/agent.js
+                                            ▇ [1ms] - #38 Require(31) node_modules/egg-schedule/agent.js
+                                            ▇ [5ms] - #39 Require(32) node_modules/egg-development/agent.js
+                                             ▇ [0ms] - #40 Require(33) node_modules/egg-logrotator/agent.js
+                                             ▇ [0ms] - #41 Require(34) node_modules/egg/agent.js
+                                             ▇▇ [42ms] - #42 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                             ▇▇ [32ms] - #43 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                             ▇▇▇▇ [57ms] - #44 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 10:48:20,189 INFO 18092 [egg:core] dump config after ready, 7ms
+2023-04-14 10:48:37,739 WARN 18092 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:48:37,530 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":99,"blocks":0,"atimeMs":1681440517525.1526,"mtimeMs":1681440517525.1526,"ctimeMs":1681440517525.1526,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:48:37.525Z","mtime":"2023-04-14T02:48:37.525Z","ctime":"2023-04-14T02:48:37.525Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:48:37,531 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":99,"blocks":0,"atimeMs":1681440517525.1526,"mtimeMs":1681440517525.1526,"ctimeMs":1681440517525.1526,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:48:37.525Z","mtime":"2023-04-14T02:48:37.525Z","ctime":"2023-04-14T02:48:37.525Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:48:38,488 WARN 18092 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:49:20,106 WARN 18092 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:49:19,891 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":86,"blocks":0,"atimeMs":1681440559888.287,"mtimeMs":1681440559888.287,"ctimeMs":1681440559888.287,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:19.888Z","mtime":"2023-04-14T02:49:19.888Z","ctime":"2023-04-14T02:49:19.888Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:19,891 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":86,"blocks":0,"atimeMs":1681440559888.287,"mtimeMs":1681440559888.287,"ctimeMs":1681440559888.287,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:19.888Z","mtime":"2023-04-14T02:49:19.888Z","ctime":"2023-04-14T02:49:19.888Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:35,029 WARN 18092 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:49:34,816 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":0,"blocks":0,"atimeMs":1681440574814.759,"mtimeMs":1681440574814.759,"ctimeMs":1681440574814.759,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:34.815Z","mtime":"2023-04-14T02:49:34.815Z","ctime":"2023-04-14T02:49:34.815Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:34,820 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":86,"blocks":0,"atimeMs":1681440574814.759,"mtimeMs":1681440574814.759,"ctimeMs":1681440574814.759,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:34.815Z","mtime":"2023-04-14T02:49:34.815Z","ctime":"2023-04-14T02:49:34.815Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:36,056 WARN 18092 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:49:54,355 WARN 18092 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:49:54,143 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":88,"blocks":0,"atimeMs":1681440594136.7124,"mtimeMs":1681440594136.7124,"ctimeMs":1681440594136.7124,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:54.137Z","mtime":"2023-04-14T02:49:54.137Z","ctime":"2023-04-14T02:49:54.137Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:54,144 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":88,"blocks":0,"atimeMs":1681440594136.7124,"mtimeMs":1681440594136.7124,"ctimeMs":1681440594136.7124,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:54.137Z","mtime":"2023-04-14T02:49:54.137Z","ctime":"2023-04-14T02:49:54.137Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:55,594 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":88,"blocks":0,"atimeMs":1681440595588.7117,"mtimeMs":1681440595588.7117,"ctimeMs":1681440595588.7117,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:55.589Z","mtime":"2023-04-14T02:49:55.589Z","ctime":"2023-04-14T02:49:55.589Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:55,595 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":88,"blocks":0,"atimeMs":1681440595588.7117,"mtimeMs":1681440595588.7117,"ctimeMs":1681440595588.7117,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:55.589Z","mtime":"2023-04-14T02:49:55.589Z","ctime":"2023-04-14T02:49:55.589Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:55,614 WARN 18092 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:49:55,800 WARN 18092 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:49:57,129 WARN 18092 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:49:58,684 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":86,"blocks":0,"atimeMs":1681440598680.545,"mtimeMs":1681440598680.545,"ctimeMs":1681440598680.545,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:58.681Z","mtime":"2023-04-14T02:49:58.681Z","ctime":"2023-04-14T02:49:58.681Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:58,685 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":86,"blocks":0,"atimeMs":1681440598680.545,"mtimeMs":1681440598680.545,"ctimeMs":1681440598680.545,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T02:49:58.681Z","mtime":"2023-04-14T02:49:58.681Z","ctime":"2023-04-14T02:49:58.681Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:49:58,891 WARN 18092 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 10:49:59,966 WARN 18092 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 10:52:26,722 WARN 18092 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\router.js change
+2023-04-14 10:52:26,514 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":0,"blocks":0,"atimeMs":1681440746512.985,"mtimeMs":1681440746512.985,"ctimeMs":1681440746512.985,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T02:52:26.513Z","mtime":"2023-04-14T02:52:26.513Z","ctime":"2023-04-14T02:52:26.513Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:52:26,518 INFO 18092 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\router.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452273,"size":272,"blocks":0,"atimeMs":1681440746514.9866,"mtimeMs":1681440746514.9866,"ctimeMs":1681440746514.9866,"birthtimeMs":1681436643595.4275,"atime":"2023-04-14T02:52:26.515Z","mtime":"2023-04-14T02:52:26.515Z","ctime":"2023-04-14T02:52:26.515Z","birthtime":"2023-04-14T01:44:03.595Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 10:52:27,622 WARN 18092 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 11:09:05,005 INFO 25292 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 11:09:05,011 INFO 25292 [egg:core] dump config after load, 2ms
+2023-04-14 11:09:05,050 INFO 25292 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 11:09:05,050 INFO 25292 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 11:09:05,050 INFO 25292 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 11:09:05,050 INFO 25292 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 11:09:05,050 INFO 25292 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 11:09:05,050 INFO 25292 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 11:09:05,050 INFO 25292 [egg-watcher:agent] watcher start success
+2023-04-14 11:09:05,085 INFO 25292 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [491ms] - #0 Process Start
+                                  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [218ms] - #1 Application Start
+                                  ▇ [28ms] - #2 Load Plugin
+                                    ▇▇▇ [49ms] - #3 Load Config
+                                    ▇ [1ms] - #4 Require(0) config/config.default.js
+                                    ▇ [1ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+                                    ▇ [1ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+                                    ▇ [0ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+                                    ▇ [0ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+                                    ▇ [1ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+                                    ▇ [1ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+                                     ▇ [0ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+                                     ▇ [1ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+                                     ▇ [0ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+                                     ▇ [0ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+                                     ▇ [0ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+                                     ▇ [0ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+                                     ▇ [15ms] - #17 Require(13) node_modules/egg-view-ejs/config/config.default.js
+                                      ▇ [1ms] - #18 Require(14) node_modules/egg/config/config.default.js
+                                      ▇ [0ms] - #19 Require(15) config/config.default.js
+                                      ▇ [1ms] - #20 Require(16) node_modules/egg-security/config/config.local.js
+                                      ▇ [0ms] - #21 Require(17) node_modules/egg-watcher/config/config.local.js
+                                      ▇ [0ms] - #22 Require(18) node_modules/egg-view/config/config.local.js
+                                      ▇ [14ms] - #23 Require(19) node_modules/egg-view-ejs/config/config.local.js
+                                       ▇ [1ms] - #24 Require(20) node_modules/egg/config/config.local.js
+                                       ▇ [28ms] - #25 Load extend/agent.js
+                                       ▇ [1ms] - #26 Require(21) node_modules/egg-security/app/extend/agent.js
+                                        ▇ [23ms] - #27 Require(22) node_modules/egg-schedule/app/extend/agent.js
+                                         ▇ [1ms] - #28 Require(23) node_modules/egg-logrotator/app/extend/agent.js
+                                         ▇ [22ms] - #29 Load extend/context.js
+                                         ▇ [6ms] - #30 Require(24) node_modules/egg-security/app/extend/context.js
+                                          ▇ [1ms] - #31 Require(25) node_modules/egg-jsonp/app/extend/context.js
+                                          ▇ [0ms] - #32 Require(26) node_modules/egg-i18n/app/extend/context.js
+                                          ▇ [9ms] - #33 Require(27) node_modules/egg-multipart/app/extend/context.js
+                                           ▇ [1ms] - #34 Require(28) node_modules/egg-view/app/extend/context.js
+                                           ▇ [1ms] - #35 Require(29) node_modules/egg/app/extend/context.js
+                                           ▇ [12ms] - #36 Load agent.js
+                                           ▇ [0ms] - #37 Require(30) node_modules/egg-security/agent.js
+                                           ▇ [1ms] - #38 Require(31) node_modules/egg-onerror/agent.js
+                                           ▇ [2ms] - #39 Require(32) node_modules/egg-watcher/agent.js
+                                           ▇ [1ms] - #40 Require(33) node_modules/egg-schedule/agent.js
+                                           ▇ [6ms] - #41 Require(34) node_modules/egg-development/agent.js
+                                            ▇ [0ms] - #42 Require(35) node_modules/egg-logrotator/agent.js
+                                            ▇ [0ms] - #43 Require(36) node_modules/egg/agent.js
+                                            ▇▇ [43ms] - #44 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                            ▇▇ [33ms] - #45 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                            ▇▇▇▇ [70ms] - #46 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 11:09:05,086 INFO 25292 [egg:core] dump config after ready, 7ms
+2023-04-14 11:09:05,950 INFO 25292 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app\\controller\\user.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":281474977452293,"size":182,"blocks":0,"atimeMs":1681441745946.5757,"mtimeMs":1681437569327.2795,"ctimeMs":1681437569327.2795,"birthtimeMs":1681437427659.4368,"atime":"2023-04-14T03:09:05.947Z","mtime":"2023-04-14T01:59:29.327Z","ctime":"2023-04-14T01:59:29.327Z","birthtime":"2023-04-14T01:57:07.659Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 11:09:06,166 WARN 25292 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\app\controller\user.js change
+2023-04-14 11:09:07,072 WARN 25292 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 11:09:46,282 INFO 25292 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":511,"blocks":8,"atimeMs":1681441786281.2847,"mtimeMs":1681441786281.2847,"ctimeMs":1681441786281.2847,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T03:09:46.281Z","mtime":"2023-04-14T03:09:46.281Z","ctime":"2023-04-14T03:09:46.281Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 11:09:46,282 INFO 25292 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":511,"blocks":8,"atimeMs":1681441786281.2847,"mtimeMs":1681441786281.2847,"ctimeMs":1681441786281.2847,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T03:09:46.281Z","mtime":"2023-04-14T03:09:46.281Z","ctime":"2023-04-14T03:09:46.281Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 11:09:46,283 INFO 25292 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":511,"blocks":8,"atimeMs":1681441786281.2847,"mtimeMs":1681441786281.2847,"ctimeMs":1681441786281.2847,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T03:09:46.281Z","mtime":"2023-04-14T03:09:46.281Z","ctime":"2023-04-14T03:09:46.281Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 11:09:46,489 WARN 25292 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 11:09:47,407 WARN 25292 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 11:09:59,596 INFO 20524 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 11:09:59,601 INFO 20524 [egg:core] dump config after load, 2ms
+2023-04-14 11:09:59,634 INFO 20524 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 11:09:59,634 INFO 20524 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 11:09:59,634 INFO 20524 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 11:09:59,634 INFO 20524 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 11:09:59,634 INFO 20524 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 11:09:59,634 INFO 20524 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 11:09:59,634 INFO 20524 [egg-watcher:agent] watcher start success
+2023-04-14 11:09:59,660 INFO 20524 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [426ms] - #0 Process Start
+                                    ▇▇▇▇▇▇▇▇▇▇▇▇ [146ms] - #1 Application Start
+                                     ▇ [9ms] - #2 Load Plugin
+                                     ▇ [13ms] - #3 Load Config
+                                     ▇ [0ms] - #4 Require(0) config/config.default.js
+                                     ▇ [1ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+                                      ▇ [0ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+                                      ▇ [0ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+                                      ▇ [1ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+                                      ▇ [0ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+                                      ▇ [0ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+                                      ▇ [0ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+                                      ▇ [0ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+                                      ▇ [0ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+                                      ▇ [0ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+                                      ▇ [0ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+                                      ▇ [0ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+                                      ▇ [0ms] - #17 Require(13) node_modules/egg-view-ejs/config/config.default.js
+                                      ▇ [1ms] - #18 Require(14) node_modules/egg/config/config.default.js
+                                      ▇ [0ms] - #19 Require(15) config/config.default.js
+                                      ▇ [0ms] - #20 Require(16) node_modules/egg-security/config/config.local.js
+                                      ▇ [0ms] - #21 Require(17) node_modules/egg-watcher/config/config.local.js
+                                      ▇ [0ms] - #22 Require(18) node_modules/egg-view/config/config.local.js
+                                      ▇ [0ms] - #23 Require(19) node_modules/egg-view-ejs/config/config.local.js
+                                      ▇ [1ms] - #24 Require(20) node_modules/egg/config/config.local.js
+                                      ▇▇ [28ms] - #25 Load extend/agent.js
+                                       ▇ [1ms] - #26 Require(21) node_modules/egg-security/app/extend/agent.js
+                                       ▇ [22ms] - #27 Require(22) node_modules/egg-schedule/app/extend/agent.js
+                                         ▇ [1ms] - #28 Require(23) node_modules/egg-logrotator/app/extend/agent.js
+                                         ▇ [22ms] - #29 Load extend/context.js
+                                         ▇ [6ms] - #30 Require(24) node_modules/egg-security/app/extend/context.js
+                                         ▇ [1ms] - #31 Require(25) node_modules/egg-jsonp/app/extend/context.js
+                                         ▇ [1ms] - #32 Require(26) node_modules/egg-i18n/app/extend/context.js
+                                          ▇ [10ms] - #33 Require(27) node_modules/egg-multipart/app/extend/context.js
+                                          ▇ [1ms] - #34 Require(28) node_modules/egg-view/app/extend/context.js
+                                           ▇ [1ms] - #35 Require(29) node_modules/egg/app/extend/context.js
+                                           ▇ [14ms] - #36 Load agent.js
+                                           ▇ [0ms] - #37 Require(30) node_modules/egg-security/agent.js
+                                           ▇ [1ms] - #38 Require(31) node_modules/egg-onerror/agent.js
+                                           ▇ [2ms] - #39 Require(32) node_modules/egg-watcher/agent.js
+                                           ▇ [1ms] - #40 Require(33) node_modules/egg-schedule/agent.js
+                                           ▇ [8ms] - #41 Require(34) node_modules/egg-development/agent.js
+                                            ▇ [0ms] - #42 Require(35) node_modules/egg-logrotator/agent.js
+                                            ▇ [0ms] - #43 Require(36) node_modules/egg/agent.js
+                                            ▇▇▇ [37ms] - #44 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                            ▇▇ [27ms] - #45 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                            ▇▇▇▇ [52ms] - #46 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 11:09:59,660 INFO 20524 [egg:core] dump config after ready, 7ms
+2023-04-14 11:10:07,890 WARN 20524 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\config.default.js change
+2023-04-14 11:10:07,679 INFO 20524 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":529,"blocks":8,"atimeMs":1681441807677.3699,"mtimeMs":1681441807677.3699,"ctimeMs":1681441807677.3699,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T03:10:07.677Z","mtime":"2023-04-14T03:10:07.677Z","ctime":"2023-04-14T03:10:07.677Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 11:10:07,681 INFO 20524 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":529,"blocks":8,"atimeMs":1681441807677.3699,"mtimeMs":1681441807677.3699,"ctimeMs":1681441807677.3699,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T03:10:07.677Z","mtime":"2023-04-14T03:10:07.677Z","ctime":"2023-04-14T03:10:07.677Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 11:10:07,682 INFO 20524 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\config.default.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848179,"size":529,"blocks":8,"atimeMs":1681441807677.3699,"mtimeMs":1681441807677.3699,"ctimeMs":1681441807677.3699,"birthtimeMs":1681436953557.868,"atime":"2023-04-14T03:10:07.677Z","mtime":"2023-04-14T03:10:07.677Z","ctime":"2023-04-14T03:10:07.677Z","birthtime":"2023-04-14T01:49:13.558Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 11:10:08,776 WARN 20524 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 11:12:26,396 INFO 25540 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 11:12:26,401 INFO 25540 [egg:core] dump config after load, 3ms
+2023-04-14 11:12:26,667 INFO 25540 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 11:12:26,667 INFO 25540 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 11:12:26,668 INFO 25540 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 11:12:26,668 INFO 25540 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 11:12:26,668 INFO 25540 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 11:12:26,668 INFO 25540 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 11:12:26,668 INFO 25540 [egg-watcher:agent] watcher start success
+2023-04-14 11:12:26,696 INFO 25540 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇ [558ms] - #0 Process Start
+           ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [1869ms] - #1 Application Start
+           ▇ [42ms] - #2 Load Plugin
+            ▇▇▇▇ [229ms] - #3 Load Config
+            ▇ [0ms] - #4 Require(0) config/config.default.js
+            ▇ [17ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+            ▇ [1ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+            ▇ [7ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+             ▇ [18ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+             ▇ [5ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+             ▇ [6ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+             ▇ [13ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+             ▇ [1ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+             ▇ [18ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+              ▇ [16ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+              ▇ [16ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+               ▇ [15ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+               ▇ [15ms] - #17 Require(13) node_modules/egg-view-ejs/config/config.default.js
+               ▇ [15ms] - #18 Require(14) node_modules/egg/config/config.default.js
+                ▇ [0ms] - #19 Require(15) config/config.default.js
+                ▇ [13ms] - #20 Require(16) node_modules/egg-security/config/config.local.js
+                ▇ [13ms] - #21 Require(17) node_modules/egg-watcher/config/config.local.js
+                ▇ [1ms] - #22 Require(18) node_modules/egg-view/config/config.local.js
+                ▇ [12ms] - #23 Require(19) node_modules/egg-view-ejs/config/config.local.js
+                ▇ [9ms] - #24 Require(20) node_modules/egg/config/config.local.js
+                 ▇▇▇▇▇▇▇▇▇ [461ms] - #25 Load extend/agent.js
+                 ▇ [3ms] - #26 Require(21) node_modules/egg-security/app/extend/agent.js
+                 ▇▇▇▇▇▇▇▇ [423ms] - #27 Require(22) node_modules/egg-schedule/app/extend/agent.js
+                         ▇ [29ms] - #28 Require(23) node_modules/egg-logrotator/app/extend/agent.js
+                          ▇▇▇▇▇▇▇▇▇▇▇ [561ms] - #29 Load extend/context.js
+                          ▇▇▇ [152ms] - #30 Require(24) node_modules/egg-security/app/extend/context.js
+                             ▇ [59ms] - #31 Require(25) node_modules/egg-jsonp/app/extend/context.js
+                              ▇ [12ms] - #32 Require(26) node_modules/egg-i18n/app/extend/context.js
+                               ▇▇▇▇▇ [292ms] - #33 Require(27) node_modules/egg-multipart/app/extend/context.js
+                                     ▇ [16ms] - #34 Require(28) node_modules/egg-view/app/extend/context.js
+                                     ▇ [23ms] - #35 Require(29) node_modules/egg/app/extend/context.js
+                                      ▇▇▇▇▇ [277ms] - #36 Load agent.js
+                                      ▇ [13ms] - #37 Require(30) node_modules/egg-security/agent.js
+                                      ▇ [2ms] - #38 Require(31) node_modules/egg-onerror/agent.js
+                                      ▇ [67ms] - #39 Require(32) node_modules/egg-watcher/agent.js
+                                       ▇ [30ms] - #40 Require(33) node_modules/egg-schedule/agent.js
+                                        ▇▇ [139ms] - #41 Require(34) node_modules/egg-development/agent.js
+                                           ▇ [7ms] - #42 Require(35) node_modules/egg-logrotator/agent.js
+                                           ▇ [15ms] - #43 Require(36) node_modules/egg/agent.js
+                                           ▇▇▇▇▇ [271ms] - #44 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                           ▇▇▇ [152ms] - #45 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                           ▇▇▇▇▇ [291ms] - #46 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 11:12:26,696 INFO 25540 [egg:core] dump config after ready, 6ms
+2023-04-14 11:12:45,075 WARN 25540 [agent:development] reload worker because E:\project\TAI\tai-project\learn\egg\code\config\plugin.js change
+2023-04-14 11:12:44,872 INFO 25540 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":163,"blocks":0,"atimeMs":1681441964871.408,"mtimeMs":1681441964871.408,"ctimeMs":1681441964871.408,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T03:12:44.871Z","mtime":"2023-04-14T03:12:44.871Z","ctime":"2023-04-14T03:12:44.871Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 11:12:44,874 INFO 25540 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config\\plugin.js","stat":{"dev":2493532949,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2814749767848204,"size":163,"blocks":0,"atimeMs":1681441964871.408,"mtimeMs":1681441964871.408,"ctimeMs":1681441964871.408,"birthtimeMs":1681439443761.8308,"atime":"2023-04-14T03:12:44.871Z","mtime":"2023-04-14T03:12:44.871Z","ctime":"2023-04-14T03:12:44.871Z","birthtime":"2023-04-14T02:30:43.762Z"},"remove":false,"isDirectory":false,"isFile":true}
+2023-04-14 11:12:45,969 WARN 25540 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-04-14 11:12:51,911 INFO 15112 [egg:logger] init all loggers with options: {"dir":"E:\\project\\TAI\\tai-project\\learn\\egg\\code\\logs\\code","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"code-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2023-04-14 11:12:51,918 INFO 15112 [egg:core] dump config after load, 4ms
+2023-04-14 11:12:51,959 INFO 15112 [egg-watcher] Start watching: ["E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy","E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"]
+2023-04-14 11:12:51,959 INFO 15112 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app"
+2023-04-14 11:12:51,959 INFO 15112 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\config"
+2023-04-14 11:12:51,959 INFO 15112 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks"
+2023-04-14 11:12:51,959 INFO 15112 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\mocks_proxy"
+2023-04-14 11:12:51,959 INFO 15112 [egg-watcher] Start watching: "E:\\project\\TAI\\tai-project\\learn\\egg\\code\\app.js"
+2023-04-14 11:12:51,960 INFO 15112 [egg-watcher:agent] watcher start success
+2023-04-14 11:12:51,987 INFO 15112 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [716ms] - #0 Process Start
+                                       ▇▇▇▇▇▇▇▇▇▇ [183ms] - #1 Application Start
+                                       ▇ [11ms] - #2 Load Plugin
+                                        ▇ [18ms] - #3 Load Config
+                                        ▇ [0ms] - #4 Require(0) config/config.default.js
+                                        ▇ [0ms] - #5 Require(1) node_modules/egg-session/config/config.default.js
+                                        ▇ [1ms] - #6 Require(2) node_modules/egg-security/config/config.default.js
+                                        ▇ [0ms] - #7 Require(3) node_modules/egg-jsonp/config/config.default.js
+                                        ▇ [0ms] - #8 Require(4) node_modules/egg-onerror/config/config.default.js
+                                        ▇ [0ms] - #9 Require(5) node_modules/egg-i18n/config/config.default.js
+                                        ▇ [0ms] - #10 Require(6) node_modules/egg-watcher/config/config.default.js
+                                        ▇ [0ms] - #11 Require(7) node_modules/egg-schedule/config/config.default.js
+                                        ▇ [0ms] - #12 Require(8) node_modules/egg-multipart/config/config.default.js
+                                        ▇ [1ms] - #13 Require(9) node_modules/egg-development/config/config.default.js
+                                        ▇ [0ms] - #14 Require(10) node_modules/egg-logrotator/config/config.default.js
+                                        ▇ [1ms] - #15 Require(11) node_modules/egg-static/config/config.default.js
+                                         ▇ [1ms] - #16 Require(12) node_modules/egg-view/config/config.default.js
+                                         ▇ [0ms] - #17 Require(13) node_modules/egg-view-ejs/config/config.default.js
+                                         ▇ [1ms] - #18 Require(14) node_modules/egg/config/config.default.js
+                                         ▇ [0ms] - #19 Require(15) config/config.default.js
+                                         ▇ [0ms] - #20 Require(16) node_modules/egg-security/config/config.local.js
+                                         ▇ [0ms] - #21 Require(17) node_modules/egg-watcher/config/config.local.js
+                                         ▇ [0ms] - #22 Require(18) node_modules/egg-view/config/config.local.js
+                                         ▇ [0ms] - #23 Require(19) node_modules/egg-view-ejs/config/config.local.js
+                                         ▇ [1ms] - #24 Require(20) node_modules/egg/config/config.local.js
+                                         ▇ [35ms] - #25 Load extend/agent.js
+                                         ▇ [1ms] - #26 Require(21) node_modules/egg-security/app/extend/agent.js
+                                         ▇ [28ms] - #27 Require(22) node_modules/egg-schedule/app/extend/agent.js
+                                           ▇ [1ms] - #28 Require(23) node_modules/egg-logrotator/app/extend/agent.js
+                                           ▇ [27ms] - #29 Load extend/context.js
+                                           ▇ [8ms] - #30 Require(24) node_modules/egg-security/app/extend/context.js
+                                           ▇ [1ms] - #31 Require(25) node_modules/egg-jsonp/app/extend/context.js
+                                           ▇ [0ms] - #32 Require(26) node_modules/egg-i18n/app/extend/context.js
+                                           ▇ [11ms] - #33 Require(27) node_modules/egg-multipart/app/extend/context.js
+                                            ▇ [1ms] - #34 Require(28) node_modules/egg-view/app/extend/context.js
+                                            ▇ [2ms] - #35 Require(29) node_modules/egg/app/extend/context.js
+                                            ▇ [17ms] - #36 Load agent.js
+                                            ▇ [0ms] - #37 Require(30) node_modules/egg-security/agent.js
+                                            ▇ [0ms] - #38 Require(31) node_modules/egg-onerror/agent.js
+                                            ▇ [2ms] - #39 Require(32) node_modules/egg-watcher/agent.js
+                                            ▇ [1ms] - #40 Require(33) node_modules/egg-schedule/agent.js
+                                             ▇ [7ms] - #41 Require(34) node_modules/egg-development/agent.js
+                                             ▇ [0ms] - #42 Require(35) node_modules/egg-logrotator/agent.js
+                                             ▇ [0ms] - #43 Require(36) node_modules/egg/agent.js
+                                             ▇▇ [47ms] - #44 Before Start in node_modules/egg-watcher/lib/init.js:15:14
+                                             ▇ [33ms] - #45 Before Start in node_modules/egg-schedule/agent.js:12:9
+                                             ▇▇▇ [65ms] - #46 Before Start in node_modules/egg-development/agent.js:12:9
+2023-04-14 11:12:51,987 INFO 15112 [egg:core] dump config after ready, 8ms

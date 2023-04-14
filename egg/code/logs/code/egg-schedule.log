@@ -1,0 +1,171 @@
+2023-04-14 09:50:14,529 INFO 13496 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 09:50:14,529 INFO 13496 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 09:50:14,529 INFO 13496 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 09:50:15,445 INFO 16736 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 67184557ms at 2023-04-15 04:30:00.002
+2023-04-14 09:50:15,445 INFO 16736 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 50984555ms at 2023-04-15 00:00:00.000
+2023-04-14 09:50:15,446 INFO 16736 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 50985555ms at 2023-04-15 00:00:01.001
+2023-04-14 09:51:47,545 INFO 992 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 09:51:47,545 INFO 992 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 09:51:47,545 INFO 992 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 09:51:56,054 INFO 24604 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 67083948ms at 2023-04-15 04:30:00.002
+2023-04-14 09:51:56,055 INFO 24604 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 50883946ms at 2023-04-15 00:00:00.001
+2023-04-14 09:51:56,055 INFO 24604 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 50884945ms at 2023-04-15 00:00:01.000
+2023-04-14 09:51:55,961 INFO 9920 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 09:51:55,961 INFO 9920 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 09:51:55,961 INFO 9920 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 09:52:10,861 INFO 12416 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 09:52:10,861 INFO 12416 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 09:52:10,861 INFO 12416 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 09:58:45,227 INFO 7088 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 09:58:45,227 INFO 7088 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 09:58:45,227 INFO 7088 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 09:58:59,998 INFO 22868 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 66660005ms at 2023-04-15 04:30:00.003
+2023-04-14 09:58:59,999 INFO 22868 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 50460001ms at 2023-04-15 00:00:00.000
+2023-04-14 09:58:59,999 INFO 22868 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 50461001ms at 2023-04-15 00:00:01.000
+2023-04-14 09:58:59,906 INFO 25576 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 09:58:59,906 INFO 25576 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 09:58:59,906 INFO 25576 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 09:59:30,682 INFO 24356 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 09:59:30,682 INFO 24356 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 09:59:30,682 INFO 24356 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:00:00,416 INFO 15812 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:00:00,416 INFO 15812 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:00:00,416 INFO 15812 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:23:57,225 INFO 16000 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:23:57,225 INFO 16000 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:23:57,225 INFO 16000 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:24:02,601 INFO 17624 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:24:02,601 INFO 17624 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:24:02,601 INFO 17624 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:30:44,999 INFO 20832 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:30:44,999 INFO 20832 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:30:44,999 INFO 20832 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:32:00,386 INFO 21264 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:32:00,386 INFO 21264 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:32:00,386 INFO 21264 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:32:31,798 INFO 25244 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:32:31,798 INFO 25244 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:32:31,798 INFO 25244 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:32:40,677 INFO 4060 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:32:40,677 INFO 4060 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:32:40,677 INFO 4060 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:32:42,307 INFO 16520 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:32:42,307 INFO 16520 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:32:42,307 INFO 16520 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:32:54,676 INFO 16672 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:32:54,676 INFO 16672 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:32:54,676 INFO 16672 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:34:03,563 INFO 10160 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:34:03,563 INFO 10160 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:34:03,563 INFO 10160 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:35:48,119 INFO 24032 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:35:48,119 INFO 24032 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:35:48,119 INFO 24032 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:36:50,418 INFO 22936 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:36:50,418 INFO 22936 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:36:50,418 INFO 22936 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:38:20,791 INFO 17976 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:38:20,791 INFO 17976 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:38:20,791 INFO 17976 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:38:30,388 INFO 22656 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:38:30,388 INFO 22656 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:38:30,388 INFO 22656 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:39:16,523 INFO 24984 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:39:16,523 INFO 24984 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:39:16,523 INFO 24984 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:40:20,060 INFO 15052 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:40:20,060 INFO 15052 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:40:20,060 INFO 15052 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:40:27,514 INFO 23488 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:40:27,514 INFO 23488 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:40:27,514 INFO 23488 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:40:37,443 INFO 17164 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 64162565ms at 2023-04-15 04:30:00.008
+2023-04-14 10:40:37,444 INFO 17164 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 47962557ms at 2023-04-15 00:00:00.001
+2023-04-14 10:40:37,445 INFO 17164 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 47963556ms at 2023-04-15 00:00:01.001
+2023-04-14 10:40:37,238 INFO 4700 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:40:37,238 INFO 4700 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:40:37,238 INFO 4700 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:41:28,700 INFO 12624 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:41:28,700 INFO 12624 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:41:28,700 INFO 12624 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:42:53,865 INFO 18612 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:42:53,865 INFO 18612 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:42:53,865 INFO 18612 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:43:08,655 INFO 24320 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:43:08,655 INFO 24320 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:43:08,655 INFO 24320 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:43:42,053 INFO 15272 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:43:42,053 INFO 15272 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:43:42,053 INFO 15272 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:43:51,739 INFO 25228 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:43:51,739 INFO 25228 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:43:51,739 INFO 25228 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:43:55,628 INFO 1488 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:43:55,628 INFO 1488 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:43:55,628 INFO 1488 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:45:09,560 INFO 17048 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 63890445ms at 2023-04-15 04:30:00.004
+2023-04-14 10:45:09,560 INFO 17048 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 47690440ms at 2023-04-15 00:00:00.000
+2023-04-14 10:45:09,561 INFO 17048 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 47691440ms at 2023-04-15 00:00:01.001
+2023-04-14 10:45:09,383 INFO 25476 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:45:09,383 INFO 25476 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:45:09,383 INFO 25476 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:48:20,995 INFO 18092 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 63699007ms at 2023-04-15 04:30:00.002
+2023-04-14 10:48:20,995 INFO 18092 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 47499005ms at 2023-04-15 00:00:00.000
+2023-04-14 10:48:20,996 INFO 18092 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 47500005ms at 2023-04-15 00:00:01.001
+2023-04-14 10:48:20,888 INFO 17464 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:48:20,888 INFO 17464 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:48:20,888 INFO 17464 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:49:21,139 INFO 20620 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:49:21,139 INFO 20620 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:49:21,139 INFO 20620 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:49:35,897 INFO 25388 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:49:35,897 INFO 25388 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:49:35,898 INFO 25388 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:49:55,321 INFO 1212 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:49:55,321 INFO 1212 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:49:55,321 INFO 1212 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:49:56,937 INFO 24276 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:49:56,937 INFO 24276 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:49:56,937 INFO 24276 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:49:59,810 INFO 17568 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:49:59,810 INFO 17568 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:49:59,810 INFO 17568 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 10:52:27,493 INFO 24420 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 10:52:27,493 INFO 24420 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 10:52:27,493 INFO 24420 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 11:09:06,002 INFO 25292 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 62454001ms at 2023-04-15 04:30:00.002
+2023-04-14 11:09:06,002 INFO 25292 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 46253998ms at 2023-04-15 00:00:00.000
+2023-04-14 11:09:06,002 INFO 25292 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 46254998ms at 2023-04-15 00:00:01.000
+2023-04-14 11:09:05,811 INFO 18860 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 11:09:05,811 INFO 18860 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 11:09:05,811 INFO 18860 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 11:09:06,839 INFO 5876 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 11:09:06,839 INFO 5876 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 11:09:06,839 INFO 5876 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 11:09:47,195 INFO 8924 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 11:09:47,196 INFO 8924 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 11:09:47,196 INFO 8924 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 11:10:00,354 INFO 20524 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 62399649ms at 2023-04-15 04:30:00.003
+2023-04-14 11:10:00,355 INFO 20524 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 46199646ms at 2023-04-15 00:00:00.001
+2023-04-14 11:10:00,355 INFO 20524 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 46200645ms at 2023-04-15 00:00:01.000
+2023-04-14 11:10:00,257 INFO 22772 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 11:10:00,257 INFO 22772 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 11:10:00,257 INFO 22772 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 11:10:08,646 INFO 2812 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 11:10:08,646 INFO 2812 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 11:10:08,646 INFO 2812 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 11:12:28,305 INFO 20188 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 11:12:28,306 INFO 20188 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 11:12:28,306 INFO 20188 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 11:12:29,544 INFO 25540 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 62250459ms at 2023-04-15 04:30:00.003
+2023-04-14 11:12:29,544 INFO 25540 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 46050456ms at 2023-04-15 00:00:00.000
+2023-04-14 11:12:29,544 INFO 25540 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 46051456ms at 2023-04-15 00:00:01.000
+2023-04-14 11:12:45,839 INFO 19616 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 11:12:45,840 INFO 19616 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 11:12:45,841 INFO 19616 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2023-04-14 11:12:52,814 INFO 15112 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 62227188ms at 2023-04-15 04:30:00.002
+2023-04-14 11:12:52,815 INFO 15112 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 46027186ms at 2023-04-15 00:00:00.001
+2023-04-14 11:12:52,815 INFO 15112 [Timer] E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 46028185ms at 2023-04-15 00:00:01.000
+2023-04-14 11:12:52,695 INFO 14548 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2023-04-14 11:12:52,695 INFO 14548 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\clean_log.js
+2023-04-14 11:12:52,695 INFO 14548 [egg-schedule]: register schedule E:\project\TAI\tai-project\learn\egg\code\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
