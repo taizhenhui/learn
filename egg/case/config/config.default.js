@@ -21,8 +21,17 @@ exports.middleware = ["mymid"]
 
 exports.mymid = {
   enable: true,
-  match:'/login',
-  a: 1,
-  b: 2
+  match:'/login'
 }
+
+// 配置redis
+// exports.redis = {
+//   client: {
+//     port: 6379, // Redis port
+//     host: "127.0.0.1", // Redis host
+//     password: "auth",
+//     db: 0,
+//   },
+// };
+
 exports.$apiBase = "http://study.yuanjin.tech";
