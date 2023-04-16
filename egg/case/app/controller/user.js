@@ -1,30 +1,29 @@
-const Controller = require('egg').Controller;
-const axios = require('axios')
+const Controller = require('egg').Controller
 class UserController extends Controller {
   async login() {
     const model = {
       title: '登录',
       error: '',
-      loginId: ''
+      loginId: '',
     }
     await this.ctx.render('login', model)
   }
+
   async handleLogin() {
-    const url = `${this.config.$apiBase}/api/user/login`;
     const { body } = this.ctx.request
-    const resp = await this.app.axios.post(url, body)
-    if (resp.data.code) {
+    const result = await this.service.user.login(body.loginId, body.loginPwd)
+    if (result) {
+      // 登录成功
+      this.ctx.cookies.set('token', result.token)
+      this.ctx.redirect('/')
+    } else {
       // 登录失败
       const model = {
         title: '登录',
-        error: resp.data.message,
-        loginId: body.loginId
+        error: '账号密码不正确',
+        loginId: body.loginId,
       }
       await this.ctx.render('login', model)
-    } else {
-      const token =  resp.headers.authorization
-      this.ctx.cookies.set('token', token)
-      this.ctx.redirect('/')
     }
   }
 }

@@ -3,10 +3,10 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
 
   async index() {
-    const resp2 = await this.app.axios.get(`${this.config.$apiBase}/api/local`)
+    const provinces = await this.service.local.getProvinces();
     const model = {
       title: '首页',
-      provinces: resp2.data
+      provinces
     }
     await this.ctx.render('home', model)
   }
@@ -18,6 +18,7 @@ class HomeController extends Controller {
     this.ctx.body = view
     this.ctx.type = 'text/css'
   }
+  
 }
 
 module.exports = HomeController
