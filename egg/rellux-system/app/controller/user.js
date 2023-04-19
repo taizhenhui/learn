@@ -8,7 +8,6 @@ module.exports = class extends Controller {
   }
   async login() {
     const { account, password } = this.ctx.request.body;
-    console.log(this.ctx.request.body,'this.ctx.request');
     if (!account || !password) {
       this.ctx.body = {
         code: -1,
@@ -30,8 +29,6 @@ module.exports = class extends Controller {
       return
     }
     // 找到用户，并且判断输入密码与数据库中用户密码。
-    console.log('password',password);
-    console.log('accountInfo.password',accountInfo.password);
     if (password != accountInfo.password) {
       this.ctx.body = {
         code: -1,

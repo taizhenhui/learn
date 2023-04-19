@@ -9,7 +9,6 @@ module.exports = class extends Service {
   async findByName(account) {
     try {
       const result = await this.app.mysql.get('t_system_account', { account });
-
       return result;
     } catch (error) {
       console.log(error);

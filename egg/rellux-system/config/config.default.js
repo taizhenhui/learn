@@ -37,3 +37,8 @@ exports.jwt = {
   //   expiresIn: 10   //多少s后过期。actionToken.js中,jwt.sing(plyload,secret,{expiresIn:number})会被合并，调用时设置优先级更高;
   // }
 }
+
+exports.bodyParser= {
+  jsonLimit: '1mb',
+  formLimit: '1mb',
+}
