@@ -1,4 +1,5 @@
 const mapper = {};
+
 mapper.mapUser = function (app){
   const {router} = app;
   const _jwt = app.middleware.midJWT(app.config.jwt.secret)
