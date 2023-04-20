@@ -50,7 +50,8 @@ export default defineConfig({
       "@images": path.resolve(__dirname, "src/assets/images"),
       "@views": path.resolve(__dirname, "src/views"),
       "@store": path.resolve(__dirname, "src/store"),
-    }
+    },
+    extensions: ['.ts', '.vue', '.json']
   },
   css: {
     preprocessorOptions: {
@@ -91,7 +92,6 @@ export default defineConfig({
     },
   },
   server: {
-    // https: false, // 是否开启 https
     open: false, // 是否自动在浏览器打开
     cors: true, // 允许跨域 
     port: 8066, // 端口号
