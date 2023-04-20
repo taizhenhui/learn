@@ -1,4 +1,4 @@
-const Controller = require('egg').Controller;
+const Controller = require('../core/base_controller');
 
 module.exports = class extends Controller {
   async index() {
