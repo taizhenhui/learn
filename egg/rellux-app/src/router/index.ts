@@ -1,13 +1,33 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@views/home/index.vue'
+import type { RouteRecordRaw } from "vue-router";
+
+import LayoutView from '@/views/layout/index.vue'
+
+/**
+ * 路由模块导入
+ */ 
+import systemRouter from './modules/systemRouter';
+
+const MENU_ROUTE_NAME = 'menuRoute'
+
+const routes: Array<RouteRecordRaw> = [
+  {
+    path: '/',
+    name: MENU_ROUTE_NAME,
+    component: LayoutView,
+    children: [
+      ...systemRouter,
+    ]
+  }
+]
+
+
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path:'/',
-      component: Home
-    }
-  ]
+  history: createWebHistory(),
+  strict: true,
+  routes,
+  scrollBehavior: () => ({ top: 0, left: 0 })  // 跳转页面回到顶部
 })
+
 
 export default router
