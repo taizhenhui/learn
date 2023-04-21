@@ -53,6 +53,18 @@ export default defineConfig({
 
 ### 安装router
 
+```js
+yarn add vue-router
+```
+
+
+
+### 安装axios
+
+```js
+yarn add axios
+```
+
 
 
 ## 项目中的报错

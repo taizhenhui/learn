@@ -20,11 +20,13 @@ import AsideBar from "./AsideBar.vue";
 </script>
 
 <style scoped lang="less">
+@import '~@/styles/mixin.less';
 .container {
   
-  width: 100%;
+  .self-fill();
   height: 100%;
   background: #f5f5f5;
+  // background-color:red;
   // display: flex;
 }
 </style>

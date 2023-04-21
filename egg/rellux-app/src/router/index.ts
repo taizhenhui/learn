@@ -5,18 +5,28 @@ import LayoutView from '@/views/layout/index.vue'
 
 /**
  * 路由模块导入
- */ 
+ */
 import systemRouter from './modules/systemRouter';
+import brandRouter from './modules/brandRouter';
 
-const MENU_ROUTE_NAME = 'menuRoute'
+export const MENU_ROUTE_NAME = 'menuRoute'
 
-const routes: Array<RouteRecordRaw> = [
+declare module 'vue-router' {
+  interface RouteMeta extends Record<string | number | symbol, undefined> {
+    // permisson?: string;
+    icon?: string;
+    title?: string;
+  }
+}
+
+export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: MENU_ROUTE_NAME,
     component: LayoutView,
     children: [
       ...systemRouter,
+      ...brandRouter,
     ]
   }
 ]

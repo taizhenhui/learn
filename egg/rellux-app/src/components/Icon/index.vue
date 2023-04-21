@@ -55,7 +55,6 @@ const classMap: KeyType = {
 };
 
 const fontClass = computed(() => classMap[props.type]);
-console.log(fontClass.value);
 </script>
 
 <style lang="less" scoped>

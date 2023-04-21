@@ -9,7 +9,7 @@ const systemRouter: Array<RouteRecordRaw> = [
     component: PageLayoutView,
     meta: {
       title: '系统管理',
-      icon: 'el-icon-s-tools',
+      icon: 'systemCenter',
     },
     children: [
       {
