@@ -1,39 +1,22 @@
 <template>
   <div
     class="aside-bar"
-    :style="{ width: isCollapse ? '64px' : '250px', transition: '0.5s' }"
+    :style="{ width: menuCollapse ? '64px' : '250px', transition: '0.5s' }"
   >
-    <div
-      class="nav-sty"
-      :style="{ justifyContent: isCollapse ? 'flex-start' : 'space-between' }"
-    >
-      <h1
-        :style="{
-          opacity: isCollapse ? 0 : 1,
-          overflow: 'hidden',
-          width: isCollapse ? '0' : '',
-          transition: '0.3s',
-        }"
-      >
-        导航菜单
-      </h1>
+    <div class="nav-sty" :class="{ 'nav-sty-flex': menuCollapse }">
+      <h1 :class="{ 'nav-menu': menuCollapse }">导航菜单</h1>
       <Icon
         class="icon-sty"
-        :style="{ transform: isCollapse ? ' rotate(180deg)' : '', transition: '0.3s' }"
+        :class="{ 'icon-sty-transform': menuCollapse }"
         type="close"
         @click="handleCollapse"
       />
     </div>
-    <el-menu
-      class="el-menu-vertical-demo"
-      :collapse="isCollapse"
-      text-color="#333"
-     
-    >
+    <el-menu class="el-menu-vertical-demo" :collapse="menuCollapse" text-color="#333">
       <el-sub-menu
         v-for="(item, index) in menuRoutes"
         :index="index.toString()"
-        :class="{ active: index === indexRef }"
+        :class="{ active: index === activeIndex }"
         :key="item.name"
       >
         <template #title>
@@ -42,6 +25,7 @@
         </template>
         <el-menu-item
           v-for="(it, i) in item.children"
+          :class="{ 'is-active': it.name === activeName }"
           :index="index + '-' + i"
           :key="it.name"
           @click="handleMenuItemClick(it, index)"
@@ -54,10 +38,12 @@
 </template>
 
 <script setup lang="ts">
-// import { ref } from "vue";
 import { routes, MENU_ROUTE_NAME } from "@/router";
 import { RouteRecordRaw } from "vue-router";
+import { useAppStore } from "@/store";
 const router = useRouter();
+const appStore = useAppStore();
+const { menuCollapse, activeIndex, activeName } = toRefs(appStore);
 const getMenuRoutes = (routes: Array<RouteRecordRaw>) => {
   for (let i = 0; i < routes.length; i++) {
     if (routes[i].name === MENU_ROUTE_NAME) return routes[i].children;
@@ -65,18 +51,15 @@ const getMenuRoutes = (routes: Array<RouteRecordRaw>) => {
 };
 const menuRoutes = getMenuRoutes(routes);
 
-const isCollapse = ref<boolean>(false);
-const indexRef = ref<number>(-1);
-
 const handleCollapse = () => {
-  isCollapse.value = !isCollapse.value;
+  menuCollapse.value = !menuCollapse.value;
 };
 
 const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
-  indexRef.value = index;
+  activeIndex.value = index;
+  activeName.value = route.name!;
   router.push({ name: route.name });
 };
-
 </script>
 
 <style scoped lang="less">
@@ -99,12 +82,26 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
     h1 {
       font-size: 16px;
       font-weight: 400;
+      overflow: hidden;
+      transition: 0.3s;
+      opacity: 1;
+    }
+    .nav-menu {
+      width: 0;
+      opacity: 0;
     }
     .icon-sty {
       cursor: pointer;
       font-size: 12px;
       color: #9f9f9f;
+      transition: 0.3s;
     }
+    .icon-sty-transform {
+      transform: rotate(180deg);
+    }
+  }
+  .nav-sty-flex {
+    justify-content: flex-start;
   }
 }
 .el-menu {
