@@ -56,8 +56,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { routes, MENU_ROUTE_NAME } from "@/router";
-import { RouteRecordRaw } from "vue-router";
-import { useRouter } from "vue-router";
+import { RouteRecordRaw, useRouter } from "vue-router";
 const router = useRouter();
 const getMenuRoutes = (routes: Array<RouteRecordRaw>) => {
   for (let i = 0; i < routes.length; i++) {
@@ -120,10 +119,10 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
   }
 }
 
-::v-deep .el-sub-menu__title {
+:deep(.el-sub-menu__title) {
   height: 42px;
 }
-::v-deep .el-sub-menu__title:hover {
+:deep(.el-sub-menu__title:hover) {
   background-color: @color !important;
   color: #fff !important;
 }
@@ -145,7 +144,7 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
 .active {
   &.el-sub-menu {
     background-color: @color !important;
-    ::v-deep .el-sub-menu__title {
+    :deep(.el-sub-menu__title) {
       color: #fff !important;
     }
   }
