@@ -1,18 +1,18 @@
 <template>
-  <div
-    class="aside-bar"
-    :style="{ width: menuCollapse ? '64px' : '250px', transition: '0.5s' }"
-  >
-    <div class="nav-sty" :class="{ 'nav-sty-flex': menuCollapse }">
+  <div class="aside-bar" :style="{ width: menuCollapse ? '64px' : '250px' }">
+    <div :class="{ 'nav-sty': true, 'nav-sty-flex': menuCollapse }">
       <h1 :class="{ 'nav-menu': menuCollapse }">导航菜单</h1>
       <Icon
-        class="icon-sty"
-        :class="{ 'icon-sty-transform': menuCollapse }"
+        :class="{ 'icon-sty': true, 'icon-sty-transform': menuCollapse }"
         type="close"
         @click="handleCollapse"
       />
     </div>
-    <el-menu class="el-menu-vertical-demo" :collapse="menuCollapse" text-color="#333">
+    <el-menu
+      class="el-menu-vertical-demo"
+      :collapse="menuCollapse"
+      :collapse-transition="false"
+    >
       <el-sub-menu
         v-for="(item, index) in menuRoutes"
         :index="index.toString()"
@@ -41,16 +41,22 @@
 import { routes, MENU_ROUTE_NAME } from "@/router";
 import { RouteRecordRaw } from "vue-router";
 import { useAppStore } from "@/store";
+
 const router = useRouter();
+const route = useRoute();
 const appStore = useAppStore();
 const { menuCollapse, activeIndex, activeName } = toRefs(appStore);
+
 const getMenuRoutes = (routes: Array<RouteRecordRaw>) => {
   for (let i = 0; i < routes.length; i++) {
     if (routes[i].name === MENU_ROUTE_NAME) return routes[i].children;
   }
 };
-const menuRoutes = getMenuRoutes(routes);
 
+const menuRoutes = getMenuRoutes(routes);
+watchEffect(() => {
+  activeName.value = route.name!;
+});
 const handleCollapse = () => {
   menuCollapse.value = !menuCollapse.value;
 };
@@ -66,10 +72,10 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
 @import "~@/styles/mixin.less";
 @color: #625df7;
 .aside-bar {
-  // width: 250px;
   height: 100vh;
   background-color: #fff;
   color: #333333;
+  transition: 0.5s;
   .nav-sty {
     width: 100%;
     height: 50px;
