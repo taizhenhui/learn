@@ -54,9 +54,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+// import { ref } from "vue";
 import { routes, MENU_ROUTE_NAME } from "@/router";
-import { RouteRecordRaw, useRouter } from "vue-router";
+import { RouteRecordRaw } from "vue-router";
 const router = useRouter();
 const getMenuRoutes = (routes: Array<RouteRecordRaw>) => {
   for (let i = 0; i < routes.length; i++) {

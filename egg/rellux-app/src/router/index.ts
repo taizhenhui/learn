@@ -9,7 +9,6 @@ import LayoutView from '@/views/layout/index.vue'
 import systemRouter from './modules/systemRouter';
 import brandRouter from './modules/brandRouter';
 
-export const MENU_ROUTE_NAME = 'menuRoute'
 
 declare module 'vue-router' {
   interface RouteMeta extends Record<string | number | symbol, undefined> {
@@ -18,6 +17,8 @@ declare module 'vue-router' {
     title?: string;
   }
 }
+
+export const MENU_ROUTE_NAME = 'menuRoute'
 
 export const routes: Array<RouteRecordRaw> = [
   {
