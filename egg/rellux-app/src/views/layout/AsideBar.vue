@@ -70,18 +70,16 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
 
 <style scoped lang="less">
 @import "~@/styles/mixin.less";
-@color: #625df7;
+
 .aside-bar {
   height: 100vh;
   background-color: #fff;
   color: #333333;
-  transition: 0.5s;
+  transition: 0.1s;
   .nav-sty {
     width: 100%;
     height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .flex-common();
     color: #666666;
     padding: 0 20px;
     border-bottom: 1px solid #eee;
@@ -126,7 +124,7 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
   height: 42px;
 }
 :deep(.el-sub-menu__title:hover) {
-  background-color: @color !important;
+  background-color: @theme !important;
   color: #fff !important;
 }
 
@@ -136,17 +134,17 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
 }
 .el-menu-item:hover {
   background-color: #fff;
-  color: @color;
+  color: @theme;
   transition: 0.1s;
 }
 .el-menu-item.is-active {
-  background-color: #e2e0f6 !important;
-  border-left: 3px solid @color;
-  color: @color !important;
+  background-color: @subtopic !important;
+  border-left: 3px solid @theme;
+  color: @theme !important;
 }
 .active {
   &.el-sub-menu {
-    background-color: @color !important;
+    background-color: @theme !important;
     :deep(.el-sub-menu__title) {
       color: #fff !important;
     }

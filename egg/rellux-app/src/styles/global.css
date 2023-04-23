@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 html {
-  color: #373737;
+  color: #333;
   font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "微软雅黑", sans-serif;
   overflow: hidden;
 }
@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #6b9eee;
+  color: #333;
 }
 /* 整个滚动条 */
 ::-webkit-scrollbar {

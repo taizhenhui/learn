@@ -17,13 +17,5 @@ export const useAppStore = defineStore('app', {
     }
   },
   actions: {
-    // async login(loginForm: TokenRequest): Promise<void> {
-    //   this.token = await createToken(loginForm)
-    // },
-    // async logout(): Promise<void> {
-    //   const userStore = useUserStoer()
-    //   this.token = ''
-    //   userStore.$reset()
-    // }
   },
 })

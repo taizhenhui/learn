@@ -1,4 +1,12 @@
 // 提供混合样式
+// less变量
+@theme: #625DF7 ; // 主色调
+@subtopic: #E2E0F6; // 副色调、链接
+@words: #333; // 大部分文字、深色文字
+@lightWords: #999; // 少部分文字、浅色文字
+@warn: #F85858; // 禁用
+@success: #40BD7F; // 启用
+
 
 .self-center(@pos: absolute) {
   position: @pos;
@@ -12,5 +20,11 @@
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.flex-common(@align: center, @justifyContent: space-between) {
+  display: flex;
+  justify-content: @justifyContent;
+  align-items: @align;
 }
 
