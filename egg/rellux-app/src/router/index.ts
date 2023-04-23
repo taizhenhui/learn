@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from "vue-router";
 
+import Login from '@/views/login/index.vue'
 import LayoutView from '@/views/layout/index.vue'
 
 /**
@@ -29,6 +30,11 @@ export const routes: Array<RouteRecordRaw> = [
       ...systemRouter,
       ...brandRouter,
     ]
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
   }
 ]
 
