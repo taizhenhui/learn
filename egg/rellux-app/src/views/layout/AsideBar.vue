@@ -28,8 +28,7 @@
       class="el-menu-vertical-demo"
       :collapse="isCollapse"
       text-color="#333"
-      @open="handleOpen"
-      @close="handleOpen"
+     
     >
       <el-sub-menu
         v-for="(item, index) in menuRoutes"
@@ -45,6 +44,7 @@
           v-for="(it, i) in item.children"
           :index="index + '-' + i"
           :key="it.name"
+          @click="handleMenuItemClick(it, index)"
         >
           <span class="sub-title"></span> {{ it.meta?.title }}</el-menu-item
         >
@@ -57,7 +57,8 @@
 import { ref } from "vue";
 import { routes, MENU_ROUTE_NAME } from "@/router";
 import { RouteRecordRaw } from "vue-router";
-
+import { useRouter } from "vue-router";
+const router = useRouter();
 const getMenuRoutes = (routes: Array<RouteRecordRaw>) => {
   for (let i = 0; i < routes.length; i++) {
     if (routes[i].name === MENU_ROUTE_NAME) return routes[i].children;
@@ -67,13 +68,16 @@ const menuRoutes = getMenuRoutes(routes);
 
 const isCollapse = ref<boolean>(false);
 const indexRef = ref<number>(-1);
-const handleOpen = (key: string) => {
-  indexRef.value = +key;
-};
 
 const handleCollapse = () => {
   isCollapse.value = !isCollapse.value;
 };
+
+const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
+  indexRef.value = index;
+  router.push({ name: route.name });
+};
+
 </script>
 
 <style scoped lang="less">
@@ -110,8 +114,11 @@ const handleCollapse = () => {
 }
 .el-menu-vertical-demo {
   height: 100%;
+  .sub-title {
+    display: block;
+    margin-left: 10px;
+  }
 }
-
 
 ::v-deep .el-sub-menu__title {
   height: 42px;
