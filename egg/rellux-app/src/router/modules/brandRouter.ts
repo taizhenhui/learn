@@ -13,7 +13,7 @@ const brandRouter: Array<RouteRecordRaw> = [
     },
     children: [
       {
-        name: 'brandMan',
+        name: 'BrandBrandMan',
         path: 'brandMan',
         meta: {
           title: '品牌管理',
@@ -21,7 +21,7 @@ const brandRouter: Array<RouteRecordRaw> = [
         component: () => import('@/views/brand/brandMan/index.vue'),
       },
       {
-        name: 'storeMan',
+        name: 'BrandStoreMan',
         path: 'storeMan',
         meta: {
           title: '门店管理',

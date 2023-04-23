@@ -13,7 +13,7 @@ const systemRouter: Array<RouteRecordRaw> = [
     },
     children: [
       {
-        name: 'role',
+        name: 'systemRole',
         path: 'role',
         meta: {
           title: '角色管理',
@@ -21,7 +21,7 @@ const systemRouter: Array<RouteRecordRaw> = [
         component: () => import('@/views/system/role/index.vue'),
       },
       {
-        name: 'account',
+        name: 'systemAccount',
         path: 'account',
         meta: {
           title: '账号管理',
