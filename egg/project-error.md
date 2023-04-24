@@ -94,7 +94,7 @@ resolve: {
 
 找不到模块“vite”或其相应的类型声明。
 
-![image-20230421153207390](C:\Users\JS04\AppData\Roaming\Typora\typora-user-images\image-20230421153207390.png)
+![image-20230421153207390](img-md/image-20230421153207390.png)
 
 **解决：**
 

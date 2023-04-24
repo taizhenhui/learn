@@ -7,7 +7,9 @@
       <el-container>
         <AsideBar />
         <el-main>
-          <router-view />
+          <el-card>
+            <router-view />
+          </el-card>
         </el-main>
       </el-container>
     </div>
@@ -20,9 +22,8 @@ import AsideBar from "./AsideBar.vue";
 </script>
 
 <style scoped lang="less">
-@import '~@/styles/mixin.less';
+@import "~@/styles/mixin.less";
 .container {
-  
   .self-fill();
   height: 100%;
   background: #f5f5f5;
