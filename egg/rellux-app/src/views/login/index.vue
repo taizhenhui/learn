@@ -49,9 +49,11 @@
 </template>
 
 <script setup lang="ts">
-import { getCaptcha, login } from "@/api";
+import { getCaptcha } from "@/api";
 import { FormInstance, FormRules } from "element-plus/lib/components/index";
-
+import { useUserStore } from "@/store";
+const userStore = useUserStore();
+const router = useRouter();
 const captchaSvg = ref<string>();
 const ruleForm = reactive({
   account: "",
@@ -75,9 +77,13 @@ async function handleLogin(formEl: FormInstance | undefined) {
   if (!formEl) return;
   await formEl.validate(async (valid: any) => {
     if (valid) {
-      getCaptchaFun()
-      const data = await login(ruleForm);
-      console.log(data);
+      getCaptchaFun();
+      await userStore.fatchLogin(ruleForm);
+      await ElMessage({
+        message: "登陆成功",
+        type: "success",
+      });
+      await router.push("/");
     }
   });
 }

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from "vue-router";
-
+import {useUserStore} from '@/store'
 import Login from '@/views/login/index.vue'
 import LayoutView from '@/views/layout/index.vue'
 
@@ -20,13 +20,20 @@ declare module 'vue-router' {
 }
 
 export const MENU_ROUTE_NAME = 'menuRoute'
+export const HOME_ROUTE_NAME = 'Home'
 
 export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: MENU_ROUTE_NAME,
     component: LayoutView,
+    redirect: '/',
     children: [
+      {
+        name: HOME_ROUTE_NAME,
+        path: '/',
+        component: () => import('@/views/home/index.vue')
+      },
       ...systemRouter,
       ...brandRouter,
     ]
@@ -35,7 +42,13 @@ export const routes: Array<RouteRecordRaw> = [
     path: '/login',
     name: 'login',
     component: Login
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: ()=> import('@/views/NotFound/index.vue')
   }
+
 ]
 
 
@@ -44,6 +57,23 @@ const router = createRouter({
   strict: true,
   routes,
   scrollBehavior: () => ({ top: 0, left: 0 })  // 跳转页面回到顶部
+})
+
+
+const whiteList = [
+  '/login'
+]
+router.beforeEach((to, from, next) => {
+  const userStore = useUserStore()
+  if (!userStore.token) {
+    whiteList.indexOf(to.path) !== -1 ? next() : next(`login?redirect=${to.path}`)
+    return
+  }
+  if (userStore.token && to.path === '/login') {
+    next({ path: '/' })
+    return
+  }
+  next()
 })
 
 

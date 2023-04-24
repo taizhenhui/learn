@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import { routes, MENU_ROUTE_NAME } from "@/router";
+import { routes, MENU_ROUTE_NAME, HOME_ROUTE_NAME } from "@/router";
 import { RouteRecordRaw } from "vue-router";
 import { useAppStore } from "@/store";
 
@@ -49,14 +49,18 @@ const { menuCollapse, activeIndex, activeName } = toRefs(appStore);
 
 const getMenuRoutes = (routes: Array<RouteRecordRaw>) => {
   for (let i = 0; i < routes.length; i++) {
-    if (routes[i].name === MENU_ROUTE_NAME) return routes[i].children;
+    if (routes[i].name === MENU_ROUTE_NAME && routes[i].children) {
+      return routes[i].children?.filter((r) => r.name !== HOME_ROUTE_NAME);
+    }
   }
 };
 
 const menuRoutes = getMenuRoutes(routes);
 watchEffect(() => {
   activeName.value = route.name!;
+  if (route.name === HOME_ROUTE_NAME) activeIndex.value = -1;
 });
+
 const handleCollapse = () => {
   menuCollapse.value = !menuCollapse.value;
 };
