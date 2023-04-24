@@ -1,13 +1,15 @@
 <template>
   <div class="container">
-    <router-view />
+    <!-- <Suspense> -->
+      <router-view />
+    <!-- </Suspense> -->
   </div>
 </template>
 
 <script setup lang="ts"></script>
 
 <style scoped lang="less">
-.container{
+.container {
   width: 100%;
   height: 100vh;
   overflow: hidden;

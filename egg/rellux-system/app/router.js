@@ -5,8 +5,9 @@ mapper.mapUser = function (app){
   const _jwt = app.middleware.midJWT(app.config.jwt.secret)
   const prefix = "/user";
 
-  router.post(`${prefix}/login`, "user.login");
   router.post(`${prefix}`, _jwt, "user.index");
+  router.post(`${prefix}/login`, "user.login");
+  router.get(`${prefix}/captcha`, "user.captcha");
 }
 
 mapper.mapRole = function (app){

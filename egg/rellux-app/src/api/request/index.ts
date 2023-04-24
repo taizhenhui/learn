@@ -1,5 +1,4 @@
 
-import { ElMessage, ElMessageBox } from 'element-plus'
 import type { ExpandAxiosResponse, InterceptorHooks } from './config';
 import Request from './request';
 
@@ -61,7 +60,7 @@ const transform: InterceptorHooks = {
     ])
     const message = mapErrorStatus.get(err.response.status) || '请求出错，请稍后再试'
     // 此处全局报错
-    console.error(message)
+    console.log(message)
     // ElMessageBox.alert('This is a message', 'Title', {
     //   confirmButtonText: '确定',
     // })

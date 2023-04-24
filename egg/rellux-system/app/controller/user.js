@@ -1,13 +1,14 @@
 const Controller = require('../core/base_controller');
+const svgCaptcha = require('svg-captcha');
 module.exports = class extends Controller {
   async index() {
     const result = await this.service.user.index()
     this.success(result)
   }
   async login() {
-    const { account, password } = this.ctx.request.body
-    if (!account || !password) {
-      this.fail('账号或密码不能为空')
+    const { account, password, code } = this.ctx.request.body
+    if (!account || !password || !code) {
+      this.fail('账号、密码、验证码不能为空')
       return
     }
 
@@ -24,7 +25,11 @@ module.exports = class extends Controller {
       return
     }
 
-
+    let verify = this.ctx.session.captcha;     //获得session中的验证码
+    if (code.toUpperCase() !== verify.toUpperCase()) {
+      this.fail('验证码错误')
+      return
+    }
 
     const token = this.app.jwt.sign({
       id: accountInfo.id,
@@ -33,5 +38,22 @@ module.exports = class extends Controller {
     }, this.app.config.jwt.secret);
 
     this.success({ token })
+  }
+
+  async captcha() {
+    const captcha = svgCaptcha.create({
+      size: 4,              //图片验证码的字符数
+      fontSize: 42,
+      ignoreChars: 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM',    //忽略的一些字符
+      width: 100,
+      height: 38,
+      noise: 2,
+      color: true,
+      background: '#FFF',
+    });
+    this.ctx.session.captcha = captcha.text;       //text及data都是函数返回的string属性的对象  将图片验证码中的text传到session里边 
+    this.ctx.response.type = 'image';     //返回的类型
+    // this.ctx.body = captcha.data;                //返回一张图片
+    this.success({ captcha: captcha.data })
   }
 }

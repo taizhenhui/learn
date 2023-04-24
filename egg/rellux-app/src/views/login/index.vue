@@ -10,31 +10,41 @@
         </div>
       </div>
       <div class="right">
-        <h1 class="title">欢迎登录</h1>
-        <div class="input-sty">
-          <el-input v-model="account" placeholder="请输入用户名" />
-          <el-input
-            v-model="password"
-            type="password"
-            placeholder="请输入您的密码"
-            show-password
-          />
-          <div class="code-box">
-            <el-input v-model="code" placeholder="请输入验证码" />
-            <img src="" alt="" />
+        <el-form>
+          <h1 class="title">欢迎登录</h1>
+          <div class="input-sty">
+            <el-input v-model="account" placeholder="请输入用户名" />
+            <el-input
+              v-model="password"
+              type="password"
+              placeholder="请输入您的密码"
+              show-password
+            />
+            <div class="code-box">
+              <el-input style="flex:1" v-model="code" placeholder="请输入验证码" />
+              <div class="captcha-box" v-html="captchaSvg" @click="getCaptchaFun"></div>
+            </div>
           </div>
-        </div>
-        <button class="login-btn">登录</button>
+          <button class="login-btn">登录</button>
+        </el-form>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { getCaptcha } from "@/api";
 
-const account = ref<string>("");
-const password = ref<string>("");
-const code = ref<string>("");
+const account = ref<string>();
+const password = ref<string>();
+const code = ref<string>();
+const captchaSvg = ref<string>();
+
+async function getCaptchaFun() {
+  const { captcha } = await getCaptcha();
+  captchaSvg.value = captcha;
+}
+getCaptchaFun();
 
 </script>
 
@@ -55,8 +65,6 @@ const code = ref<string>("");
   .content {
     width: 80%;
     height: 70%;
-    // width: calc(100% - 280px);
-    // height: calc(100% - 228px);
     background: #ffffff;
     border-radius: 20px;
     overflow: hidden;
@@ -81,7 +89,7 @@ const code = ref<string>("");
     .right {
       // .flex-common(center, center);
       // flex-direction: column;
-      
+
       padding: 0 12%;
       .title {
         color: @words;
@@ -90,16 +98,30 @@ const code = ref<string>("");
         width: 100%;
         margin-bottom: 30px;
       }
-      .input-sty{
-        .el-input{
+      .input-sty {
+        :deep(.el-input) {
           margin-bottom: 20px;
           height: 38px;
+          line-height: 38px;
         }
-        :deep(.el-input__wrapper.is-focus){
+        :deep(.el-input__wrapper.is-focus) {
           box-shadow: 0 0 0 1px @theme inset;
         }
       }
-      .login-btn{
+      .code-box {
+        // width: 150px;
+        width: 100%;
+        .flex-common(flex-start);
+        .captcha-box {
+          width: 100px;
+          height: 38px;
+          margin-left: 10px;
+          border: 1px solid #dcdfe6;
+          border-radius: 4px;
+          overflow: hidden;
+        }
+      }
+      .login-btn {
         width: 100%;
         height: 38px;
         border: none;

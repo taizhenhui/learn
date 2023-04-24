@@ -12,6 +12,7 @@ const pinia = createPinia()
 pinia.use(piniaPlugin({
   key: "rellux-key",
 }))
-app.use(router).use(pinia)
+app.use(router)
+app.use(pinia)
 
 app.mount('#app')
