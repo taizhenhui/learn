@@ -1,10 +1,12 @@
 
 import { request } from '@/api/request'
-import { ICaptcha } from './types'
-// export const login = (data: IorderListRequest) => {
-//   return request.get<IorderListResponse>('/rellux-advance/advance/order/list', data)
-// }
+import { ICaptcha, ILoginReq, ILoginRes } from './types'
 
+
+
+export const login = (data: ILoginReq) => {
+  return request.post<ILoginRes>('/user/login', data)
+}
 
 export const getCaptcha = () => {
   return request.get<ICaptcha>('/user/captcha')

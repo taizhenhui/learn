@@ -11,7 +11,7 @@ export default class Request {
     baseURL: '/api',
     timeout: 5000,
     requestOptions: {
-      globalErrorMessage: false,
+      globalErrorMessage: true,
       globalSuccessMessage: false
     }
   }

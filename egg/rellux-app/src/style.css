@@ -13,7 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+:root{
+  --el-color-primary: #625DF7;
 
+}
 a {
   font-weight: 500;
   color: #646cff;

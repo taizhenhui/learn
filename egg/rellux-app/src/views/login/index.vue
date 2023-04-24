@@ -10,35 +10,60 @@
         </div>
       </div>
       <div class="right">
-        <el-form>
+        <el-form :model="ruleForm" :rules="rules" ref="ruleFormRef">
           <h1 class="title">欢迎登录</h1>
           <div class="input-sty">
-            <el-input v-model="account" placeholder="请输入用户名" />
-            <el-input
-              v-model="password"
-              type="password"
-              placeholder="请输入您的密码"
-              show-password
-            />
+            <el-form-item prop="account">
+              <el-input
+                v-model="ruleForm.account"
+                placeholder="请输入用户名"
+                maxlength="32"
+              />
+            </el-form-item>
+            <el-form-item prop="password">
+              <el-input
+                v-model="ruleForm.password"
+                type="password"
+                placeholder="请输入您的密码"
+                show-password
+                maxlength="32"
+              />
+            </el-form-item>
             <div class="code-box">
-              <el-input style="flex:1" v-model="code" placeholder="请输入验证码" />
+              <el-form-item prop="code">
+                <el-input
+                  style="width: 100%"
+                  v-model="ruleForm.code"
+                  placeholder="请输入验证码"
+                  maxlength="4"
+                />
+              </el-form-item>
               <div class="captcha-box" v-html="captchaSvg" @click="getCaptchaFun"></div>
             </div>
           </div>
-          <button class="login-btn">登录</button>
         </el-form>
+        <button class="login-btn" @click="() => handleLogin(ruleFormRef)">登录</button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { getCaptcha } from "@/api";
+import { getCaptcha, login } from "@/api";
+import { FormInstance, FormRules } from "element-plus/lib/components/index";
 
-const account = ref<string>();
-const password = ref<string>();
-const code = ref<string>();
 const captchaSvg = ref<string>();
+const ruleForm = reactive({
+  account: "",
+  password: "",
+  code: "",
+});
+const ruleFormRef = ref<FormInstance>();
+const rules = reactive<FormRules>({
+  account: [{ required: true, message: "账号不能为空", trigger: "blur" }],
+  password: [{ required: true, message: "密码不能为空", trigger: "blur" }],
+  code: [{ required: true, message: "验证码不能为空", trigger: "blur" }],
+});
 
 async function getCaptchaFun() {
   const { captcha } = await getCaptcha();
@@ -46,6 +71,16 @@ async function getCaptchaFun() {
 }
 getCaptchaFun();
 
+async function handleLogin(formEl: FormInstance | undefined) {
+  if (!formEl) return;
+  await formEl.validate(async (valid: any) => {
+    if (valid) {
+      getCaptchaFun()
+      const data = await login(ruleForm);
+      console.log(data);
+    }
+  });
+}
 </script>
 
 <style scoped lang="less">
@@ -87,31 +122,32 @@ getCaptchaFun();
       }
     }
     .right {
-      // .flex-common(center, center);
-      // flex-direction: column;
-
       padding: 0 12%;
       .title {
         color: @words;
         font-size: 24px;
         font-weight: bold;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
       }
       .input-sty {
         :deep(.el-input) {
-          margin-bottom: 20px;
+          margin-top: 20px;
           height: 38px;
           line-height: 38px;
         }
         :deep(.el-input__wrapper.is-focus) {
           box-shadow: 0 0 0 1px @theme inset;
         }
+        .el-form-item {
+          margin-bottom: 0;
+          flex: 1;
+        }
       }
       .code-box {
         // width: 150px;
-        width: 100%;
-        .flex-common(flex-start);
+        // width: 100%;
+        .flex-common(flex-end);
         .captcha-box {
           width: 100px;
           height: 38px;
@@ -130,6 +166,7 @@ getCaptchaFun();
         border-radius: 30px;
         background-color: @theme;
         color: #fff;
+        margin-top: 20px;
       }
     }
   }

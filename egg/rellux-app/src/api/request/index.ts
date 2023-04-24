@@ -17,7 +17,7 @@ const transform: InterceptorHooks = {
   },
 
   requestInterceptorCatch(err) {
-    console.log(err, 'err');
+    console.log(err, 'err-22-index.ts');
     // ElMessageBox.alert('This is a message', 'Title', {
     //   confirmButtonText: '确定',
     // })
@@ -34,9 +34,9 @@ const transform: InterceptorHooks = {
     if (res.data.code !== SUCCESS_CODE) {
       if (res.config.requestOptions?.globalErrorMessage) {
         // 这里全局提示错误
-        // ElMessageBox.alert('This is a message', 'Title', {
-        //   confirmButtonText: '确定',
-        // })
+        ElMessageBox.alert(res.data.message, '提示', {
+          confirmButtonText: '确定'
+        })
       }
       return Promise.reject(res.data)
     }
@@ -61,9 +61,9 @@ const transform: InterceptorHooks = {
     const message = mapErrorStatus.get(err.response.status) || '请求出错，请稍后再试'
     // 此处全局报错
     console.log(message)
-    // ElMessageBox.alert('This is a message', 'Title', {
-    //   confirmButtonText: '确定',
-    // })
+    ElMessageBox.alert(message, '提示', {
+      confirmButtonText: '确定'
+    })
     return Promise.reject(err.response)
   }
 }

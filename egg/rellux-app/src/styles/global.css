@@ -45,3 +45,7 @@ a:hover {
   background-color: #fff;
   border-radius: 32px;
 }
+.el-button--primary {
+  background-color: #625DF7 !important;
+  border: none !important;
+}
