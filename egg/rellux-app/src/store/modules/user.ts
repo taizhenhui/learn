@@ -18,6 +18,9 @@ export const useUserStore = defineStore('user', {
     async fatchLogin(from: ILoginReq): Promise<void> {
       const { token } = await login(from)
       this.token = token
+    },
+    async logout() {
+      this.token = ''
     }
   },
 })

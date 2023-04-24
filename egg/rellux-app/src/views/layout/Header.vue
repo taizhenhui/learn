@@ -10,7 +10,7 @@
         <Icon type="edit" />
         <span>修改密码</span>
       </div>
-      <div class="user-operate">
+      <div class="user-operate" @click="handleLogout">
         <Icon type="out" />
         <span>退出</span>
       </div>
@@ -20,6 +20,17 @@
 
 <script setup lang="ts">
 import Icon from "@/components/Icon/index.vue";
+import { useUserStore } from "@/store";
+const userStore = useUserStore();
+const router = useRouter();
+const handleLogout = async () => {
+  await userStore.logout();
+  await ElMessage({
+    message: "退出成功",
+    type: "success",
+  });
+  await router.push("/login");
+};
 </script>
 
 <style scoped lang="less">
