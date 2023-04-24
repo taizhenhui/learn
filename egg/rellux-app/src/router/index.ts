@@ -63,7 +63,7 @@ const router = createRouter({
 const whiteList = [
   '/login'
 ]
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   const userStore = useUserStore()
   if (!userStore.token) {
     whiteList.indexOf(to.path) !== -1 ? next() : next(`login?redirect=${to.path}`)
