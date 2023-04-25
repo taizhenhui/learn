@@ -6,11 +6,14 @@
       @searchClick="searchClick"
       :labelWidth="80"
     />
+    
+    <TableData />
   </div>
 </template>
 
 <script setup lang="ts">
 import SearchForm from "@/components/SearchForm/index.vue";
+import TableData from "@/components/TableData/index.vue";
 import { IDataSource, IFormData } from "@/types";
 
 const searchDataSource = ref<Array<IDataSource>>([
