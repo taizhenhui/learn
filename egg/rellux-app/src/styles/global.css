@@ -49,3 +49,11 @@ a:hover {
   background-color: #625DF7 !important;
   border: none !important;
 }
+.el-main {
+  --el-main-padding: 15px !important;
+  width: calc(100% - 250px);
+}
+:root {
+  --el-color-primary: #625DF7 !important;
+  --el-fill-color-light: #f5f5f5;
+}
