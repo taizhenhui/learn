@@ -104,7 +104,7 @@ const singleElection = (row: User) => {
 };
 
 const currentPage = ref<number>(1);
-const pageSize = ref<number>(10);
+const pageSize = ref<number>(20);
 const background = ref(true);
 const rangeSize = ref<Array<number>>([10, 20, 50, 100, 200]);
 
