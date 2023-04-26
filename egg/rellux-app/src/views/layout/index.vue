@@ -3,24 +3,13 @@
     <div class="header-sty">
       <Header />
     </div>
-    <!-- <div class="content-sty"> -->
+
     <div class="content-sty">
       <AsideBar />
-      <!-- <div class="main-sty"> -->
       <el-card class="card-sty">
         <router-view />
       </el-card>
-      <!-- </div> -->
     </div>
-    <!-- <el-container>
-      <AsideBar />
-      <el-main class="main-sty">
-        <el-card class="card-sty">
-          <router-view />
-        </el-card>
-      </el-main>
-    </el-container> -->
-    <!-- </div> -->
   </div>
 </template>
 
@@ -45,6 +34,13 @@ import AsideBar from "./AsideBar.vue";
       margin: @marginSize;
       box-sizing: border-box;
       height: calc(100% - @marginSize*2);
+    }
+    :deep(.el-card__body){
+      height: 100%;
+      overflow: hidden;
+      .page{
+        height: 100%;
+      }
     }
   }
 }
