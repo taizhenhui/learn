@@ -4,7 +4,7 @@ export interface IDataSource {
   label: string
   prop: string
   maxlength?: number | string
-  place: string
+  place?: string
   [propsName: string]: any
 }
 export interface IFormData {

@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="table-data">
     <el-table
       ref="multipleTableRef"
       :data="tableData"
@@ -8,7 +8,7 @@
       @row-click="singleElection"
       highlight-current-row
     >
-      <el-table-column align="center" width="55" label="选择">
+      <el-table-column align="center" width="85" label="选择">
         <template #default="scope">
           <!-- 可以手动的修改label的值，从而控制选择哪一项 -->
           <el-radio v-model="templateSelection" :label="scope.row.id">&nbsp;</el-radio>
@@ -66,4 +66,35 @@ const singleElection = (row: User) => {
 };
 </script>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+@import "~@/styles/mixin.less";
+.table-data {
+  :deep(.el-radio__label) {
+    padding-left: 0;
+  }
+  :deep(.el-radio__inner) {
+    border-radius: 2px;
+  }
+  :deep(.el-radio__input.is-checked .el-radio__inner::after){
+    transform: rotate(45deg) scaleY(1);
+  }
+  :deep(.el-radio__inner::after) {
+    border: none;
+    box-sizing: content-box;
+    content: "";
+    border: 1px solid #fff;
+    border-left: 0;
+    border-top: 0;
+    height: 7px;
+    left: 4px;
+    position: absolute;
+    top: 1px;
+    transform: rotate(45deg) scaleY(0);
+    width: 3px;
+    transition: transform 0.15s ease-in 50ms;
+    transform-origin: center;
+    background-color: rgba(0,0,0,0);
+    border-radius:0;
+  }
+}
+</style>
