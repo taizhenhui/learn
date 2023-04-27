@@ -5,9 +5,9 @@
     </div>
     <div class="content-sty">
       <AsideBar />
-      <el-card class="card-sty">
+      <div class="card-sty">
         <router-view />
-      </el-card>
+      </div>
     </div>
   </div>
 </template>
@@ -27,17 +27,18 @@ import AsideBar from "./AsideBar.vue";
   background: #f5f5f5;
   .content-sty {
     .flex-common(flex-start, flex-start);
-    height: calc(100% - @headerHeight);
+    height: calc(100vh - @headerHeight);
     .card-sty {
       flex: 1;
+      height: calc(100vh - @headerHeight - @marginSize*2);
       margin: @marginSize;
-      box-sizing: border-box;
-      height: calc(100% - @marginSize*2);
-    }
-    :deep(.el-card__body){
-      height: 100%;
+      padding: @marginSize;
+      border-radius: 4px;
+      border: 1px solid var(--el-card-border-color);
+      box-shadow: var(--el-box-shadow-light);
+      background-color: #fff;
       overflow: hidden;
-      .page{
+      :deep(.page) {
         height: 100%;
       }
     }

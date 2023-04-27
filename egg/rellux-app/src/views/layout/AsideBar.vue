@@ -76,7 +76,7 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
 @import "~@/styles/mixin.less";
 
 .aside-bar {
-  height: calc(100vh - 105px);
+  height: calc(100vh - 60px);
   background-color: #fff;
   color: #333333;
   transition: 0.1s;
@@ -114,10 +114,11 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
 }
 .el-menu {
   border-right: none;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .el-menu-vertical-demo {
-  height: 100%;
+  height: calc(100vh - 110px);
   .sub-title {
     display: block;
     margin-left: 10px;

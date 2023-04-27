@@ -1,13 +1,14 @@
 <template>
-  <div class="index">
+  <div class="account-container">
     <SearchForm
       :dataSource="searchDataSource"
       :formData="formData"
       @searchClick="searchClick"
       :labelWidth="80"
     />
-    
-    <TableData />
+    <div class="table-sty">
+      <TableData />
+    </div>
   </div>
 </template>
 
@@ -49,6 +50,7 @@ const searchDataSource = ref<Array<IDataSource>>([
     maxlength: 32,
     place: "请输入姓名",
   },
+  
 ]);
 const formData: IFormData = reactive({
   username: "阿萨德",
@@ -59,7 +61,19 @@ const formData: IFormData = reactive({
 const searchClick = (value: IFormData) => {
   console.log("searchClick", value);
 };
-
 </script>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.account-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .table-sty {
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+  }
+}
+</style>
