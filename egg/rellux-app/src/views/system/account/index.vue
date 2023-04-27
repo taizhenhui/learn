@@ -59,6 +59,7 @@ const formData: IFormData = reactive({
 const searchClick = (value: IFormData) => {
   console.log("searchClick", value);
 };
+
 </script>
 
 <style scoped lang="less"></style>

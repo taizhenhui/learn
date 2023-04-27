@@ -76,7 +76,7 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
 @import "~@/styles/mixin.less";
 
 .aside-bar {
-  height: 100%;
+  height: 100vh;
   background-color: #fff;
   color: #333333;
   transition: 0.1s;
@@ -118,7 +118,6 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
 }
 .el-menu-vertical-demo {
   height: 100%;
-  padding-bottom: 50px;
   .sub-title {
     display: block;
     margin-left: 10px;
