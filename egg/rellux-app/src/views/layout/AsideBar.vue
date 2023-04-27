@@ -76,7 +76,7 @@ const handleMenuItemClick = (route: RouteRecordRaw, index: number) => {
 @import "~@/styles/mixin.less";
 
 .aside-bar {
-  height: 100vh;
+  height: calc(100vh - 105px);
   background-color: #fff;
   color: #333333;
   transition: 0.1s;
