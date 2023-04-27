@@ -1,12 +1,12 @@
 <template>
-  <div class="account-container">
+  <div class="index">
     <SearchForm
       :dataSource="searchDataSource"
       :formData="formData"
       @searchClick="searchClick"
       :labelWidth="80"
     />
-
+    
     <TableData />
   </div>
 </template>
@@ -61,9 +61,4 @@ const searchClick = (value: IFormData) => {
 };
 </script>
 
-<style scoped lang="less">
-.account-container {
-  height: 100%;
-  overflow: hidden;
-}
-</style>
+<style scoped lang="less"></style>
