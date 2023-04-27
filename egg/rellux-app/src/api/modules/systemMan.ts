@@ -1,6 +1,6 @@
 import { request } from '@/api/request'
-// import type { IorderListResponse, IorderListRequest } from "../types";
+import { IUserListReq, IUserListRes } from '../types'
 
-// export const orderList = (data: IorderListRequest) => {
-//   return request.get<IorderListResponse>('/rellux-advance/advance/order/list', data)
-// }
+export const userList = (data: IUserListReq) => {
+  return request.post<IUserListRes>('/user', data)
+}

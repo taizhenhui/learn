@@ -8,5 +8,13 @@ export interface IDataSource {
   [propsName: string]: any
 }
 export interface IFormData {
+  pageNum?: number,
+  pageSize?: number,
   [propsName: string]: any;
+}
+
+export enum Align {
+  center,
+  left,
+  right
 }

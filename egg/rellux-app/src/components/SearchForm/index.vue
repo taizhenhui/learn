@@ -89,7 +89,6 @@ const search = () => emit("searchClick", formInfo);
 const reset = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   formEl.resetFields();
-  formInfo = Object.assign(formInfo, props.formData);
   search();
 };
 // {

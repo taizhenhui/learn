@@ -1,16 +1,20 @@
 
 import type { ExpandAxiosResponse, InterceptorHooks } from './config';
 import Request from './request';
+import {useUserStore} from '@/store'
+
 
 // 请求拦截器
 const transform: InterceptorHooks = {
 
   requestInterceptor(config) {
+    const userStore = useUserStore()
     // 请求头部处理，如添加 token
-    // const token = 'token-value'
-    // if (token) {
-    //   config!.headers!.Authorization = token
-    // }
+    const token = userStore.token
+    if (token) {
+      config!.headers!.Authorization = token
+      config!.headers['content-type'] = 'application/x-www-form-urlencoded'
+    }
     // console.log(config,'config');
 
     return config
@@ -34,7 +38,7 @@ const transform: InterceptorHooks = {
     if (res.data.code !== SUCCESS_CODE) {
       if (res.config.requestOptions?.globalErrorMessage) {
         // 这里全局提示错误
-        ElMessageBox.alert(res.data.message, '提示', {
+        ElMessageBox.alert(res.data.msg, '提示', {
           confirmButtonText: '确定'
         })
       }

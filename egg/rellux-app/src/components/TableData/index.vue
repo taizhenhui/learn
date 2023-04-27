@@ -8,28 +8,33 @@
       border
       fit
       @row-click="singleElection"
-      highlight-current-row
+      :highlight-current-row="isHighlightCurrentRow"
     >
-      <el-table-column align="center" width="55" label="选择">
+      <el-table-column align="center" width="55" label="选择" v-if="singleSelect">
         <template #default="scope">
-          <!-- 可以手动的修改label的值，从而控制选择哪一项 -->
           <el-radio v-model="templateSelection" :label="scope.row.id">&nbsp;</el-radio>
         </template>
       </el-table-column>
-      <el-table-column label="Date" align="center">
-        <template #default="scope">{{ scope.row.date }}</template>
+      <el-table-column
+        v-for="item in columns"
+        :property="item.property"
+        :label="item.label"
+        :align="item.align || 'center'"
+      />
+      <el-table-column fixed="right" label="操作" width="120" v-if="isOperate">
+        <template #default="scope">
+          <slot :row="scope.row"></slot>
+        </template>
       </el-table-column>
-      <el-table-column property="name" label="Name" align="center" />
-      <el-table-column property="address" label="Address" show-overflow-tooltip />
     </el-table>
 
     <el-pagination
-      v-model:current-page="currentPage"
-      v-model:page-size="pageSize"
-      :page-sizes="rangeSize"
-      :background="background"
-      layout="prev, pager, next, total, jumper, sizes"
-      :total="400"
+      v-model:current-page="pagination.currentPage"
+      v-model:page-size="pagination.pageSize"
+      :page-sizes="pagination.rangeSize"
+      :background="pagination.background"
+      :layout="pagination.layout"
+      :total="pagination.total"
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
     />
@@ -37,338 +42,74 @@
 </template>
 
 <script setup lang="ts">
-interface User {
-  id: string;
-  date: string;
-  name: string;
-  address: string;
-}
-const templateSelection = ref("");
-const tableData: User[] = [
-  {
-    id: "0001",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0002",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0003",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0004",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0005",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0006",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0007",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0008",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0001",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0002",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0003",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0004",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0005",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0006",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0007",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0008",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0001",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0002",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0003",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0004",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0005",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0006",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0007",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0008",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0001",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0002",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0003",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0004",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0005",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0006",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0007",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0008",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0001",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0002",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0003",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0004",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0005",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0006",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0007",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0008",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0001",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0002",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0003",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0004",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0005",
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 弄",
-  },
-  {
-    id: "0006",
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 弄",
-  },
-  {
-    id: "0007",
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 弄",
-  },
-  {
-    id: "0008",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-  {
-    id: "0008",
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 弄",
-  },
-];
-const checkList = ref<Array<User>>([]);
-const singleElection = (row: User) => {
-  console.log("val", row);
-  templateSelection.value = row.id;
-  checkList.value = tableData.filter((item) => item.id === row.id);
-  console.log(`该行的编号为${row.id}`, checkList.value);
-};
+import { Align } from "@/types";
 
-const currentPage = ref<number>(1);
-const pageSize = ref<number>(20);
-const background = ref(true);
-const rangeSize = ref<Array<number>>([10, 20, 50, 100, 200]);
+interface ITableData {
+  [propsName: string]: any;
+}
+
+interface Columns {
+  label: string; // 表头
+  property: string; // 表格字段
+  align?: Align; // 文本对齐方式 center left right
+  [propsName: string]: any;
+}
+interface IPagination {
+  currentPage?: number; // 当前页数
+  pageSize?: number; // 每页显示条目个数
+  rangeSize?: number[]; // 每页显示个数选择器的选项设置
+  background?: boolean; // 是否为分页按钮添加背景色
+  layout?: string; // 组件布局，子组件名用逗号分隔
+  total?: number; // 总条目数
+}
+
+interface IProps {
+  tableData: ITableData[]; // 表格数据
+  singleSelect?: boolean; // 是否需要单选
+  isOperate?: boolean; // 是否需要操作
+  isHighlightCurrentRow?: boolean; // 是否当前行是否高亮
+  columns: Columns[]; // 表格的字段和名称
+  pagination: IPagination; // 分页数据
+}
+
+const props = withDefaults(defineProps<IProps>(), {
+  singleSelect: false,
+  isOperate: false,
+  isHighlightCurrentRow: false,
+});
+const emit = defineEmits(["current-change", "size-change", "on-select-single"]);
+
+const templateSelection = ref("");
+const checkList = ref<Array<ITableData>>([]);
+const singleElection = (row: ITableData) => {
+  if (row.id === templateSelection.value) {
+    templateSelection.value = "";
+    checkList.value = [];
+    return;
+  }
+  templateSelection.value = row.id;
+  checkList.value = props.tableData.filter((item) => item.id === row.id);
+  emit("on-select-single", row);
+};
 
 const handleSizeChange = (val: number) => {
-  console.log(`${val} items per page`);
+  emit("size-change", val);
+  templateSelection.value = "";
 };
 const handleCurrentChange = (val: number) => {
-  console.log(`current page: ${val}`);
+  emit("current-change", val);
+  templateSelection.value = "";
 };
 </script>
 
 <style scoped lang="less">
 @import "~@/styles/mixin.less";
-.table-data{
+.table-data {
   width: 100%;
   height: 96%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 // 单选样式修改

@@ -9,6 +9,7 @@ module.exports = class extends Service {
       email: body.email || '',
       operator_name: body.operator_name || '',
     }
+    console.log('body',body);
     let wheres = {}
     Object.keys(data).forEach(i => {
       if (body[i] !== '') {
@@ -30,7 +31,7 @@ module.exports = class extends Service {
       limit: +limit, // 返回数据量
       offset: (offset - 1) * (+limit), // 数据偏移量
     });
-
+    console.log('results',results);
     return {
       rows: results,
       total: sum.length,
