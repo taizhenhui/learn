@@ -8,14 +8,14 @@
     />
     <div class="table-sty">
       <TableData
+        v-slot="{ row }"
         :table-data="data.rows"
         :columns="columns"
-        :single-select="true"
+        :select-type="SelectTypes.index"
         :pagination="pagination"
-        v-slot="{ row }"
         @current-change="handleCurrentChange"
         @size-change="handleSizeChange"
-        @on-select-single="handleSelectSingle"
+        @on-select="handleSelectRow"
       >
         <span>{{ row.id }}</span>
         <span> {{ row.name }}</span>
@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import SearchForm from "@/components/SearchForm/index.vue";
 import TableData from "@/components/TableData/index.vue";
-import { Align, IDataSource, IFormData } from "@/types";
+import { Align, IDataSource, IFormData, SelectTypes } from "@/types";
 import { userList } from "@/api";
 import { IUserListRes } from "@/api/types";
 const searchDataSource = ref<Array<IDataSource>>([
@@ -122,7 +122,7 @@ const handleCurrentChange = (val: number) => {
   formData.pageNum = val;
   getUserList();
 };
-const handleSelectSingle = (val: any ) => {
+const handleSelectRow = (val: any ) => {
   console.log(val);
   
 };

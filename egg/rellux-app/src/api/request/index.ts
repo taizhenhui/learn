@@ -3,7 +3,6 @@ import type { ExpandAxiosResponse, InterceptorHooks } from './config';
 import Request from './request';
 import {useUserStore} from '@/store'
 
-
 // 请求拦截器
 const transform: InterceptorHooks = {
 
@@ -39,7 +38,12 @@ const transform: InterceptorHooks = {
       if (res.config.requestOptions?.globalErrorMessage) {
         // 这里全局提示错误
         ElMessageBox.alert(res.data.msg, '提示', {
-          confirmButtonText: '确定'
+          confirmButtonText: '确定',
+          callback: () => {
+            const userStore = useUserStore()
+            userStore.logout()
+            location.reload()
+          }
         })
       }
       return Promise.reject(res.data)

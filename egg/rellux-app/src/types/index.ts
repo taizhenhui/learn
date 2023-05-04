@@ -18,3 +18,11 @@ export enum Align {
   left,
   right
 }
+
+export enum SelectTypes {
+  index,
+  multiple,
+  single,
+  expand,
+  other
+}
