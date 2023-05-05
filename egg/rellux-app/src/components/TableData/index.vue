@@ -55,6 +55,8 @@
         :property="item.property"
         :label="item.label"
         :align="item.align || 'center'"
+        :width="item.width || 'auto'"
+        :show-overflow-tooltip="true"
       />
       <el-table-column fixed="right" label="操作" width="120" v-if="isOperate">
         <template #default="scope">
@@ -105,7 +107,7 @@ interface IProps {
   isOperate?: boolean; // 是否需要操作
   isHighlightCurrentRow?: boolean; // 是否当前行是否高亮
   columns: Columns[]; // 表格的字段和名称
-  pagination?: IPagination; // 分页数据
+  pagination: IPagination; // 分页数据
   paginationShow?: boolean; // 是否需要分页
 }
 
