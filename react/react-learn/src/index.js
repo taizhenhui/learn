@@ -1,4 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Ball from './components/Ball'
 
-ReactDOM.render(<h1>Hello World <span>span元素</span></h1>, document.getElementById('root'));
+
+ReactDOM.render(<Ball xSpeed={100} ySpeed={200} left={100} top={100}/>, document.getElementById('root'))
