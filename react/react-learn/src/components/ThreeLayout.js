@@ -1,27 +1,38 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import '../style/ThreeLayout.css'
+ThreeLayout.defaultProps = {
+    leftWidth: 200,
+    rightWidth: 200,
+    minWidth: 800,
+    gap:0
+}
+ThreeLayout.PropTypes = {
+    leftWidth: PropTypes.number,
+    rightWidth: PropTypes.number,
+    minWidth: PropTypes.number,
+    gap: PropTypes.number,
+    children: PropTypes.node,
+    left: PropTypes.node,
+    right: PropTypes.node,
+}
 function ThreeLayout(props) {
-    const defaultProps = {
-        leftWidth: 200,
-        rightWidth: 200,
-        minWidth: 800,
-        gap:0
-    }
-    const datas = Object.assign({}, defaultProps, props)
+    
     return (
-        <div className='three-layout' style={{ minWidth: datas.minWidth }}>
+        <div className='three-layout' style={{ minWidth: props.minWidth }}>
             <div className="main">
                 {props.children}
             </div>
             <div className="aside-left" style={{
-                width: datas.leftWidth,
-                marginRight: datas.gap + "px"
+                width: props.leftWidth,
+                marginRight: props.gap + "px"
             }}>
                 {props.left}
             </div>
             <div className="aside-right" style={{
-                width: datas.rightWidth,
-                marginLeft: datas.gap + "px"
+                width: props.rightWidth,
+                marginLeft: props.gap + "px"
             }}>
                 {props.right}
             </div>

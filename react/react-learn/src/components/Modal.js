@@ -1,22 +1,28 @@
 import React from 'react'
 import '../style/Modal.css'
-export default function Modal(props) {
-    let defaultProps = {
-        bg: "rgba(0,0,0,0.5)"
-    }
+import PropTypes from 'prop-types'
 
-    let datas = Object.assign({}, defaultProps, props)
+export default function Modal(props) {
+
     return (
         <div onClick={(e) => {
             if (e.target.className === 'modal') {
-                datas.onClose()
+                props.onClose()
             }
         }}
             className='modal'
-            style={{ background: datas.bg }}>
+            style={{ background: props.bg }}>
             <div className='modal-center'>
                 {props.children}
             </div>
         </div>
     )
+}
+Modal.defaultProps = {
+    bg: "rgba(0,0,0,0.5)"
+}
+Modal.PropTypes = {
+    children: PropTypes.node,
+    bg: PropTypes.string,
+    onClose: PropTypes.func
 }
