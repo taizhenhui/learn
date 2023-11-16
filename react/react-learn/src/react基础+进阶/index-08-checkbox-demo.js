@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import CheckBoxGroup from './components/CheckBoxGroup'
+import CheckBoxGroup from '../components/CheckBoxGroup'
 
 class CheckBoxTest extends Component {
     state = {

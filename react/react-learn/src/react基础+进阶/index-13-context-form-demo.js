@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Form from './components/form/Form'
+import Form from '../components/form/Form'
 
 const div = (
     <div>

@@ -13,7 +13,7 @@ asdfafasfafasdfasdf
 
 如果给自定义组件传递元素内容，则React会将元素内容作为children属性传递过去。
  */
-import CompChildren from "./components/CompChildren"
+import CompChildren from "../components/CompChildren"
 
 ReactDOM.render((
     <CompChildren content1={<h2>第2组元素内容</h2>} content2={<h2>第3组元素内容</h2>}>

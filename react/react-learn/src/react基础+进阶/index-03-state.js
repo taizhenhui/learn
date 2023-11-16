@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Tick from './components/Tick'
+import Tick from '../components/Tick'
 /**
   # 组件状态
   组件状态：组件可以自行维护的数据

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Comp from './components/Comp'
+import Comp from '../components/Comp'
 
 
 /**

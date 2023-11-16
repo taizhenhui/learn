@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App1'
+import App from '../components/App1'
 
 /**
 # 生命周期

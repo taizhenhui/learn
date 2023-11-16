@@ -10,37 +10,48 @@ import '../style/Pager.css'
  * 5. onPageChange：当页码改变的事件
  */
 export default function Pager(props) {
-  const pageNumber = getPageNumber(props)
-  if (pageNumber === 0) {
-    return null
-  }
-  const { min, max } = getMaxMinNumber(pageNumber, props) //最大数字
-  const numbers = []
-  for (let i = min; i <= max; i++) {
-    numbers.push(
-      <span key={i} onClick={() => toPage(i, props)} className={i === props.current ? 'item active' : 'item'}>
-        {i}
-      </span>
+    const pageNumber = getPageNumber(props)
+    if (pageNumber === 0) {
+        return null
+    }
+    const { min, max } = getMaxMinNumber(pageNumber, props) //最大数字
+    const numbers = []
+    if (pageNumber <= props.panelNumber) {
+        for (let i = 1; i <= pageNumber; i++) {
+            numbers.push(
+                <span key={i} onClick={() => toPage(i, props)} className={i === props.current ? 'item active' : 'item'}>
+                    {i}
+                </span>
+            )
+        }
+    } else {
+        for (let i = min; i <= max; i++) {
+            numbers.push(
+                <span key={i} onClick={() => toPage(i, props)} className={i === props.current ? 'item active' : 'item'}>
+                    {i}
+                </span>
+            )
+        }
+
+    }
+    return (
+        <>
+            <span className={props.current === 1 ? 'item disabled' : 'item'} onClick={() => toPage(1, props)}>
+                首页
+            </span>
+            <span className={props.current === 1 ? 'item disabled' : 'item'} onClick={() => toPage(props.current - 1 < 1 ? 1 : props.current - 1, props)}>
+                上一页
+            </span>
+            {numbers}
+            <span className={props.current === pageNumber ? 'item disabled' : 'item'} onClick={() => toPage(props.current + 1 > pageNumber ? pageNumber : props.current + 1, props)}>
+                下一页
+            </span>
+            <span className={props.current === pageNumber ? 'item disabled' : 'item'} onClick={() => toPage(pageNumber, props)}>
+                尾页
+            </span>
+            <span>{props.current}</span>/<span>{pageNumber}</span>
+        </>
     )
-  }
-  return (
-    <>
-      <span className={props.current === 1 ? 'item disabled' : 'item'} onClick={() => toPage(1, props)}>
-        首页
-      </span>
-      <span className={props.current === 1 ? 'item disabled' : 'item'} onClick={() => toPage(props.current - 1 < 1 ? 1 : props.current - 1, props)}>
-        上一页
-      </span>
-      {numbers}
-      <span className={props.current === pageNumber ? 'item disabled' : 'item'} onClick={() => toPage(props.current + 1 > pageNumber ? pageNumber : props.current + 1, props)}>
-        下一页
-      </span>
-      <span className={props.current === pageNumber ? 'item disabled' : 'item'} onClick={() => toPage(pageNumber, props)}>
-        尾页
-      </span>
-      <span>{props.current}</span>/<span>{pageNumber}</span>
-    </>
-  )
 }
 
 /**
@@ -50,23 +61,23 @@ export default function Pager(props) {
  * @returns
  */
 function getMaxMinNumber(pageNumber, props) {
-  const { current, panelNumber } = props
-  const middleNumber = Math.floor(panelNumber / 2)
-  const maxPale = pageNumber - middleNumber
-  const minPale = middleNumber + 1
-  let min, max
-  if (current > minPale && current < maxPale) {
-    min = current - middleNumber
-    max = min + panelNumber - 1
-  } else if (current <= minPale) {
-    min = 1
-    max = panelNumber
-  } else {
-    min = pageNumber - panelNumber + 1
-    max = pageNumber
-  }
+    const { current, panelNumber } = props
+    const middleNumber = Math.floor(panelNumber / 2)
+    const maxPale = pageNumber - middleNumber
+    const minPale = middleNumber + 1
+    let min, max
+    if (current > minPale && current < maxPale) {
+        min = current - middleNumber
+        max = min + panelNumber - 1
+    } else if (current <= minPale) {
+        min = 1
+        max = panelNumber
+    } else {
+        min = pageNumber - panelNumber + 1
+        max = pageNumber
+    }
 
-  return { min, max }
+    return { min, max }
 }
 
 /**
@@ -75,10 +86,10 @@ function getMaxMinNumber(pageNumber, props) {
  * @param {*} props  所有属性
  */
 function toPage(target, props) {
-  if (props.current === target) {
-    return
-  }
-  props.onPageChange && props.onPageChange(target)
+    if (props.current === target) {
+        return
+    }
+    props.onPageChange && props.onPageChange(target)
 }
 
 /**
@@ -86,5 +97,5 @@ function toPage(target, props) {
  * @param {*} props
  */
 function getPageNumber(props) {
-  return Math.ceil(props.total / props.limit)
+    return Math.ceil(props.total / props.limit)
 }

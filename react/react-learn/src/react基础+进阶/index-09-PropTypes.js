@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from "prop-types";
-import Comp from "./components/Comp"
+import Comp from "../components/Comp"
 /**
 # 属性默认值 和 类型检查
 

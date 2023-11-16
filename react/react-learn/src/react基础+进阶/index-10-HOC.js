@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import CheckBox from './components/hoc/CheckBox'
-import RadioBox from './components/hoc/RadioBox'
+import CheckBox from '../components/hoc/CheckBox'
+import RadioBox from '../components/hoc/RadioBox'
 
 /**
 # HOC 高阶组件

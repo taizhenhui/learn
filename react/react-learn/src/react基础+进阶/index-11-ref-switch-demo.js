@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import Banner from './components/Banner'
+import Banner from '../components/Banner'
 import React, { Component } from 'react'
 import src1 from './components/img/1.jpg'
 import src2 from './components/img/2.webp'

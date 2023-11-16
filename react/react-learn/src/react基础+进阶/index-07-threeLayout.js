@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ThreeLayout from './components/ThreeLayout'
+import ThreeLayout from '../components/ThreeLayout'
 const div = (
     <div>
         <ThreeLayout

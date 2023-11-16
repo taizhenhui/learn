@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MyFuncComp from './components/MyFuncComp'
-import MyClassComp from './components/MyClassComp'
-import StudentList from './components/StudentList'
+import MyFuncComp from '../components/MyFuncComp'
+import MyClassComp from '../components/MyClassComp'
+import StudentList from '../components/StudentList'
 
 /**
     # 组件和组件属性
