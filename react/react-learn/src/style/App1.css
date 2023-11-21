@@ -1,0 +1,38 @@
+.container {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.comp-container {
+  height: 150px;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.exit-active {
+    transition: 500ms;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.exit-done {
+    display: none;
+}
+
+.enter,
+.appear {
+    display: block;
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.enter-active,
+.appear-active {
+    transition: 500ms;
+    opacity: 1;
+    transform: translateX(0);
+}
