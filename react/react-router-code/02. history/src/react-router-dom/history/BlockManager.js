@@ -17,13 +17,13 @@ export default class BlockManager {
     }
 
     triggerBlock(location, action, cb){
-        if(typeof this.prompt !== 'string' && typeof this.prompt !== 'function'){
-            throw new TypeError('block must be string or function')
-        }
-
+        
         if(!this.prompt){
             cb()
             return
+        }
+        if(typeof this.prompt !== 'string' && typeof this.prompt !== 'function'){
+            throw new TypeError('block must be string or function')
         }
         let message // 阻塞消息
         if(typeof this.prompt === 'string'){
