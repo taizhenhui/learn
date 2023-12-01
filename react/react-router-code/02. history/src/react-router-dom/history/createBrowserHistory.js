@@ -111,7 +111,14 @@ export default function createBrowserHistory(options = {}) {
     }
 
     function createHref(location) {
-        return basename + location.pathname + location.search + location.hash;
+        let { pathname = "/", search = "", hash = "" } = location;
+        if (search.charAt(0) === "?" && search.length === 1) {
+            search = "";
+        }
+        if (hash.charAt(0) === "#" && hash.length === 1) {
+            hash = "";
+        }
+        return basename + pathname + search + hash;
     }
 
     const history = {
