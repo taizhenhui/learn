@@ -6,7 +6,17 @@ import ActionTypes from './utils/ActionTypes'
  * @param {*} reducer reducer
  * @param {*} defaultState  默认的状态值
  */
-export default function (reducer, defaultState) {
+export default function createStore(reducer, defaultState, enhanced) {
+
+    if(typeof defaultState === 'function'){
+        enhanced = defaultState
+        defaultState = undefined
+    }
+    if(typeof enhanced === 'function'){
+        // 进入applyMiddleware的处理逻辑
+        return enhanced(createStore)(reducer)
+    }
+
     let currentReducer = reducer; // 当前使用的reducer
     let currentState = defaultState; // 当前仓库中的状态
 
