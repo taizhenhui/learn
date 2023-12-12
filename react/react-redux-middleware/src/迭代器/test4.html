@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var iterator = {
+            total: 3,
+            i: 1,
+            next() {
+                var obj = {
+                    value: this.i > this.total ? undefined : this.i,
+                    done: this.i > this.total
+                }
+                this.i++
+                return obj
+            }
+        }
+        let next = iterator.next()
+        while(!next.done){
+            console.log(next.value)
+            next = iterator.next()
+
+        }
+    </script>
+</body>
+
+</html>

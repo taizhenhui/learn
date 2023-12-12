@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 无限迭代器
+        var iterator = {
+            a: 1,
+            b: 1,
+            curIndex: 1,
+            next() {
+                if (this.curIndex === 1 || this.curIndex === 2) {
+                    this.curIndex++
+                    return {
+                        value: 1,
+                        done: false
+                    }
+                }
+                let c = this.a + this.b
+                this.a = this.b
+                this.b = c
+                this.curIndex++
+                return {
+                    value: c,
+                    done: false
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
