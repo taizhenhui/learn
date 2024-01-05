@@ -4,6 +4,12 @@ export default {
   'menu.home': '首页',
   'menu.admin': '管理页',
   'menu.admin.sub-page': '二级管理页',
+
+  'menu.goods': '商品',
+  'menu.goods.category': '品类管理',
+  'menu.goods.goodsList': '商品管理',
+  'menu.goods.specMana': '规格属性',
+
   'menu.login': '登录',
   'menu.register': '注册',
   'menu.register-result': '注册结果',

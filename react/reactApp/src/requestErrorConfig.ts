@@ -1,7 +1,7 @@
 ﻿import type { RequestOptions } from '@@/plugin-request/request';
 import type { RequestConfig } from '@umijs/max';
-import { message, notification } from 'antd';
-
+import { message, notification, Spin } from 'antd';
+import { createRoot, Root } from 'react-dom/client';
 // 错误处理方案： 错误类型
 enum ErrorShowType {
   SILENT = 0,
@@ -19,6 +19,25 @@ interface ResponseStructure {
   showType?: ErrorShowType;
 }
 
+// 当前请求数量
+// let requestCount = 0;
+// let wapperRoot: any;
+// function showLoading() {
+//   if (requestCount === 0) {
+//     var dom = document.createElement('div');
+//     dom.setAttribute('id', 'loading');
+//     document.body.appendChild(dom);
+//     wapperRoot = createRoot(dom);
+//     wapperRoot.render(<Spin tip="加载中..." size="large" />);
+//   }
+//   requestCount++;
+// }
+// function hideLoading() {
+//   requestCount--;
+//   if (requestCount === 0) {
+//     wapperRoot?.unmount();
+//   }
+// }
 /**
  * @name 错误处理
  * pro 自带的错误处理， 可以在这里做自己的改动
@@ -89,8 +108,12 @@ export const errorConfig: RequestConfig = {
   requestInterceptors: [
     (config: RequestOptions) => {
       // 拦截请求配置，进行个性化处理。
-      const url = config?.url?.concat('?token = 123');
-      return { ...config, url };
+      let token = window.localStorage.getItem('token');
+      let headers = {
+        Authorization: `Bearer ${token}`,
+      };
+
+      return { ...config, headers };
     },
   ],
 

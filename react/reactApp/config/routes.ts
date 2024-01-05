@@ -24,27 +24,53 @@ export default [
   },
   {
     path: '/welcome',
-    name: 'welcome',
+    name: 'home',
     icon: 'smile',
     component: './Welcome',
   },
   {
-    path: '/admin',
-    name: 'admin',
+    path: '/goods',
+    name: 'goods',
     icon: 'crown',
-    access: 'canAdmin',
     routes: [
+    //   {
+    //     path: '/goods',
+    //     redirect: '/goods/category',
+    //   },
       {
-        path: '/admin',
-        redirect: '/admin/sub-page',
+        path: '/goods/category',
+        name: 'category',
+        component: '@/pages/Goods/Category/Category.tsx',
       },
       {
-        path: '/admin/sub-page',
-        name: 'sub-page',
-        component: './Admin',
+        path: '/goods/goodsList',
+        name: 'goodsList',
+        component: '@/pages/Goods/GoodsList/GoodsList.tsx',
+      },
+      {
+        path: '/goods/specMana',
+        name: 'specMana',
+        component: '@/pages/Goods/SpecMana/SpecMana.tsx',
       },
     ],
   },
+//   {
+//     path: '/admin',
+//     name: 'admin',
+//     icon: 'crown',
+//     access: 'canAdmin',
+//     routes: [
+//       {
+//         path: '/admin',
+//         redirect: '/admin/sub-page',
+//       },
+//       {
+//         path: '/admin/sub-page',
+//         name: 'sub-page',
+//         component: './Admin',
+//       },
+//     ],
+//   },
   {
     name: 'list.table-list',
     icon: 'table',
