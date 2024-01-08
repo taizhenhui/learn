@@ -5,10 +5,6 @@ import java.util.Map;
 
 /**
  * 页面响应entity
- * @author java1234_小锋
- * @site www.java1234.com
- * @company Java知识分享网
- * @create 2019-08-13 上午 10:00
  */
 public class R extends HashMap<String, Object> {
 
